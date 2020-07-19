@@ -1,0 +1,205 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.mpe.operations.manages1.blocks.ActivitiesBlockController" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:core="sap.ui.core"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<smartTable:SmartTable id="idActivitiesSmartTable" entitySet="C_ProcgExecOperationActivity" showRowCount="false"
+		class="sapUiResponsiveContentPadding" enableAutoBinding="{DetailModel>/bEnableAutoBinding}" tableType="ResponsiveTable" editable="false" useVariantManagement="false"
+		useTablePersonalisation="true" header="{i18n>ActivityItems}" useExportToExcel="false" beforeRebindTable="onHandleRebindActivitiesBlock"
+		demandPopin="true" noData="{i18n>noActivitiesFound}" ignoredFields="EffectivityParameterDesc,EffctyTypeCnctntdParamDesc"
+		requestAtLeastFields="ManufacturingOrder,WorkCenter,OpActyChgAlertAcknIsRequired,OperationActyVersionCounter,SASStatusCategory,ProductionPlant,OperationActivityIsImpacted"
+		dataReceived="onDataReceived">
+		<smartTable:customData>
+			<core:CustomData key="p13nDialogSettings" value='\{"columns":\{"visible": true \},"filter":\{"visible": false\}\}'/>
+		</smartTable:customData>
+		<!--Toolbar for hold button | visible only for PEO-->
+		<smartTable:customToolbar>
+			<OverflowToolbar design="Transparent">
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="{i18n>Hold}" press="onPressActivityHold" enabled="{customActyModel>/isActivityHoldEnabled}"
+					visible="{path: 'MfgFeatureIsActiveInAnyPlant', formatter: '.formatter.setHoldIconVisibility'}"/>
+				<Button text="{i18n>Defect}" press="onPressDefectBtn" enabled="{= ${customActyModel>/isDefectButtonEnabled} &amp;&amp; !${SerialNmbrAssgmtProfileIsAssgd}}"
+					visible="{path: 'MfgFeatureIsActiveInAnyPlant', formatter: '.formatter.setHoldIconVisibility'}"/>
+			</OverflowToolbar>
+		</smartTable:customToolbar>
+		<Table fixedLayout="false" id="idActivitiesBlockTable" growing="true" growingThreshold="10" itemPress="handleActivitySelect"
+			selectionChange="onSelectionChangeOperationActTable" mode="MultiSelect">
+			<columns>
+				<!--<Column width="2%" />-->
+				<Column width="5%"
+					customData:p13nData='\{"columnKey":"OpActyChgAlertAcknIsRequired", "leadingProperty":["OpActyChgAlertAcknIsRequired","OperationActyVersionCounter"]\}'
+					visible="{customActyModel>/showChangeAlertColumn}">
+					<header>
+						<Text text="{i18n>Activity}" tooltip="{i18n>ActivityTooltip}" visible="false"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"OpActyNtwkElementExternalID", "leadingProperty":["OpActyNtwkInstance", "OpActyNtwkElement", "OpActyNtwkElementExternalID", "OperationActivity","OperationActivityName"]\}'>
+					<header>
+						<Text text="{i18n>Activity}" tooltip="{i18n>ActivityTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OpActyNtwkGroupName", "leadingProperty":["OpActyNtwkGroupName","OpActyNtwkGroupExternalID"]\}'>
+					<header>
+						<Text text="{i18n>ActivityGroup}" tooltip="{i18n>ActivityGroupTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"SASStatusName", "leadingProperty":["SASStatusName"]\}'>
+					<header>
+						<Text text="{i18n>StatusAndActionSchemaStatus}" tooltip="{i18n>StatusAndActionSchemaStatusTooltip}"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"ConfirmationYieldQuantity", "leadingProperty":["ConfirmationYieldQuantity", "OperationExecutionAvailableQty", "ProductionUnit"]\}'>
+					<header>
+						<Text text="{i18n>ActivitiesInProgress}" tooltip="{i18n>ActivitiesInProgressTooltip}"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"OpActyNtwkSegmentTypeText", "leadingProperty":["OpActyNtwkSegmentType,OpActyNtwkSegmentTypeText"]\}'>
+					<header>
+						<Text text="{i18n>ActivityNwrkSegType}" tooltip="{i18n>ActivityNwrkSegType}"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"OpActyHasAssgdWorkInstructions", "leadingProperty":["OpActyHasMandatoryComponents,OpActyHasAssignedComponents,OpActyHasAssgdWorkInstructions,OpActyHasMandatoryInspCharcs,OpActyHasAssgdProdnRsceTools,MfgBuyOffCycleIsExisting,OpActyHasAssgdBuyOffs,OpActyHasAssgdInspCharcs"]\}'>
+					<header>
+						<Text text="{i18n>Assignments}" tooltip="{i18n>AssignmentsTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OperationActivityName", "leadingProperty":["OperationActivityName"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"ManufacturingOrderOperation", "leadingProperty":["ManufacturingOrderOperation"]\}'
+					visible="false">
+					<header>
+						<Text text="{i18n>MfgOrdOper}" tooltip="{i18n>MfgOrdOper}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"MfgOrderOperationText", "leadingProperty":["MfgOrderOperationText"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OperationStatusText", "leadingProperty":["OperationStatusText"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"ManufacturingOrder", "leadingProperty":["ManufacturingOrder","ProductionPlant"]\}'
+					visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"WorkCenter", "leadingProperty":["WorkCenter","WorkCenterText"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"Material", "leadingProperty":["Material"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"ConfirmationScrapQuantity", "leadingProperty":["ConfirmationScrapQuantity"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"ConfirmationSkippedQuantity", "leadingProperty":["ConfirmationSkippedQuantity"]\}'
+					visible="false">
+					<header>
+						<Text text="{i18n>CnfSkippedQty}" tooltip="{i18n>CnfSkippedQty}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"WorkCenterText"\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OpActyNtwkGroupExternalID"\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityGroup}" tooltip="{i18n>ActivityGroupTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OpPlannedYieldQuantity", "leadingProperty":["OpPlannedYieldQuantity"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityGroup}" tooltip="{i18n>ActivityGroupTooltip}"/>
+					</header>
+				</Column>
+				<!--<Column customData:p13nData='\{"columnKey":"ConfirmationYieldQuantity", "leadingProperty":["ConfirmationYieldQuantity"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OpPlannedYieldQuantity", "leadingProperty":["OpPlannedYieldQuantity"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"OpActyNtwkGroupExternalID", "leadingProperty":["OpActyNtwkGroupExternalID"]\}' visible="false">
+					<header>
+						<Text text="{i18n>ActivityType}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					</header>
+				</Column>-->
+			</columns>
+			<ColumnListItem type="Navigation" vAlign="Middle" highlight="{= ${OperationActivityIsImpacted} ? 'Error' : 'None' }">
+				<cells>
+					<!--Table mode could have been set to MultiSelect but checkbox in title row was explicitly mentioned as not required-->
+					<!--<CheckBox select="onCheckBoxSelect" enabled="{= ${SASStatusCategory} !== 3 &amp;&amp; ${SASStatusCategory} !== 4 }" />-->
+					<!--Show Change Alert-->
+					<Button id="changeAlertButton" tooltip="{i18n>showChangeAlerts}" icon="sap-icon://alert" visible="{OpActyChgAlertAcknIsRequired}"
+						press="onPressChangeAlertIcon" type="Transparent"/>
+					<ObjectIdentifier title="{OpActyNtwkElementExternalID}" text="{OperationActivityName}"/>
+					<ObjectIdentifier title="{OpActyNtwkGroupExternalID}" text="{OpActyNtwkGroupName}"/>
+					<Text text="{SASStatusName}"></Text>
+					<ProgressIndicator visible="{= ${OpActyNtwkSegmentType} === '2'}" class="sapUiTinyMarginTop"
+						displayValue="{parts:[{path:'ConfirmationYieldQuantity'}, {path:'OperationExecutionAvailableQty'}, {path:'ProductionUnit'}], formatter: '.formatter.activityProgressDisplayValue'}"
+						percentValue="{parts:[{path:'ConfirmationYieldQuantity'}, {path:'OperationExecutionAvailableQty'}], formatter: '.formatter.setActivityProgressPercentValue'}"
+						showValue="true" state="Success"/>
+					<Text text="{OpActyNtwkSegmentTypeText}"></Text>
+					<HBox>
+						<core:Icon src="sap-icon://tree" tooltip="{i18n>OpActyHasAssignedComponents}" class="sapUiTinyMarginBegin"
+							color="{= ${OpActyHasAssignedComponents} ? 'None' :'#d3d3d3'}"></core:Icon>
+						<core:Icon src="sap-icon://document-text" tooltip="{i18n>OpActyHasAssgdWorkInstructions}" class="sapUiTinyMarginBegin"
+							color="{= ${OpActyHasAssgdWorkInstructions} ? 'None' : '#d3d3d3'}"></core:Icon>
+						<core:Icon src="sap-icon://measuring-point" tooltip="{i18n>OpActyHasAssgdInspCharcs}" class="sapUiTinyMarginBegin"
+							color="{= ${OpActyHasAssgdInspCharcs} ? 'None' :'#d3d3d3'}"></core:Icon>
+						<core:Icon src="sap-icon://wrench" tooltip="{i18n>OpActyHasAssgdProdnRsceTools}" class="sapUiTinyMarginBegin"
+							color="{= ${OpActyHasAssgdProdnRsceTools} ? 'None' : '#d3d3d3'}"></core:Icon>
+						<core:Icon src="sap-icon://signature" tooltip="{i18n>Buyoff}" class="sapUiTinyMarginBegin"
+							color="{= ${OpActyHasAssgdBuyOffs} ? 'None' : '#d3d3d3'}"></core:Icon>
+						<!--<core:Icon src="sap-icon://tree" tooltip="{i18n>OpActyHasAssignedComponents}" class="sapUiTinyMarginBegin"-->
+						<!--	color="{= ${OpActyHasMandatoryComponents} ? 'Critical' : ${OpActyHasAssignedComponents} ? 'Default' :'#d3d3d3'}"></core:Icon>-->
+						<!--<core:Icon src="sap-icon://document-text" tooltip="{i18n>OpActyHasAssgdWorkInstructions}" class="sapUiTinyMarginBegin"-->
+						<!--	color="{= ${OpActyHasAssgdWorkInstructions} ? 'Default' : '#d3d3d3'}"></core:Icon>-->
+						<!--<core:Icon src="sap-icon://measuring-point" tooltip="{i18n>OpActyHasAssgdInspCharcs}" class="sapUiTinyMarginBegin"-->
+						<!--	color="{= ${OpActyHasMandatoryInspCharcs} ? 'Critical' : ${OpActyHasAssgdInspCharcs} ? 'Default' :'#d3d3d3'}"></core:Icon>-->
+						<!--<core:Icon src="sap-icon://wrench" tooltip="{i18n>OpActyHasAssgdProdnRsceTools}" class="sapUiTinyMarginBegin"-->
+						<!--	color="{= ${OpActyHasAssgdProdnRsceTools} ? 'Default' : '#d3d3d3'}"></core:Icon>-->
+						<!--<core:Icon src="sap-icon://signature" tooltip="{i18n>Buyoff}" class="sapUiTinyMarginBegin"-->
+						<!--	color="{= ${MfgBuyOffCycleIsExisting} ? 'Critical' : '#d3d3d3'}"></core:Icon>-->
+					</HBox>
+					<Text text="{OperationActivityName}"></Text>
+					<Text text="{ManufacturingOrderOperation}"/>
+					<Text text="{MfgOrderOperationText}"/>
+					<Text text="{OperationStatusText}"/>
+					<Text text="{ManufacturingOrder}"/>
+					<Text text="{WorkCenter}"/>
+					<Text text="{Material}"/>
+					<Text text="{ConfirmationScrapQuantity}"/>
+					<Text text="{ConfirmationSkippedQuantity}"/>
+					<Text text="{WorkCenterText}" tooltip="{i18n>ActivityTypeTooltip}"/>
+					<Text text="{OpActyNtwkGroupExternalID}"/>
+					<Text text="{OpPlannedYieldQuantity}"/>
+				</cells>
+			</ColumnListItem>
+		</Table>
+	</smartTable:SmartTable>
+</mvc:View>

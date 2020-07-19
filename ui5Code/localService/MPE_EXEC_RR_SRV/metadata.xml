@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="MPE_EXEC_RR_SRV" sap:schema-version="1" xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="SFICharInfo" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ShopFloorItem"/>
+                    <PropertyRef Name="Inspectioncharacteristic"/>
+                    <PropertyRef Name="Inspectionlot"/>
+                    <PropertyRef Name="Inspectionsubsetinternalid"/>
+                    <PropertyRef Name="Inspplanoperationinternalid"/>
+                </Key>
+                <Property Name="MeanValueVisible" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="IsUpper" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="IsLower" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspectedEnabled" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="NoOfBelowVisible" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="NoOfAboveVisible" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="NonConformingEnabled" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="ViewTemplateID" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="ControllerTemplateId" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="ShopFloorItem" Nullable="false" Type="Edm.Int64" sap:unicode="false"/>
+                <Property Name="OperationActivity" Nullable="false" Type="Edm.Int64" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="10" Name="Batch" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspectionresulthaslongtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Long text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspresultisdocumentationrqd" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Unitofmeasuretechnicalname" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Technical" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspresultvaluecount" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="CharacteristicAttributeCode" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="CharacteristicAttributeCodeGrp" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="characteristicattributecodetxt" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="CreatedByUser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Created By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Defectflag" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspcharacteristicsamplesize" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:label="Inspect" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="3" Name="Inspcharacteristicsampleunit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspectioncharacteristic" Nullable="false" Type="Edm.String" sap:label="Characteristic" sap:unicode="false"/>
+                <Property MaxLength="12" Name="Inspectionlot" Nullable="false" Type="Edm.String" sap:label="Inspection Lot" sap:unicode="false"/>
+                <Property Name="Inspectionlotquantity" Nullable="false" Precision="13" Scale="3" Type="Edm.Decimal" sap:creatable="false" sap:filterable="false" sap:label="Insp. Lot Qty" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionlotstarttime" Nullable="false" Precision="0" Type="Edm.Time" sap:creatable="false" sap:filterable="false" sap:label="Field of type TIMS" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionlottype" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Inspection Type" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionmethod" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspectionmethodplant" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Plant" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionmethodtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Inspectionmethodversion" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Version" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspectionoperation" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Oper./Act." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="InspectionResultAttribute" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Attribute" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultattributetext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionresultmeanvalue" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultorigintext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspectionresultstatus" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultstatustext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionsamplesize" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionscope" Nullable="false" Precision="13" Scale="3" Type="Edm.Decimal" sap:creatable="false" sap:filterable="false" sap:label="Insp. Quantity" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionspecification" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Mstr Insp. Cha." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="InspectionSpecificationPlant" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Plant" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionspecificationtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="3" Name="Inspectionspecificationunit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Unit of Meas." sap:semantics="unit-of-measure" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="InspectionSpecificationVersion" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Version" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Inspectionsubsetinternalid" Nullable="false" Type="Edm.String" sap:label="Sample Number" sap:unicode="false"/>
+                <Property MaxLength="1" Name="Inspectionvaluationresult" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="14" Name="Inspectionvaluationresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Inspector" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Inspector" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="80" Name="InspectorFullname" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Insplothassubsets" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Prod. insp." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Insplottestequipinternalid" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspplanoperationinternalid" Nullable="false" Type="Edm.String" sap:label="Node Number" sap:unicode="false"/>
+                <Property Name="InspResultStandardDeviation" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspResultValidValuesNumber" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Inspected" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspResultVariance" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:label="Variance" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltAboveToleranceFraction" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:label="Fraction Above" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltAboveToleranceValsNmbr" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:label="Number Above" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltBelowToleranceFraction" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:label="Fraction Below" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltBelowToleranceValsNmbr" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Number Below" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltNonconformingValsNmbr" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Nonconforming" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspsampleacceptancenumber" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Signed INT2 / int16" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspsamplerejectionnumber" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Signed INT2 / int16" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="InspSampleValuationRule" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecaddldecimalplaces" Nullable="false" Type="Edm.Byte" sap:creatable="false" sap:filterable="false" sap:label="AddlDecPlaces" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspeccharccategory" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="30" Name="Inspspeccontrolindicators" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="CharCntrl ind." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecdecimalplaces" Nullable="false" Type="Edm.Byte" sap:creatable="false" sap:filterable="false" sap:label="Decimal Places" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspechaslowerlimit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Not Initial" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspechastargetvalue" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Not Initial" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspechasupperlimit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Not Initial" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecislongterminspection" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="InspSpecIsMeasuredValueRqd" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecisquantitative" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspeclowerlimit" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecrecordingtype" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecresultcalculation" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecsamplequantityfactor" Nullable="false" Precision="5" Scale="2" Type="Edm.Decimal" sap:creatable="false" sap:filterable="false" sap:label="Base smpl. qty" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecsummarizeddcmlplaces" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspectargetvalue" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecupperlimit" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="LastChangedByUser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Changed By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Manufacturingorder" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Order" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Material" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Materialname" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Materialsample" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Sample" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Operationtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Op. Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Plant" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Productionresourcetool" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Material" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Productionresourcetooldesc" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Description" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="3" Name="Quantityunit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Sample UOM" sap:semantics="unit-of-measure" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspectionNonconformingRatio" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="SelectedCodeSet" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="CodeGrp/SelSet" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="SelectedCodeSetText" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="128" Name="ShopFloorItemExternalID" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Workcentertext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="InspSpecImportanceCode" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="InspSpecImportanceCodeText" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="OpActyNtwkInstance" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="OpActyNtwkElement" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <NavigationProperty FromRole="FromRole_Association_SFI_CharInfo_ResultDetails" Name="to_SFIResultDetails" Relationship="MPE_EXEC_RR_SRV.Association_SFI_CharInfo_ResultDetails" ToRole="ToRole_Association_SFI_CharInfo_ResultDetails"/>
+            </EntityType>
+            <EntityType Name="SFIResultDetail" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ShopFloorItem"/>
+                    <PropertyRef Name="Inspectionsubsetinternalid"/>
+                    <PropertyRef Name="Inspectionlot"/>
+                    <PropertyRef Name="Inspplanoperationinternalid"/>
+                    <PropertyRef Name="Inspectioncharacteristic"/>
+                </Key>
+                <Property Name="ShopFloorItem" Nullable="false" Type="Edm.Int64" sap:filterable="false" sap:unicode="false"/>
+                <Property MaxLength="128" Name="ShopFloorItemExternalID" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="characteristicattributecodetxt" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Lastchangedbyuser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Changed By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Createdbyuser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Created By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Inspectionsubsetinternalid" Nullable="false" Type="Edm.String" sap:label="Partial sample" sap:unicode="false"/>
+                <Property MaxLength="1" Name="Inspresultattributeisvalid" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="60" Name="CharacteristicAttributeInfo" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultattributetext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="18" Name="Insprsltfreedefinedtestequip" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Information" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="18" Name="Inspectionresultitem" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Serial Number" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecisquantitative" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="CharacteristicAttributeCatalog" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="CharacteristicAttributeCode" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="CharacteristicAttributeCodeGrp" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecsummarizeddcmlplaces" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionvaluationresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Inspectionlot" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="1" Name="Inspectionvaluationresult" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecrecordingtype" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspectionresultattribute" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspresultiteminternalid" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Insp. Unit No." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="16" Name="Inspectionresultmeasuredvalue" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecdecimalplaces" Nullable="false" Type="Edm.Byte" sap:creatable="false" sap:filterable="false" sap:label="Decimal Places" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspplanoperationinternalid" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="4" Name="Inspectioncharacteristic" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="14" Name="Inspectionresultmeanvalue" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="25" Name="Inspectionresultoriginalvalue" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="8" Name="Inspresultvalueinternalid" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Commentcharresult" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Displayflag" Nullable="false" Type="Edm.Boolean" sap:label="Indicator" sap:unicode="false"/>
+                <Property Name="Inspectionscope" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Commentcharheader" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="SFOCharInfo" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Inspectioncharacteristic"/>
+                    <PropertyRef Name="Inspectionlot"/>
+                    <PropertyRef Name="Inspectionsubsetinternalid"/>
+                    <PropertyRef Name="Inspplanoperationinternalid"/>
+                </Key>
+                <Property Name="MeanValueVisible" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="IsUpper" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="IsLower" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspectedEnabled" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="NoOfBelowVisible" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="NoOfAboveVisible" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="NonConformingEnabled" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="ViewTemplateID" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="ControllerTemplateId" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="OperationActivity" Nullable="false" Type="Edm.Int64" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="10" Name="Batch" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspectionresulthaslongtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Long text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspresultisdocumentationrqd" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Unitofmeasuretechnicalname" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Technical" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspresultvaluecount" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="CharacteristicAttributeCode" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="CharacteristicAttributeCodeGrp" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="characteristicattributecodetxt" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="CreatedByUser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Created By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Defectflag" Nullable="false" Type="Edm.Boolean" sap:creatable="false" sap:filterable="false" sap:label="Indicator" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspcharacteristicsamplesize" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:label="Inspect" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="3" Name="Inspcharacteristicsampleunit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspectioncharacteristic" Nullable="false" Type="Edm.String" sap:label="Characteristic" sap:unicode="false"/>
+                <Property MaxLength="12" Name="Inspectionlot" Nullable="false" Type="Edm.String" sap:label="Inspection Lot" sap:unicode="false"/>
+                <Property Name="Inspectionlotquantity" Nullable="false" Precision="13" Scale="3" Type="Edm.Decimal" sap:creatable="false" sap:filterable="false" sap:label="Insp. Lot Qty" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionlotstarttime" Nullable="false" Precision="0" Type="Edm.Time" sap:creatable="false" sap:filterable="false" sap:label="Field of type TIMS" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionlottype" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Inspection Type" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionmethod" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspectionmethodplant" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Plant" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionmethodtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Inspectionmethodversion" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Version" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspectionoperation" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Oper./Act." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="InspectionResultAttribute" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Attribute" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultattributetext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionresultmeanvalue" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultorigintext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspectionresultstatus" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultstatustext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionsamplesize" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspectionscope" Nullable="false" Precision="13" Scale="3" Type="Edm.Decimal" sap:creatable="false" sap:filterable="false" sap:label="Insp. Quantity" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionspecification" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Mstr Insp. Cha." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="InspectionSpecificationPlant" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Plant" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionspecificationtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="3" Name="Inspectionspecificationunit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Unit of Meas." sap:semantics="unit-of-measure" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="InspectionSpecificationVersion" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Version" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Inspectionsubsetinternalid" Nullable="false" Type="Edm.String" sap:label="Sample Number" sap:unicode="false"/>
+                <Property MaxLength="1" Name="Inspectionvaluationresult" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="14" Name="Inspectionvaluationresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Inspector" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Inspector" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="80" Name="InspectorFullname" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Insplothassubsets" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Prod. insp." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Insplottestequipinternalid" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspplanoperationinternalid" Nullable="false" Type="Edm.String" sap:label="Node Number" sap:unicode="false"/>
+                <Property Name="InspResultStandardDeviation" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspResultValidValuesNumber" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Inspected" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspResultVariance" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:label="Variance" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltAboveToleranceFraction" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:label="Fraction Above" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltAboveToleranceValsNmbr" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:label="Number Above" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltBelowToleranceFraction" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:label="Fraction Below" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltBelowToleranceValsNmbr" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Number Below" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspRsltNonconformingValsNmbr" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Nonconforming" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspsampleacceptancenumber" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Signed INT2 / int16" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspsamplerejectionnumber" Nullable="false" Type="Edm.Int16" sap:creatable="false" sap:filterable="false" sap:label="Signed INT2 / int16" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="InspSampleValuationRule" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecaddldecimalplaces" Nullable="false" Type="Edm.Byte" sap:creatable="false" sap:filterable="false" sap:label="AddlDecPlaces" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspeccharccategory" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="30" Name="Inspspeccontrolindicators" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="CharCntrl ind." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecdecimalplaces" Nullable="false" Type="Edm.Byte" sap:creatable="false" sap:filterable="false" sap:label="Decimal Places" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspechaslowerlimit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Not Initial" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspechastargetvalue" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Not Initial" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspechasupperlimit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Not Initial" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecislongterminspection" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="InspSpecIsMeasuredValueRqd" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecisquantitative" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspeclowerlimit" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecrecordingtype" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecresultcalculation" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecsamplequantityfactor" Nullable="false" Precision="5" Scale="2" Type="Edm.Decimal" sap:creatable="false" sap:filterable="false" sap:label="Base smpl. qty" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecsummarizeddcmlplaces" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspectargetvalue" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecupperlimit" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="LastChangedByUser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Changed By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Manufacturingorder" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Order" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Material" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Materialname" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Materialsample" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Sample" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Operationtext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Op. Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Plant" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Productionresourcetool" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Material" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Productionresourcetooldesc" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Description" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="3" Name="Quantityunit" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Sample UOM" sap:semantics="unit-of-measure" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="InspectionNonconformingRatio" Nullable="false" Type="Edm.Float" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="SelectedCodeSet" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="CodeGrp/SelSet" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="SelectedCodeSetText" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Workcentertext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="2" Name="InspSpecImportanceCode" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="InspSpecImportanceCodeText" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="OpActyNtwkInstance" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="OpActyNtwkElement" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <NavigationProperty FromRole="FromRole_Assocation_SFO_CharInfo_ResultDetails" Name="to_SFOResultDetails" Relationship="MPE_EXEC_RR_SRV.Assocation_SFO_CharInfo_ResultDetails" ToRole="ToRole_Assocation_SFO_CharInfo_ResultDetails"/>
+            </EntityType>
+            <EntityType Name="SFOResultDetail" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Inspectionsubsetinternalid"/>
+                    <PropertyRef Name="Inspectionlot"/>
+                    <PropertyRef Name="Inspplanoperationinternalid"/>
+                    <PropertyRef Name="Inspectioncharacteristic"/>
+                </Key>
+                <Property MaxLength="40" Name="characteristicattributecodetxt" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Lastchangedbyuser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Changed By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Createdbyuser" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Created By" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="6" Name="Inspectionsubsetinternalid" Nullable="false" Type="Edm.String" sap:label="Partial sample" sap:unicode="false"/>
+                <Property MaxLength="1" Name="Inspresultattributeisvalid" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="60" Name="CharacteristicAttributeInfo" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="40" Name="Inspectionresultattributetext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Short Text" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="18" Name="Insprsltfreedefinedtestequip" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Information" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="18" Name="Inspectionresultitem" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Serial Number" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecisquantitative" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="CharacteristicAttributeCatalog" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="CharacteristicAttributeCode" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="CharacteristicAttributeCodeGrp" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecsummarizeddcmlplaces" Nullable="false" Type="Edm.Int32" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspectionvaluationresulttext" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="12" Name="Inspectionlot" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="1" Name="Inspectionvaluationresult" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspspecrecordingtype" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="1" Name="Inspectionresultattribute" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="4" Name="Inspresultiteminternalid" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:label="Insp. Unit No." sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="25" Name="Inspectionresultmeasuredvalue" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Inspspecdecimalplaces" Nullable="false" Type="Edm.Byte" sap:creatable="false" sap:filterable="false" sap:label="Decimal Places" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property MaxLength="8" Name="Inspplanoperationinternalid" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="4" Name="Inspectioncharacteristic" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="14" Name="Inspectionresultmeanvalue" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="25" Name="Inspectionresultoriginalvalue" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property MaxLength="8" Name="Inspresultvalueinternalid" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Commentcharresult" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+                <Property Name="Displayflag" Nullable="false" Type="Edm.Boolean" sap:label="Indicator" sap:unicode="false"/>
+                <Property Name="Inspectionscope" Nullable="false" Type="Edm.String" sap:creatable="false" sap:filterable="false" sap:sortable="false" sap:unicode="false" sap:updatable="false"/>
+                <Property Name="Commentcharheader" Nullable="false" Type="Edm.String" sap:unicode="false"/>
+            </EntityType>
+            <EntityType Name="C_Chargroupcode_ValuehelpType" sap:content-version="1" sap:label="Selection for group and code">
+                <Key>
+                    <PropertyRef Name="SelectedCodeSetPlant"/>
+                    <PropertyRef Name="SelectedCodeSet"/>
+                    <PropertyRef Name="CharacteristicAttributeCode"/>
+                    <PropertyRef Name="InspectionLot"/>
+                    <PropertyRef Name="InspPlanOperationInternalID"/>
+                    <PropertyRef Name="InspectionCharacteristic"/>
+                </Key>
+                <Property MaxLength="4" Name="SelectedCodeSetPlant" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Plant" sap:quickinfo="Plant of the Assigned Selected Set"/>
+                <Property MaxLength="8" Name="SelectedCodeSet" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Code group/sel. set" sap:quickinfo="Assigned Code Group or Selected Set"/>
+                <Property MaxLength="4" Name="CharacteristicAttributeCode" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Code"/>
+                <Property MaxLength="12" Name="InspectionLot" Nullable="false" Type="Edm.String" sap:display-format="NonNegative" sap:label="Inspection Lot" sap:quickinfo="Inspection Lot Number"/>
+                <Property MaxLength="8" Name="InspPlanOperationInternalID" Nullable="false" Type="Edm.String" sap:display-format="NonNegative" sap:label="Current Node No." sap:quickinfo="Current Node Number from Order Counter"/>
+                <Property MaxLength="4" Name="InspectionCharacteristic" Nullable="false" Type="Edm.String" sap:display-format="NonNegative" sap:label="Insp. Characteristic" sap:quickinfo="Inspection Characteristic Number"/>
+                <Property MaxLength="40" Name="SelectedCodeSetText" Type="Edm.String" sap:label="Short Text" sap:quickinfo="Short Description of the Selected Set"/>
+                <Property MaxLength="8" Name="CharacteristicAttributeCodeGrp" Type="Edm.String" sap:display-format="UpperCase" sap:label="Code Group"/>
+                <Property MaxLength="1" Name="CharcAttributeValuation" Type="Edm.String" sap:display-format="UpperCase" sap:label="Valuation Code" sap:quickinfo="Code Valuation"/>
+                <Property MaxLength="40" Name="CharacteristicAttributeCodeTxt" Type="Edm.String" sap:label="Short Text for Code" sap:quickinfo="Short Text for Code (Up to 40 Characters in Length)"/>
+            </EntityType>
+            <Association Name="Assocation_SFO_CharInfo_ResultDetails" sap:content-version="1">
+                <End Multiplicity="1" Role="FromRole_Assocation_SFO_CharInfo_ResultDetails" Type="MPE_EXEC_RR_SRV.SFOCharInfo"/>
+                <End Multiplicity="*" Role="ToRole_Assocation_SFO_CharInfo_ResultDetails" Type="MPE_EXEC_RR_SRV.SFOResultDetail"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Assocation_SFO_CharInfo_ResultDetails">
+                        <PropertyRef Name="Inspectioncharacteristic"/>
+                        <PropertyRef Name="Inspectionlot"/>
+                        <PropertyRef Name="Inspectionsubsetinternalid"/>
+                        <PropertyRef Name="Inspplanoperationinternalid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Assocation_SFO_CharInfo_ResultDetails">
+                        <PropertyRef Name="Inspectioncharacteristic"/>
+                        <PropertyRef Name="Inspectionlot"/>
+                        <PropertyRef Name="Inspectionsubsetinternalid"/>
+                        <PropertyRef Name="Inspplanoperationinternalid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Association_SFI_CharInfo_ResultDetails" sap:content-version="1">
+                <End Multiplicity="1" Role="FromRole_Association_SFI_CharInfo_ResultDetails" Type="MPE_EXEC_RR_SRV.SFICharInfo"/>
+                <End Multiplicity="*" Role="ToRole_Association_SFI_CharInfo_ResultDetails" Type="MPE_EXEC_RR_SRV.SFIResultDetail"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Association_SFI_CharInfo_ResultDetails">
+                        <PropertyRef Name="ShopFloorItem"/>
+                        <PropertyRef Name="Inspectioncharacteristic"/>
+                        <PropertyRef Name="Inspectionlot"/>
+                        <PropertyRef Name="Inspectionsubsetinternalid"/>
+                        <PropertyRef Name="Inspplanoperationinternalid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Association_SFI_CharInfo_ResultDetails">
+                        <PropertyRef Name="ShopFloorItem"/>
+                        <PropertyRef Name="Inspectioncharacteristic"/>
+                        <PropertyRef Name="Inspectionlot"/>
+                        <PropertyRef Name="Inspectionsubsetinternalid"/>
+                        <PropertyRef Name="Inspplanoperationinternalid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="MPE_EXEC_RR_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet EntityType="MPE_EXEC_RR_SRV.C_Chargroupcode_ValuehelpType" Name="C_Chargroupcode_Valuehelp" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:updatable="false"/>
+                <EntitySet EntityType="MPE_EXEC_RR_SRV.SFICharInfo" Name="SFICharInfoSet" sap:addressable="false" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:pageable="false" sap:updatable="false"/>
+                <EntitySet EntityType="MPE_EXEC_RR_SRV.SFIResultDetail" Name="SFIResultDetailSet" sap:addressable="false" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:pageable="false" sap:updatable="false"/>
+                <EntitySet EntityType="MPE_EXEC_RR_SRV.SFOCharInfo" Name="SFOCharInfoSet" sap:addressable="false" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:pageable="false" sap:updatable="false"/>
+                <EntitySet EntityType="MPE_EXEC_RR_SRV.SFOResultDetail" Name="SFOResultDetailSet" sap:addressable="false" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:pageable="false" sap:updatable="false"/>
+                <AssociationSet Association="MPE_EXEC_RR_SRV.Association_SFI_CharInfo_ResultDetails" Name="Association_SFI_CharInfo_ResultDetailSet" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:updatable="false">
+                    <End EntitySet="SFICharInfoSet" Role="FromRole_Association_SFI_CharInfo_ResultDetails"/>
+                    <End EntitySet="SFIResultDetailSet" Role="ToRole_Association_SFI_CharInfo_ResultDetails"/>
+                </AssociationSet>
+                <AssociationSet Association="MPE_EXEC_RR_SRV.Assocation_SFO_CharInfo_ResultDetails" Name="Association_SFO_CharInfo_ResultDetailSet" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:updatable="false">
+                    <End EntitySet="SFOCharInfoSet" Role="FromRole_Assocation_SFO_CharInfo_ResultDetails"/>
+                    <End EntitySet="SFOResultDetailSet" Role="ToRole_Assocation_SFO_CharInfo_ResultDetails"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link href="./sap/MPE_EXEC_RR_SRV/$metadata" rel="self" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link href="./sap/MPE_EXEC_RR_SRV/$metadata" rel="latest-version" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

@@ -1,0 +1,211 @@
+[{
+	"MfgOrderConfirmation": "MfgOrderConfirmation 1",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 1",
+	"ManufacturingOrder": "ManufacturingOrder 1",
+	"ManufacturingOrderType": "ManufacturingOrderType 1",
+	"Plant": "Plant 1",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 1",
+	"ConfirmationText": "ConfirmationText 1",
+	"IsFinalConfirmation": "IsFinalConfirmation 1",
+	"EnteredByUser": "EnteredByUser 1",
+	"ConfirmationUnit": "ConfirmationUnit 1",
+	"ConfirmationYieldQuantity": 8986.1,
+	"ConfirmationScrapQuantity": 4470.52,
+	"ConfirmationReworkQuantity": 5930.09,
+	"ConfirmationTotalQuantity": 3153.82,
+	"MfgOrderConfirmationEntryDate": "/Date(1241352134000)/",
+	"MfgOrderConfirmationEntryTime": "PT13H23M55S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%201',MfgOrderConfirmationCount='MfgOrderConfirmationCount%201')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 2",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 2",
+	"ManufacturingOrder": "ManufacturingOrder 2",
+	"ManufacturingOrderType": "ManufacturingOrderType 2",
+	"Plant": "Plant 2",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 2",
+	"ConfirmationText": "ConfirmationText 2",
+	"IsFinalConfirmation": "IsFinalConfirmation 2",
+	"EnteredByUser": "EnteredByUser 2",
+	"ConfirmationUnit": "ConfirmationUnit 2",
+	"ConfirmationYieldQuantity": 2910.01,
+	"ConfirmationScrapQuantity": 4706.75,
+	"ConfirmationReworkQuantity": 6774.23,
+	"ConfirmationTotalQuantity": 1559.42,
+	"MfgOrderConfirmationEntryDate": "/Date(1534420934000)/",
+	"MfgOrderConfirmationEntryTime": "PT7H31M36S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%202',MfgOrderConfirmationCount='MfgOrderConfirmationCount%202')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 3",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 3",
+	"ManufacturingOrder": "ManufacturingOrder 3",
+	"ManufacturingOrderType": "ManufacturingOrderType 3",
+	"Plant": "Plant 3",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 3",
+	"ConfirmationText": "ConfirmationText 3",
+	"IsFinalConfirmation": "IsFinalConfirmation 3",
+	"EnteredByUser": "EnteredByUser 3",
+	"ConfirmationUnit": "ConfirmationUnit 3",
+	"ConfirmationYieldQuantity": 2136.13,
+	"ConfirmationScrapQuantity": 6785.83,
+	"ConfirmationReworkQuantity": 553.48,
+	"ConfirmationTotalQuantity": 911.91,
+	"MfgOrderConfirmationEntryDate": "/Date(1454331734000)/",
+	"MfgOrderConfirmationEntryTime": "PT11H2M34S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%203',MfgOrderConfirmationCount='MfgOrderConfirmationCount%203')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 4",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 4",
+	"ManufacturingOrder": "ManufacturingOrder 4",
+	"ManufacturingOrderType": "ManufacturingOrderType 4",
+	"Plant": "Plant 4",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 4",
+	"ConfirmationText": "ConfirmationText 4",
+	"IsFinalConfirmation": "IsFinalConfirmation 4",
+	"EnteredByUser": "EnteredByUser 4",
+	"ConfirmationUnit": "ConfirmationUnit 4",
+	"ConfirmationYieldQuantity": 6817.76,
+	"ConfirmationScrapQuantity": 9741.31,
+	"ConfirmationReworkQuantity": 1302.99,
+	"ConfirmationTotalQuantity": 5617.95,
+	"MfgOrderConfirmationEntryDate": "/Date(1253448134000)/",
+	"MfgOrderConfirmationEntryTime": "PT21H43M58S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%204',MfgOrderConfirmationCount='MfgOrderConfirmationCount%204')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 5",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 5",
+	"ManufacturingOrder": "ManufacturingOrder 5",
+	"ManufacturingOrderType": "ManufacturingOrderType 5",
+	"Plant": "Plant 5",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 5",
+	"ConfirmationText": "ConfirmationText 5",
+	"IsFinalConfirmation": "IsFinalConfirmation 5",
+	"EnteredByUser": "EnteredByUser 5",
+	"ConfirmationUnit": "ConfirmationUnit 5",
+	"ConfirmationYieldQuantity": 4233.47,
+	"ConfirmationScrapQuantity": 6969.21,
+	"ConfirmationReworkQuantity": 1870.16,
+	"ConfirmationTotalQuantity": 5515.54,
+	"MfgOrderConfirmationEntryDate": "/Date(1219060934000)/",
+	"MfgOrderConfirmationEntryTime": "PT5H34M50S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%205',MfgOrderConfirmationCount='MfgOrderConfirmationCount%205')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 6",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 6",
+	"ManufacturingOrder": "ManufacturingOrder 6",
+	"ManufacturingOrderType": "ManufacturingOrderType 6",
+	"Plant": "Plant 6",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 6",
+	"ConfirmationText": "ConfirmationText 6",
+	"IsFinalConfirmation": "IsFinalConfirmation 6",
+	"EnteredByUser": "EnteredByUser 6",
+	"ConfirmationUnit": "ConfirmationUnit 6",
+	"ConfirmationYieldQuantity": 6089.77,
+	"ConfirmationScrapQuantity": 9004.47,
+	"ConfirmationReworkQuantity": 8351.49,
+	"ConfirmationTotalQuantity": 7521.2,
+	"MfgOrderConfirmationEntryDate": "/Date(1511614934000)/",
+	"MfgOrderConfirmationEntryTime": "PT6H32M19S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%206',MfgOrderConfirmationCount='MfgOrderConfirmationCount%206')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 7",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 7",
+	"ManufacturingOrder": "ManufacturingOrder 7",
+	"ManufacturingOrderType": "ManufacturingOrderType 7",
+	"Plant": "Plant 7",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 7",
+	"ConfirmationText": "ConfirmationText 7",
+	"IsFinalConfirmation": "IsFinalConfirmation 7",
+	"EnteredByUser": "EnteredByUser 7",
+	"ConfirmationUnit": "ConfirmationUnit 7",
+	"ConfirmationYieldQuantity": 6097.85,
+	"ConfirmationScrapQuantity": 8537.18,
+	"ConfirmationReworkQuantity": 2241.77,
+	"ConfirmationTotalQuantity": 629.98,
+	"MfgOrderConfirmationEntryDate": "/Date(1012568534000)/",
+	"MfgOrderConfirmationEntryTime": "PT21H21M32S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%207',MfgOrderConfirmationCount='MfgOrderConfirmationCount%207')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 8",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 8",
+	"ManufacturingOrder": "ManufacturingOrder 8",
+	"ManufacturingOrderType": "ManufacturingOrderType 8",
+	"Plant": "Plant 8",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 8",
+	"ConfirmationText": "ConfirmationText 8",
+	"IsFinalConfirmation": "IsFinalConfirmation 8",
+	"EnteredByUser": "EnteredByUser 8",
+	"ConfirmationUnit": "ConfirmationUnit 8",
+	"ConfirmationYieldQuantity": 1794.32,
+	"ConfirmationScrapQuantity": 9177.03,
+	"ConfirmationReworkQuantity": 6872.13,
+	"ConfirmationTotalQuantity": 4333.97,
+	"MfgOrderConfirmationEntryDate": "/Date(1218283334000)/",
+	"MfgOrderConfirmationEntryTime": "PT14H41M31S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%208',MfgOrderConfirmationCount='MfgOrderConfirmationCount%208')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 9",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 9",
+	"ManufacturingOrder": "ManufacturingOrder 9",
+	"ManufacturingOrderType": "ManufacturingOrderType 9",
+	"Plant": "Plant 9",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 9",
+	"ConfirmationText": "ConfirmationText 9",
+	"IsFinalConfirmation": "IsFinalConfirmation 9",
+	"EnteredByUser": "EnteredByUser 9",
+	"ConfirmationUnit": "ConfirmationUnit 9",
+	"ConfirmationYieldQuantity": 5835.87,
+	"ConfirmationScrapQuantity": 4688.45,
+	"ConfirmationReworkQuantity": 5156.29,
+	"ConfirmationTotalQuantity": 9962.62,
+	"MfgOrderConfirmationEntryDate": "/Date(1149854534000)/",
+	"MfgOrderConfirmationEntryTime": "PT2H23M35S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%209',MfgOrderConfirmationCount='MfgOrderConfirmationCount%209')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}, {
+	"MfgOrderConfirmation": "MfgOrderConfirmation 10",
+	"MfgOrderConfirmationCount": "MfgOrderConfirmationCount 10",
+	"ManufacturingOrder": "ManufacturingOrder 10",
+	"ManufacturingOrderType": "ManufacturingOrderType 10",
+	"Plant": "Plant 10",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 10",
+	"ConfirmationText": "ConfirmationText 10",
+	"IsFinalConfirmation": "IsFinalConfirmation 10",
+	"EnteredByUser": "EnteredByUser 10",
+	"ConfirmationUnit": "ConfirmationUnit 10",
+	"ConfirmationYieldQuantity": 8769.46,
+	"ConfirmationScrapQuantity": 9684.34,
+	"ConfirmationReworkQuantity": 7478.37,
+	"ConfirmationTotalQuantity": 2246.69,
+	"MfgOrderConfirmationEntryDate": "/Date(1207396934000)/",
+	"MfgOrderConfirmationEntryTime": "PT7H2M22S",
+	"__metadata": {
+		"uri": "C_Operationconfirmations(MfgOrderConfirmation='MfgOrderConfirmation%2010',MfgOrderConfirmationCount='MfgOrderConfirmationCount%2010')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationconfirmationsType"
+	}
+}]

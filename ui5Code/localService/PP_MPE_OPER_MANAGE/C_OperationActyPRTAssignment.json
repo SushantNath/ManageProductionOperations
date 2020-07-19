@@ -1,0 +1,181 @@
+[{
+	"OpActyNtwkInstance": 7492,
+	"OpActyNtwkElement": 9892,
+	"OrderInternalID": "OrderInternalID 1",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 1",
+	"ProductionResourceTool": "ProductionResourceTool 1",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 1",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 1",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 1",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 1",
+	"PlannedTotalProdnRsceToolQty": 9201.84,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 1",
+	"ManufacturingOrderType": "ManufacturingOrderType 1",
+	"ProductionPlant": "ProductionPlant 1",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=7492,OpActyNtwkElement=9892,OrderInternalID='OrderInternalID%201',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%201')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 819,
+	"OpActyNtwkElement": 1218,
+	"OrderInternalID": "OrderInternalID 2",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 2",
+	"ProductionResourceTool": "ProductionResourceTool 2",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 2",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 2",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 2",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 2",
+	"PlannedTotalProdnRsceToolQty": 5904.9,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 2",
+	"ManufacturingOrderType": "ManufacturingOrderType 2",
+	"ProductionPlant": "ProductionPlant 2",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=819,OpActyNtwkElement=1218,OrderInternalID='OrderInternalID%202',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%202')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 3417,
+	"OpActyNtwkElement": 6883,
+	"OrderInternalID": "OrderInternalID 3",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 3",
+	"ProductionResourceTool": "ProductionResourceTool 3",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 3",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 3",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 3",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 3",
+	"PlannedTotalProdnRsceToolQty": 3721.47,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 3",
+	"ManufacturingOrderType": "ManufacturingOrderType 3",
+	"ProductionPlant": "ProductionPlant 3",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=3417,OpActyNtwkElement=6883,OrderInternalID='OrderInternalID%203',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%203')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 3270,
+	"OpActyNtwkElement": 8881,
+	"OrderInternalID": "OrderInternalID 4",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 4",
+	"ProductionResourceTool": "ProductionResourceTool 4",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 4",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 4",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 4",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 4",
+	"PlannedTotalProdnRsceToolQty": 4736.66,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 4",
+	"ManufacturingOrderType": "ManufacturingOrderType 4",
+	"ProductionPlant": "ProductionPlant 4",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=3270,OpActyNtwkElement=8881,OrderInternalID='OrderInternalID%204',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%204')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 8470,
+	"OpActyNtwkElement": 1275,
+	"OrderInternalID": "OrderInternalID 5",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 5",
+	"ProductionResourceTool": "ProductionResourceTool 5",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 5",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 5",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 5",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 5",
+	"PlannedTotalProdnRsceToolQty": 8031.77,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 5",
+	"ManufacturingOrderType": "ManufacturingOrderType 5",
+	"ProductionPlant": "ProductionPlant 5",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=8470,OpActyNtwkElement=1275,OrderInternalID='OrderInternalID%205',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%205')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 9900,
+	"OpActyNtwkElement": 7182,
+	"OrderInternalID": "OrderInternalID 6",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 6",
+	"ProductionResourceTool": "ProductionResourceTool 6",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 6",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 6",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 6",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 6",
+	"PlannedTotalProdnRsceToolQty": 4801.94,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 6",
+	"ManufacturingOrderType": "ManufacturingOrderType 6",
+	"ProductionPlant": "ProductionPlant 6",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=9900,OpActyNtwkElement=7182,OrderInternalID='OrderInternalID%206',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%206')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 4133,
+	"OpActyNtwkElement": 6351,
+	"OrderInternalID": "OrderInternalID 7",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 7",
+	"ProductionResourceTool": "ProductionResourceTool 7",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 7",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 7",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 7",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 7",
+	"PlannedTotalProdnRsceToolQty": 3177,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 7",
+	"ManufacturingOrderType": "ManufacturingOrderType 7",
+	"ProductionPlant": "ProductionPlant 7",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=4133,OpActyNtwkElement=6351,OrderInternalID='OrderInternalID%207',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%207')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 1771,
+	"OpActyNtwkElement": 8054,
+	"OrderInternalID": "OrderInternalID 8",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 8",
+	"ProductionResourceTool": "ProductionResourceTool 8",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 8",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 8",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 8",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 8",
+	"PlannedTotalProdnRsceToolQty": 194.01,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 8",
+	"ManufacturingOrderType": "ManufacturingOrderType 8",
+	"ProductionPlant": "ProductionPlant 8",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=1771,OpActyNtwkElement=8054,OrderInternalID='OrderInternalID%208',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%208')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 8735,
+	"OpActyNtwkElement": 6894,
+	"OrderInternalID": "OrderInternalID 9",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 9",
+	"ProductionResourceTool": "ProductionResourceTool 9",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 9",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 9",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 9",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 9",
+	"PlannedTotalProdnRsceToolQty": 42.83,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 9",
+	"ManufacturingOrderType": "ManufacturingOrderType 9",
+	"ProductionPlant": "ProductionPlant 9",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=8735,OpActyNtwkElement=6894,OrderInternalID='OrderInternalID%209',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%209')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}, {
+	"OpActyNtwkInstance": 9214,
+	"OpActyNtwkElement": 5457,
+	"OrderInternalID": "OrderInternalID 10",
+	"MfgOrderOpProdnRsceToolIntID": "MfgOrderOpProdnRsceToolIntID 10",
+	"ProductionResourceTool": "ProductionResourceTool 10",
+	"MfgOrderOpProdnRsceToolText": "MfgOrderOpProdnRsceToolText 10",
+	"ProdnRsceToolCategory": "ProdnRsceToolCategory 10",
+	"ProdnRsceToolCategoryName": "ProdnRsceToolCategoryName 10",
+	"PlannedProdnRsceToolQtyUnit": "PlannedProdnRsceToolQtyUnit 10",
+	"PlannedTotalProdnRsceToolQty": 5607.75,
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 10",
+	"ManufacturingOrderType": "ManufacturingOrderType 10",
+	"ProductionPlant": "ProductionPlant 10",
+	"__metadata": {
+		"uri": "C_OperationActyPRTAssignment(OpActyNtwkInstance=9214,OpActyNtwkElement=5457,OrderInternalID='OrderInternalID%2010',MfgOrderOpProdnRsceToolIntID='MfgOrderOpProdnRsceToolIntID%2010')",
+		"type": "PP_MPE_OPER_MANAGE.C_OperationActyPRTAssignmentType"
+	}
+}]

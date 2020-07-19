@@ -1,0 +1,197 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.mpe.operations.manages1.blocks.OperationInProgressController" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:microchart="sap.suite.ui.microchart" xmlns:smartTable="sap.ui.comp.smarttable" dataReceived="onDataReceived"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<smartTable:SmartTable demandPopin="true" beforeRebindTable="handleBeforeRebindTable" dataReceived="onDataReceived"
+		entitySet="C_OrderWorkCenterSchedule" id="idOperationInProgressTable" showRowCount="false" tableType="ResponsiveTable" useExportToExcel="true"
+		useTablePersonalisation="true" noData="{common_i18n>noOperationsFound}" enableAutoBinding="{DetailModel>/bEnableAutoBinding}">
+		<!--entitySet="{= ${DetailModel>/WorkCenter} &amp;&amp; ${DetailModel>/WorkCenter} !== '' ? 'C_MfgProcgExecOperation' : 'C_Manageoperations'}"-->
+		<smartTable:customToolbar>
+			<OverflowToolbar design="Transparent">
+				<SegmentedButton visible="{worklistView>/tableLoaded}" selectedKey="AllOps" select="handleOperationsBtnPress">
+					<items>
+						<SegmentedButtonItem
+							text="{common_i18n>AllOperationsTglBtn}"
+							tooltip="{common_i18n>AllOperationsTglBtn}"
+							press="showAllOperations" key="AllOps"/>
+						<SegmentedButtonItem text="{common_i18n>NoissuesTglBtn}"
+							visible="{= ${MfgFeatureIsActiveInAnyPlant} === 'X'}"
+							tooltip="{common_i18n>NoissuesTglBtn}"
+							press="showAllIssueOperations" key="IssueOps"/>
+						<SegmentedButtonItem text="{common_i18n>ReadyToFinishTglBtn}"
+							tooltip="{common_i18n>ReadyToFinishTglBtn}"
+							press="showAllRdyToFnshIssuesOperations" key="ReadyToFinishOps"/>
+					</items>
+				</SegmentedButton>
+				<ToolbarSpacer></ToolbarSpacer>
+				<SearchField id="idOptInProgressSearchField" search="handleOrdersSearch" width="15%" class="sapUiSmallMargin"/>
+			</OverflowToolbar>
+		</smartTable:customToolbar>
+		<smartTable:customData>
+			<core:CustomData key="p13nDialogSettings" value='\{"columns":\{"visible": true \},"filter":\{"visible": false\}\}'/>
+		</smartTable:customData>
+		<Table fixedLayout="false"  growing="true" id="idOperationInProgressFirstTable" growingScrollToLoad="false"
+			growingThreshold="5">
+			<columns>
+				<Column
+					customData:p13nData='\{"columnKey":"CustProductionOrderID", "leadingProperty":["ManufacturingOrder","MfgFeatureIsActiveInAnyPlant","OperationHasProductionHold", "ManufacturingOrderSequence","ManufacturingOrderOperation"] , "filterProperty" :["ManufacturingOrder"] , "sortProperty" :"ManufacturingOrder"\}'>
+					<header>
+						<Text text="{common_i18n>Order}" tooltip="{common_i18n>OrderTooltip}"/>
+					</header>
+				</Column>
+				<Column customData:p13nData='\{"columnKey":"CustMaterial", "leadingProperty":["Material","MaterialName","ProductionPlant"]\}'>
+					<header>
+						<Text text="{common_i18n>Material}" tooltip="{common_i18n>MaterialTooltip}"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"OpTotalConfirmedYieldQty", "leadingProperty":["MfgOrderOperationText", "OpTotalConfirmedYieldQty", "WorkCenter", "OperationUnit","OpPlannedTotalQuantity","OperationExecutionEndIsLate","OperationExecutionStartIsLate","MfgOrderOperationReadyQuantity","MfgOrderOperationNotReadyQty"]\}'>
+					<header>
+						<Text text="{common_i18n>OperationProgressColumn}" tooltip="{common_i18n>OperationProgressColumnTooltip}"/>
+					</header>
+				</Column>
+				<Column hAlign="Center" customData:p13nData='\{"columnKey":"CustStatus", "leadingProperty":["OperationStatusInternalID"]\}'>
+					<header>
+						<Text text="{common_i18n>Status}" tooltip="{common_i18n>StatusTooltip}"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"Quantity", "leadingProperty":["OpTotalConfirmedYieldQty","OpPlannedTotalQuantity"],"sortProperty" :"OpTotalConfirmedYieldQty"\}'
+					hAlign="Center" id="idColumnQty">
+					<header>
+						<Text text="{common_i18n>TooltipQuantity}" id="quantity" tooltip="{common_i18n>TooltipQuantity}"/>
+					</header>
+				</Column>
+				<Column
+					customData:p13nData='\{"columnKey":"FinishedQuantity", "leadingProperty":["OpTotalConfirmedYieldQty"],"sortProperty" :"OpTotalConfirmedYieldQty"\}'
+					id="idColumnFinishQty" hAlign="Center">
+					<header>
+						<Text text="{common_i18n>finishedQuantity}" id="finishedQuantity" tooltip="{common_i18n>finishedQuantity}"/>
+					</header>
+				</Column>
+				<!--<Column hAlign="Right" -->
+				<Column hAlign="End"
+					customData:p13nData='\{"columnKey":"CustAchStart", "leadingProperty":["OpActualExecutionStartDate","OpActualExecutionStartTime"]\}'>
+					<header>
+						<Text text="{common_i18n>ActualStart}" tooltip="{common_i18n>ActualStartTooltip}"/>
+					</header>
+				</Column>
+				<!--<Column  hAlign="Right"-->
+				<Column hAlign="End"
+					customData:p13nData='\{"columnKey":"CustScheduleStart", "leadingProperty":["OpLtstSchedldExecStrtTme","OpLtstSchedldExecStrtDte"]\}'>
+					<header>
+						<Text text="{common_i18n>ScheduledStart}" tooltip="{common_i18n>ScheduledStartTooltip}"/>
+					</header>
+				</Column>
+				<!--<Column hAlign="Right" -->
+				<Column hAlign="End"
+					customData:p13nData='\{"columnKey":"CustScheduleEnd", "leadingProperty":["OpLtstSchedldExecEndDte","OpLtstSchedldExecEndTme"]\}'>
+					<header>
+						<Text text="{common_i18n>ScheduledEnd}" tooltip="{common_i18n>ScheduledEndTooltip}"/>
+					</header>
+				</Column>
+				<Column hAlign="Left" customData:p13nData='\{"columnKey":"CustIssue", "leadingProperty":["OperationExecutionStartIsLate"]\}'>
+					<header>
+						<Text text="{common_i18n>IssueHeader}" tooltip="{common_i18n>IssueTooltip}"/>
+					</header>
+				</Column>
+				<Column visible="false"
+					customData:p13nData='\{"columnKey":"EffectivityParameterDesc", "leadingProperty":["EffectivityParameterDesc"], "sortProperty" :"ManufacturingOrderOperation"\}'>
+					<header>
+						<Text
+							text="{=${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:customLabel} === undefined ? ${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:label} : ${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:customLabel}}"/>
+					</header>
+				</Column>
+			</columns>
+			<ColumnListItem>
+				<Link class="sapMLabelBold" text="{ManufacturingOrder}" tooltip="{ManufacturingOrder}" press="handleOrderNumberPress"></Link>
+				<VBox class="sapUiTinyMarginTopBottom">
+					<Link text="{Material}" tooltip="{Material}" press="handleMaterialLinkPress"></Link>
+					<Text text="{MaterialName}" tooltip="{MaterialName}"></Text>
+				</VBox>
+				<HBox>
+					<VBox>
+						<Link press="handleOperationPress"
+							text="{parts:[{path:'ManufacturingOrderOperation'},{path:'MfgOrderOperationText'}], formatter:'.formatter.getManufactOrderOps'}"/>
+						<microchart:StackedBarMicroChart size="M" precision="0" press="handleCoverageChartPress" class="sapUiTinyMarginTopBottom">
+							<microchart:bars>
+								<microchart:StackedBarMicroChartBar id="mfgOrderConfirmed" valueColor="sapUiChartPaletteSemanticNeutral"
+									displayValue="{parts:[{path: 'OpTotalConfirmedYieldQty'}], formatter:'.formatter.formatMicroChartDisplayValueNull'}"
+									value="{parts: ['OpTotalConfirmedYieldQty'], formatter: '.formatter.formatMicroChartValue'}"
+									tooltip="{parts: ['OpTotalConfirmedYieldQty'], formatter: '.formatter.formatConfirmedYieldQty'}"/>
+								<microchart:StackedBarMicroChartBar id="mfgOrderReady" valueColor="sapUiChartPaletteSemanticGood"
+									displayValue="{parts:[{path: 'MfgOrderOperationReadyQuantity'}], formatter:'.formatter.formatMicroChartDisplayValueNull'}"
+									value="{parts: ['MfgOrderOperationReadyQuantity'], formatter: '.formatter.formatMicroChartValue'}"
+									tooltip="{parts: ['MfgOrderOperationReadyQuantity'], formatter: '.formatter.formatOperationReadyQty'}"/>
+								<microchart:StackedBarMicroChartBar id="mfgNotOrderReady" valueColor="sapUiChartPaletteSemanticCritical"
+									displayValue="{parts:[{path: 'MfgOrderOperationNotReadyQty'}], formatter:'.formatter.formatMicroChartDisplayValueNull'}"
+									value="{parts: ['MfgOrderOperationNotReadyQty'], formatter: '.formatter.formatMicroChartValue'}"
+									tooltip="{parts: ['MfgOrderOperationNotReadyQty'], formatter: '.formatter.formatOperationNotReadyQty'}"/>
+							</microchart:bars>
+						</microchart:StackedBarMicroChart>
+					</VBox>
+				</HBox>
+				<Link press="handleStatusLinkPress" class="sapUiTinyMarginTopBottom"
+					text="{parts:[{path:'OperationStatusInternalID'}], formatter:'.formatter.getOpStatusText'}"/>
+				<VBox>
+					<Text text="{common_i18n>TotalQuantityOpsInPrgrss} {parts:[{path:'OpPlannedTotalQuantity'}]} {OperationUnit}"
+						tooltip="{common_i18n>TotalQuantityOpsInPrgrss} {parts:[{path:'OpPlannedTotalQuantity'}]} {OperationUnit}"/>
+					<Text
+						text="{common_i18n>OpenQuantityOpsInPrgrss} {parts:[{path:'OpPlannedTotalQuantity'},{path:'OpTotalConfirmedYieldQty'},{path:'OpTotalConfirmedScrapQty'}], formatter:'.formatter.calculateOpenQuantity'} {OperationUnit}"
+						tooltip="{common_i18n>OpenQuantityOpsInPrgrss} {parts:[{path:'OpPlannedTotalQuantity'},{path:'OpTotalConfirmedYieldQty'},{path:'OpTotalConfirmedScrapQty'}], formatter:'.formatter.calculateOpenQuantity'} {OperationUnit}"/>
+				</VBox>
+				<Text text="{parts:[{path:'OpTotalConfirmedYieldQty'}]} {OperationUnit}"
+					tooltip="{parts:[{path:'OpTotalConfirmedYieldQty'}]} {OperationUnit}"></Text>
+				<!--<VBox class="sapUiTinyMarginBottom">-->
+				<VBox class="sapUiTinyMargin" alignContent="End" justifyContent="End">
+					<Text text="{parts:[{path:'OpActualExecutionStartDate'}], formatter:'.formatter.DatePriorityForActualDate'}"
+						tooltip="{parts:[{path:'OpActualExecutionStartDate'}], formatter:'.formatter.DatePriorityForActualDate'}"/>
+					<Text
+						text="{path: 'OpActualExecutionStartTime', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"
+						tooltip="{path: 'OpActualExecutionStartTime', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"></Text>
+				</VBox>
+				<!--<VBox class="sapUiTinyMarginBottom">-->
+				<VBox class="sapUiTinyMargin" alignContent="End" justifyContent="End">
+					<Text text="{parts:[{path:'OpLtstSchedldExecStrtDte'}], formatter:'.formatter.DatePriorityForActualDate'}"
+						tooltip="{parts:[{path:'OpLtstSchedldExecStrtDte'}], formatter:'.formatter.DatePriorityForActualDate'}"/>
+					<Text
+						text="{path: 'OpLtstSchedldExecStrtTme', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"
+						tooltip="{path: 'OpLtstSchedldExecStrtTme', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"></Text>
+				</VBox>
+				<!--<VBox class="sapUiTinyMarginBottom">-->
+				<VBox class="sapUiTinyMargin" alignContent="End" justifyContent="End">
+					<Text text="{parts:[{path:'OpLtstSchedldExecEndDte'}], formatter:'.formatter.DatePriorityForActualDate'}"
+						tooltip="{parts:[{path:'OpLtstSchedldExecEndDte'}], formatter:'.formatter.DatePriorityForActualDate'}"/>
+					<Text
+						text="{path: 'OpLtstSchedldExecEndTme', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"
+						tooltip="{path: 'OpLtstSchedldExecEndTme', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"></Text>
+				</VBox>
+				<HBox>
+					<core:Icon class="sapUiTinyMarginBeginEnd" id="holdIcon"
+						color="{parts:[{path:'OperationHasProductionHold'}], formatter:'.formatter.setOperationHoldIssueIconColor'}" press="handleIconPress"
+						visible="{= ${MfgFeatureIsActiveInAnyPlant} === 'X' ? true : false}" src="sap-icon://status-error" tooltip="{common_i18n>OnHoldTooltip}"></core:Icon>
+					<core:Icon
+						color="{parts:[{path:'OperationExecutionStartIsLate'}, {path:'OperationExecutionEndIsLate'}], formatter:'.formatter.setDelayIconColor'}"
+						press="handleIconPress" src="sap-icon://history" tooltip="{common_i18n>DelayTooltip}"></core:Icon>
+					<core:Icon class="sapUiTinyMarginBeginEnd"
+						color="{parts:[{path:'OperationHasMissingComponents'}], formatter:'.formatter.setMissingComponentIconColor'}" press="handleIconPress"
+						src="sap-icon://tree" tooltip="{common_i18n>ComponentIssueTooltip}"></core:Icon>
+					<core:Icon color="#d9d9d9" press="handleIconPress" src="sap-icon://wrench" tooltip="{common_i18n>ToolIssueTooltip}"></core:Icon>
+					<core:Icon class="sapUiTinyMarginBeginEnd"
+						color="{parts:[{path:'OperationYieldDeviationQty'}], formatter:'.formatter.setMissingQuantityIconColor'}" press="handleIconPress"
+						src="sap-icon://dimension" tooltip="{common_i18n>QuantityIssueTooltip}"></core:Icon>
+					<core:Icon color="{parts:[{path:'OperationHasScrapQualityIssue'}], formatter:'.formatter.setMissingQualityIssueIconColor'}"
+						press="handleIconPress" src="sap-icon://quality-issue" tooltip="{common_i18n>QualityIssueTooltip}"></core:Icon>
+				</HBox>
+				<VBox>
+					<Text text="{EffectivityParameterDesc}"/>
+				</VBox>
+			</ColumnListItem>
+		</Table>
+	</smartTable:SmartTable>
+</mvc:View>

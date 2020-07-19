@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="MPE_PRODNORD_POVER" sap:schema-version="1" xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="C_MPEProdnOrderPoverType" sap:content-version="1" sap:label="Production Order Popover">
+                <Key>
+                    <PropertyRef Name="ManufacturingOrder"/>
+                </Key>
+                <Property MaxLength="12" Name="ManufacturingOrder" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Manufacturing Order" sap:quickinfo="Manufacturing Order ID"/>
+                <Property MaxLength="10" Name="OrderInternalBillOfOperations" Type="Edm.String" sap:display-format="NonNegative" sap:label="Order Internal ID"/>
+                <Property MaxLength="2" Name="ManufacturingOrderCategory" Type="Edm.String" sap:display-format="NonNegative" sap:label="Order Category" sap:quickinfo="Manufacturing Order Category"/>
+                <Property MaxLength="4" Name="ProductionPlant" Type="Edm.String" sap:display-format="UpperCase" sap:label="Production Plant" sap:quickinfo="Production Plant in Planned Order"/>
+                <Property MaxLength="40" Name="Material" Type="Edm.String" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number for Order"/>
+                <Property MaxLength="40" Name="MaterialName" Type="Edm.String" sap:label="Material Description"/>
+                <Property MaxLength="30" Name="StatusName" Type="Edm.String" sap:label="Status" sap:quickinfo="Object status"/>
+                <Property MaxLength="4" Name="ProductionMilestoneStatus" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="1" Name="ManufacturingOrderImportance" Type="Edm.String" sap:display-format="UpperCase" sap:label="Order Importance" sap:quickinfo="Order Importance Code"/>
+                <Property MaxLength="4" Name="ManufacturingOrderType" Type="Edm.String" sap:display-format="UpperCase" sap:label="Order Type" sap:quickinfo="Manufacturing Order Type"/>
+                <Property MaxLength="40" Name="ManufacturingOrderTypeName" Type="Edm.String" sap:label="Order Type Name" sap:quickinfo="Manufacturing Order Type Name"/>
+                <Property Name="MfgOrderScheduledReleaseDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Scheduled Release Date" sap:quickinfo="Manufacturing Order Scheduled Release Date"/>
+                <Property Name="MfgOrderPlannedStartDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Planned Start Date" sap:quickinfo="Manufacturing Order Planned Start Date"/>
+                <Property Name="MfgOrderPlannedStartTime" Precision="0" Type="Edm.Time" sap:label="Planned Start Time" sap:quickinfo="Manufacturing Order Planned Start Time"/>
+                <Property Name="MfgOrderPlannedEndDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Planned End Date" sap:quickinfo="Manufacturing Order Planned End Date"/>
+                <Property Name="MfgOrderPlannedEndTime" Precision="0" Type="Edm.Time" sap:label="Planned End Time" sap:quickinfo="Manufacturing Order Planned End Time"/>
+                <Property Name="MfgOrderActualStartDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Actual Start Date" sap:quickinfo="Manufacturing Order Actual Start Date"/>
+                <Property Name="MfgOrderActualStartTime" Precision="0" Type="Edm.Time" sap:label="Actual Start Time" sap:quickinfo="Manufacturing Order Actual Start Time"/>
+                <Property Name="MfgOrderActualEndDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Actual End Date" sap:quickinfo="Manufacturing Order Actual End Date"/>
+                <Property Name="MaterialGoodsReceiptDuration" Precision="3" Scale="0" Type="Edm.Decimal" sap:label="GR Processing Time" sap:quickinfo="Goods Receipt Processing Duration in Days"/>
+                <Property MaxLength="3" Name="ProductionUnit" Type="Edm.String" sap:label="Production Unit" sap:quickinfo="Production Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="MfgOrderPlannedTotalQty" Precision="13" Scale="3" Type="Edm.Decimal" sap:label="Total Quantity" sap:quickinfo="Manufacturing Order Planned Total Quantity" sap:unit="ProductionUnit"/>
+                <Property Name="MfgOrderPlannedScrapQty" Precision="18" Scale="3" Type="Edm.Decimal" sap:unit="ProductionUnit"/>
+                <Property Name="ActualDeliveredQuantity" Precision="18" Scale="3" Type="Edm.Decimal" sap:unit="ProductionUnit"/>
+                <Property Name="ExpectedDeviationQuantity" Precision="18" Scale="3" Type="Edm.Decimal" sap:unit="ProductionUnit"/>
+                <Property Name="OpenQuantity" Precision="13" Scale="3" Type="Edm.Decimal" sap:unit="ProductionUnit"/>
+                <Property MaxLength="4" Name="ProductionVersion" Type="Edm.String" sap:display-format="UpperCase" sap:label="Production Version"/>
+                <Property MaxLength="40" Name="ProductionVersionText" Type="Edm.String" sap:label="Prodn Version Text" sap:quickinfo="Short Text for Production Version"/>
+                <Property MaxLength="4" Name="Plant" Type="Edm.String" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property MaxLength="8" Name="ProductionLine" Type="Edm.String" sap:display-format="UpperCase" sap:label="Production Line" sap:quickinfo="Production Line for Repetitive Manufacturing"/>
+                <Property MaxLength="40" Name="WorkCenterText" Type="Edm.String" sap:label="Work Center Text"/>
+                <Property Name="NumberOfMissingMatlComp" Type="Edm.Int32"/>
+                <Property MaxLength="40" Name="MissingMaterial" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property Name="MaterialComponentIsMissing" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Missing Part"/>
+                <Property MaxLength="1" Name="OrderExecutionStartIsLate" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="1" Name="OrderExecutionEndIsLate" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="4" Name="MRPPlant" Type="Edm.String" sap:display-format="UpperCase" sap:label="Planning Plant" sap:quickinfo="Planning Plant for an Order"/>
+                <Property MaxLength="3" Name="MRPController" Type="Edm.String" sap:display-format="UpperCase" sap:label="MRP Controller" sap:text="MRPControllerName"/>
+                <Property MaxLength="18" Name="MRPControllerName" Type="Edm.String" sap:label="MRP Controller Name"/>
+                <Property MaxLength="3" Name="ProductionSupervisor" Type="Edm.String" sap:display-format="UpperCase" sap:label="Production Supervisor" sap:text="ProductionSupervisorName"/>
+                <Property MaxLength="30" Name="ProductionSupervisorName" Type="Edm.String" sap:label="Prodn Superv. Name" sap:quickinfo="Production Supervisor Name"/>
+                <Property MaxLength="4" Name="CurOperation" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="40" Name="CurOperationText" Type="Edm.String" sap:label="Operation Short Text" sap:text="CurOperationText"/>
+                <Property MaxLength="3" Name="CurOperationUnit" Type="Edm.String" sap:label="Operation unit" sap:quickinfo="Unit of measure for activity" sap:semantics="unit-of-measure"/>
+                <Property Name="CurOperationQty" Precision="13" Scale="3" Type="Edm.Decimal" sap:label="Open Quantity" sap:unit="CurOperationUnit"/>
+                <Property Name="CurOpActlExecStartDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Execution Start Date" sap:quickinfo="Actual Execution Start Date"/>
+                <Property Name="CurOpActlExecStartTime" Precision="0" Type="Edm.Time" sap:label="Execution Start Time" sap:quickinfo="Actual Execution Start Time"/>
+                <Property Name="CurOpSchedldExecEndDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Execution End Date" sap:quickinfo="Latest Scheduled Execution End Date"/>
+                <Property Name="CurOpSchedldExecEndTime" Precision="0" Type="Edm.Time" sap:label="Execution End Time" sap:quickinfo="Latest Scheduled Execution End Time"/>
+                <Property MaxLength="4" Name="NextOperation" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="40" Name="NextOperationText" Type="Edm.String" sap:label="Operation Short Text" sap:text="NextOperationText"/>
+                <Property MaxLength="3" Name="NextOperationUnit" Type="Edm.String" sap:label="Operation unit" sap:quickinfo="Unit of measure for activity" sap:semantics="unit-of-measure"/>
+                <Property Name="NextOperationQty" Precision="13" Scale="3" Type="Edm.Decimal" sap:label="Open Quantity" sap:unit="NextOperationUnit"/>
+                <Property Name="NextOpActlExecStartDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Execution Start Date" sap:quickinfo="Actual Execution Start Date"/>
+                <Property Name="NextOpActlExecStartTime" Precision="0" Type="Edm.Time" sap:label="Execution Start Time" sap:quickinfo="Actual Execution Start Time"/>
+                <Property Name="NextOpSchedldExecEndDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Execution End Date" sap:quickinfo="Latest Scheduled Execution End Date"/>
+                <Property Name="NextOpSchedldExecEndTime" Precision="0" Type="Edm.Time" sap:label="Execution End Time" sap:quickinfo="Latest Scheduled Execution End Time"/>
+                <Property MaxLength="12" Name="MfgOrderSuperiorMfgOrder" Type="Edm.String" sap:display-format="UpperCase" sap:label="Superior Order" sap:quickinfo="Number of Superior Order"/>
+                <Property MaxLength="12" Name="LeadingOrder" Type="Edm.String" sap:display-format="UpperCase" sap:label="Leading Order" sap:quickinfo="Leading Order in Current Processing"/>
+                <Property MaxLength="10" Name="SDDocument" Type="Edm.String" sap:display-format="UpperCase" sap:label="Sales Document"/>
+                <Property Name="SDDocumentItem" Type="Edm.Int32"/>
+                <Property MaxLength="4" Name="SDDocumentCategory" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="60" Name="SDDocumentCategoryName" Type="Edm.String" sap:display-format="UpperCase"/>
+                <Property MaxLength="10" Name="SoldToParty" Type="Edm.String" sap:display-format="UpperCase" sap:label="Sold-To Party"/>
+                <Property MaxLength="80" Name="CustomerName" Type="Edm.String" sap:label="Name of Customer"/>
+                <Property MaxLength="4" Name="AuthorizationGroup" Type="Edm.String" sap:display-format="UpperCase" sap:label="Authorization Group"/>
+                <Property MaxLength="24" Name="WBSElement" Type="Edm.String" sap:display-format="UpperCase" sap:label="WBS Element" sap:quickinfo="Work Breakdown Structure Element (WBS Element) Edited" sap:text="WBSDescription"/>
+                <Property MaxLength="40" Name="WBSDescription" Type="Edm.String" sap:label="WBS Element Name" sap:quickinfo="PS: Short description (1st text line)"/>
+                <Property MaxLength="24" Name="Project" Type="Edm.String" sap:display-format="UpperCase" sap:label="Project Definition" sap:text="ProjectDescription"/>
+                <Property MaxLength="40" Name="ProjectDescription" Type="Edm.String" sap:label="Project Definition Name"/>
+                <Property MaxLength="12" Name="InspectionLot" Type="Edm.String" sap:display-format="UpperCase"/>
+            </EntityType>
+            <EntityContainer Name="MPE_PRODNORD_POVER_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet EntityType="MPE_PRODNORD_POVER.C_MPEProdnOrderPoverType" Name="C_MPEProdnOrderPover" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:updatable="false"/>
+            </EntityContainer>
+            <atom:link href="./sap/MPE_PRODNORD_POVER/$metadata" rel="self" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link href="./sap/MPE_PRODNORD_POVER/$metadata" rel="latest-version" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

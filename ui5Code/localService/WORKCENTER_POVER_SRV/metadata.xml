@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="WORKCENTER_POVER_SRV" sap:schema-version="1" xml:lang="de" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="C_WorkcenterpoverType" sap:content-version="1" sap:label="Work Center">
+                <Key>
+                    <PropertyRef Name="WorkCenterInternalID"/>
+                    <PropertyRef Name="WorkCenterTypeCode"/>
+                </Key>
+                <Property MaxLength="8" Name="WorkCenterInternalID" Nullable="false" Type="Edm.String" sap:display-format="NonNegative" sap:label="Objekt-Id"/>
+                <Property MaxLength="3" Name="CapacityCategoryCode" Type="Edm.String" sap:display-format="UpperCase" sap:label="Kapazitätsart"/>
+                <Property MaxLength="20" Name="CapacityCategoryName" Type="Edm.String" sap:label="Bezeichnung Art"/>
+                <Property MaxLength="8" Name="CapacityInternalID" Type="Edm.String" sap:display-format="NonNegative" sap:label="ID Kapazität"/>
+                <Property MaxLength="8" Name="Capacity" Type="Edm.String" sap:display-format="UpperCase" sap:label="Kapazität"/>
+                <Property MaxLength="40" Name="CapacityText" Type="Edm.String" sap:label="Text Kapazität"/>
+                <Property Name="CapacityNumberOfCapacities" Type="Edm.Int16" sap:label="Anzahl"/>
+                <Property MaxLength="10" Name="MachineType" Type="Edm.String" sap:display-format="UpperCase" sap:label="Maschinentyp"/>
+                <Property MaxLength="4" Name="ControllingArea" Type="Edm.String" sap:display-format="UpperCase" sap:label="Kostenrechnungskreis"/>
+                <Property MaxLength="10" Name="CostCenter" Type="Edm.String" sap:display-format="UpperCase" sap:label="Kostenstelle"/>
+                <Property MaxLength="2" Name="WorkCenterTypeCode" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Objekttyp"/>
+                <Property MaxLength="40" Name="WorkCenterText" Type="Edm.String" sap:label="Arbeitsplatztext"/>
+                <Property MaxLength="3" Name="WorkCenterResponsible" Type="Edm.String" sap:display-format="UpperCase" sap:label="Verantwortl."/>
+                <Property MaxLength="40" Name="WorkCenterResponsibleName" Type="Edm.String" sap:label="Name des Verantwort."/>
+                <Property Name="ValidityEndDate" Precision="0" Type="Edm.DateTime" sap:display-format="Date" sap:label="Endedatum"/>
+                <Property MaxLength="4" Name="WorkCenterCategoryCode" Type="Edm.String" sap:display-format="UpperCase" sap:label="Arbeitsplatzart"/>
+                <Property MaxLength="10" Name="WorkCenterLocation" Type="Edm.String" sap:display-format="UpperCase" sap:label="Standort"/>
+                <Property MaxLength="10" Name="SupplyArea" Type="Edm.String" sap:display-format="UpperCase" sap:label="ProdVersBereich"/>
+            </EntityType>
+            <EntityContainer Name="WORKCENTER_POVER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet EntityType="WORKCENTER_POVER_SRV.C_WorkcenterpoverType" Name="C_Workcenterpover" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:updatable="false"/>
+            </EntityContainer>
+            <atom:link href="./sap/WORKCENTER_POVER_SRV/$metadata" rel="self" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link href="./sap/WORKCENTER_POVER_SRV/$metadata" rel="latest-version" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

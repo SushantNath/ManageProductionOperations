@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ER9CLNT001')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="MPE_MATERIAL_POVER" sap:schema-version="1" xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="C_MPE_MaterialPoverType" sap:content-version="1" sap:label="Material Pop Over">
+                <Key>
+                    <PropertyRef Name="Material"/>
+                    <PropertyRef Name="MaterialPlant"/>
+                </Key>
+                <Property MaxLength="40" Name="Material" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Product"/>
+                <Property Name="UnderTolerenceData" Precision="3" Scale="1" Type="Edm.Decimal" sap:label="Underdelivery Tol." sap:unit="ToleranceUnit"/>
+                <Property Name="OverTolerenceData" Precision="3" Scale="1" Type="Edm.Decimal" sap:label="Overdelivery Tol." sap:unit="ToleranceUnit"/>
+                <Property MaxLength="2" Name="MRPType" Type="Edm.String" sap:display-format="UpperCase" sap:label="MRP Type"/>
+                <Property MaxLength="1" Name="ProcurementType" Type="Edm.String" sap:display-format="UpperCase" sap:label="Procurement type"/>
+                <Property MaxLength="2" Name="SpecialProcurementKey" Type="Edm.String" sap:display-format="UpperCase" sap:label="Special procurement"/>
+                <Property Name="SafetyStock" Precision="13" Scale="3" Type="Edm.Decimal" sap:label="Safety stock" sap:unit="BaseQuantityUnit"/>
+                <Property MaxLength="3" Name="ToleranceUnit" Type="Edm.String" sap:label="Unit" sap:semantics="unit-of-measure"/>
+                <Property MaxLength="3" Name="BaseQuantityUnit" Type="Edm.String" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="MaterialWithLeadingZeroes" Type="Edm.String"/>
+                <Property MaxLength="4" Name="MaterialPlant" Nullable="false" Type="Edm.String" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property MaxLength="40" Name="MaterialShortText" Type="Edm.String" sap:label="Product Description"/>
+                <Property Name="CurrentStockInPlant" Precision="13" Scale="3" Type="Edm.Decimal" sap:label="Current Stock" sap:unit="BaseQuantityUnit"/>
+                <Property MaxLength="3" Name="ProductionSupervisor" Type="Edm.String" sap:display-format="UpperCase" sap:label="Production Supervisor"/>
+                <Property MaxLength="3" Name="MRPController" Type="Edm.String" sap:display-format="UpperCase" sap:label="MRP controller"/>
+                <Property MaxLength="6" Name="ProductionSchedulingProfile" Type="Edm.String" sap:display-format="UpperCase" sap:label="Scheduling Profile"/>
+                <Property MaxLength="4" Name="SerialNumberProfile" Type="Edm.String" sap:display-format="UpperCase" sap:label="Serial no. profile"/>
+                <Property Name="BatchManagementRequired" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Batch Management Required"/>
+            </EntityType>
+            <EntityContainer Name="MPE_MATERIAL_POVER_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet EntityType="MPE_MATERIAL_POVER.C_MPE_MaterialPoverType" Name="C_MPE_MaterialPover" sap:content-version="1" sap:creatable="false" sap:deletable="false" sap:updatable="false"/>
+            </EntityContainer>
+            <atom:link href="./sap/MPE_MATERIAL_POVER/$metadata" rel="self" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link href="./sap/MPE_MATERIAL_POVER/$metadata" rel="latest-version" xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

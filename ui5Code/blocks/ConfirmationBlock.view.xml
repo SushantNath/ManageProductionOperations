@@ -1,0 +1,108 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.mpe.operations.manages1.blocks.ConfirmationBlockController" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m">
+	<HBox id="AllConfirmations" visible="true" width="100%">
+		<smartTable:SmartTable demandPopin="true" beforeRebindTable="onHandleRebindAllConfirmationTable" enableAutoBinding="{DetailModel>/bEnableAutoBinding}"
+			header="{i18n>Confirmations}" entitySet="C_Operationconfirmations" id="idAllConfirmationTable" persistencyKey='pKeyAllConfTab' width="100%"
+			showRowCount="false" tableType="ResponsiveTable" useExportToExcel="true" useTablePersonalisation="true" useVariantManagement="false">
+			<smartTable:customData>
+				<core:CustomData key="p13nDialogSettings" value='\{"filter":\{"visible": false\}\}'/>
+			</smartTable:customData>
+			<Table fixedLayout="false" id="idAllConfirmationOperationTable" growing="true" growingThreshold="10" mode="SingleSelectMaster"
+				itemPress="handleConfirmationSelect">
+				<!--itemPress="handleConfirmationSelect">-->
+				<columns>
+					<Column width="11em"
+						customData:p13nData='\{"columnKey":"CustConfirmationText", "leadingProperty":["ManufacturingOrder","ManufacturingOrderOperation","ConfirmationText","MfgOrderConfirmation"]\}'>
+						<header>
+							<Text text="{i18n>ConfirmationText}" tooltip="{i18n>ConfirmationText}"/>
+						</header>
+					</Column>
+					<Column width="15em" customData:p13nData='\{"columnKey":"CustConfCount", "leadingProperty":["MfgOrderConfirmationCount"]\}'>
+						<header>
+							<Text text="{i18n>ConfirmationCount}" tooltip="{i18n>ConfirmationCount}"/>
+						</header>
+					</Column>
+					<Column width="15em" customData:p13nData='\{"columnKey":"CustEnteredByUser", "leadingProperty":["EnteredByUser"]\}'>
+						<header>
+							<Text text="{i18n>ConfirmedBy}" tooltip="{i18n>ConfirmedBy}"/>
+						</header>
+					</Column>
+					<!--<Column width="15em"-->
+					<Column hAlign="End" width="15em"
+						customData:p13nData='\{"columnKey":"CustPostingDate", "leadingProperty":["MfgOrderConfirmationEntryDate","MfgOrderConfirmationEntryTime"]\}'>
+						<header>
+							<Text text="{i18n>EntryDate}" tooltip="{i18n>EntryDate}"/>
+						</header>
+					</Column>
+					<Column width="15em" customData:p13nData='\{"columnKey":"CustIsFinalConfirmation", "leadingProperty":["IsFinalConfirmation"]\}'>
+						<header>
+							<Text text="{i18n>FinalConfirmation}" tooltip="{i18n>FinalConfirmation}"/>
+						</header>
+					</Column>
+					<Column width="15em" hAlign="End" customData:p13nData='\{"columnKey":"Yield", "leadingProperty":["ConfirmationYieldQuantity"]\}'>
+						<header>
+							<Text text="{i18n>ConfirmYield}" tooltip="{i18n>ConfirmYield}"/>
+						</header>
+					</Column>
+					<Column width="15em" hAlign="End" customData:p13nData='\{"columnKey":"Scrap", "leadingProperty":["ConfirmationScrapQuantity"]\}'>
+						<header>
+							<Text text="{i18n>ConfirmScrap}" tooltip="{i18n>ConfirmScrap}"/>
+						</header>
+					</Column>
+					<Column width="15em" hAlign="End" customData:p13nData='\{"columnKey":"Rework", "leadingProperty":["ConfirmationReworkQuantity"]\}'>
+						<header>
+							<Text text="{i18n>CofirmRework}" tooltip="{i18n>CofirmRework}"/>
+						</header>
+					</Column>
+					<Column width="15em" hAlign="End"
+						customData:p13nData='\{"columnKey":"CustConfirmationYieldQuantity", "leadingProperty":["ConfirmationTotalQuantity","ConfirmationUnit"]\}'>
+						<header>
+							<Text text="{i18n>Quantity}" tooltip="{i18n>Quantity}"/>
+						</header>
+					</Column>
+				</columns>
+				<ColumnListItem type="Navigation" vAlign="Middle">
+					<cells>
+						<VBox class="sapUiTinyMargin">
+							<ObjectIdentifier title="{MfgOrderConfirmation}" titleActive="false" tooltip="{MfgOrderConfirmation}"/>
+							<Text text="{ConfirmationText}" tooltip="{ConfirmationText}" visible="{= ${ConfirmationText} !== ''}"></Text>
+						</VBox>
+						<!--<Link text="{MfgOrderConfirmationCount}" press="handleConfirmationSelect" visible="{= ${MfgOrderConfirmationCount} !== ''}"></Link>-->
+						<Text class="sapUiTinyMarginBegin" text="{MfgOrderConfirmationCount}" tooltip="{MfgOrderConfirmationCount}"></Text>
+						<Text text="{EnteredByUser}" tooltip="{EnteredByUser}"></Text>
+						<!--<VBox class="sapUiTinyMargin">-->
+						<VBox class="sapUiTinyMargin" alignContent="End" justifyContent="End">
+							<Text visible="{= ${MfgOrderConfirmationEntryDate} !== ''}"
+								text="{parts:[{path:'MfgOrderConfirmationEntryDate'}], formatter:'.formatter.formatDateTimeUTC'}"></Text>
+							<Text visible="{= ${MfgOrderConfirmationEntryTime} !== ''}"
+								text="{path: 'MfgOrderConfirmationEntryTime', type: 'sap.ui.model.odata.type.Time', formatOptions: {style: 'short', relativeScale: 'auto' }}"></Text>
+						</VBox>
+						<Text text="{parts:[{path:'IsFinalConfirmation'}], formatter:'.formatter.finalConfirmation'}"></Text>
+						<HBox alignContent="End" justifyContent="End">
+							<Text text="{ConfirmationYieldQuantity}" tooltip="{ConfirmationYieldQuantity}"></Text>
+							<Text class="sapUiTinyMarginBegin" text="{ConfirmationUnit}" tooltip="{ConfirmationUnit}"></Text>
+						</HBox>
+						<HBox alignContent="End" justifyContent="End">
+							<Text text="{ConfirmationScrapQuantity}" tooltip="{ConfirmationScrapQuantity}"></Text>
+							<Text class="sapUiTinyMarginBegin" text="{ConfirmationUnit}" tooltip="{ConfirmationUnit}"></Text>
+						</HBox>
+						<HBox alignContent="End" justifyContent="End">
+							<Text text="{ConfirmationReworkQuantity}" tooltip="{ConfirmationReworkQuantity}"></Text>
+							<Text class="sapUiTinyMarginBegin" text="{ConfirmationUnit}" tooltip="{ConfirmationUnit}"></Text>
+						</HBox>
+						<HBox alignContent="End" justifyContent="End">
+							<Label design="Bold" text="{ConfirmationTotalQuantity}" tooltip="{ConfirmationTotalQuantity}"></Label>
+							<Text class="sapUiTinyMarginBegin" text="{ConfirmationUnit}" tooltip="{ConfirmationUnit}"></Text>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</smartTable:SmartTable>
+	</HBox>
+</mvc:View>

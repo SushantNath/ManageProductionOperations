@@ -1,0 +1,199 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.mpe.operations.manages1.controller.ActivityObject" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" xmlns:uxap="sap.uxap" xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:l="sap.ui.layout" xmlns:customBlock="i2d.mpe.operations.manages1.blocks"
+	xmlns:commonsBlock="sap.i2d.mpe.lib.commons1.blocks">
+	<semantic:FullscreenPage id="idActivityDetailsPage" title="{i18n>activityDetailsPageTitle}">
+		<semantic:content>
+			<uxap:ObjectPageLayout id="idActivityObjectPageLayout" upperCaseAnchorBar="false" busy="{activityObjectView>/busy}">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader
+						objectTitle="{parts:[{path:'OperationActivityName'}, {path:'OpActyNtwkElementExternalID'}], formatter:'.formatter.formatTextWithBrackets'}"></uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:headerContent>
+					<layout:VerticalLayout>
+						<ObjectAttribute title="{i18n>ActivityType}" text="{OpActyNtwkSegmentTypeText}"/>
+						<ObjectAttribute title="{i18n>MfgOrderOperationText}"
+							text="{parts:[{path:'ManufacturingOrderOperation'}, {path:'MfgOrderOperationText'}], formatter:'.formatter.formatTextWithBrackets'}"/>
+						<ObjectAttribute title="{i18n>Order}" text="{ManufacturingOrder}"/>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout>
+						<ObjectAttribute title="{i18n>MaterialID}" text="{Material}"/>
+						<ObjectAttribute title="{i18n>MaterialDescription}" text="{MaterialName}"/>
+						<ObjectAttribute title="{i18n>WorkCenter}"
+							text="{parts:[{path:'WorkCenter'}, {path:'WorkCenterText'}], formatter:'.formatter.formatTextWithBrackets'}"
+							visible="{= ${WorkCenter} !== ''}"/>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout visible="{= !${OpActyConfIsSFIBased}}">
+						<ObjectAttribute title="{i18n>PlannedQty}"
+							text="{parts:[{path:'OpPlannedTotalQuantity'},{path:'OperationUnit'}], formatter:'.formatter.formatQtyWithUnit'}"/>
+						<ObjectAttribute title="{i18n>ScrapQty}"
+							text="{parts:[{path:'ConfirmationScrapQuantity'},{path:'OperationUnit'}], formatter:'.formatter.formatQtyWithUnit'}"/>
+						<ObjectAttribute title="{i18n>YieldQty}"
+							text="{parts:[{path:'ConfirmationYieldQuantity'},{path:'OperationUnit'}], formatter:'.formatter.formatQtyWithUnit'}"/>
+					</layout:VerticalLayout>
+					<layout:VerticalLayout>
+						<ObjectStatus title="{i18n>ActivityStatus}" text="{SASStatusName}" id="idObjectPageHeaderNonSerializedStatus"/>
+					</layout:VerticalLayout>
+				</uxap:headerContent>
+				<uxap:sections>
+					<!--Serial Numbers-->
+					<uxap:ObjectPageSection title="{i18n>serialNumbers}" titleUppercase="false" visible="{OpActyConfIsSFIBased}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idSerialNumbersSubSection">
+								<uxap:blocks>
+									<Table id="serialNumbersTable" width="auto" mode="SingleSelectMaster" items="{to_ShopFloorItemAtOpActy}"
+										noDataText="{i18n>serialTableNoDataText}">
+										<columns>
+											<Column>
+												<Text text="{i18n>serialNumber}"/>
+											</Column>
+											<Column>
+												<Text text="{i18n>serialNumberStatus}"/>
+											</Column>
+											<!--<Column>
+												<Text text="{i18n>buyoff}"/>
+											</Column>
+											<Column>
+												<Text text="{i18n>buyoffProgress}"/>
+											</Column>-->
+										</columns>
+										<items>
+											<ColumnListItem vAlign="Middle">
+												<cells>
+													<ObjectIdentifier title="{SerialNumber}" titleActive="false" tooltip="{SerialNumber}"/>
+												</cells>
+												<cells>
+													<Text text="{SASStatusName}" tooltip="{SASStatusName}"/>
+													<!--<Text text="{parts:[{path:'to_SASStatusText'}], formatter:'.formatter.formatSerialNrStatus'}"/>-->
+												</cells>
+												<!--<cells>
+													<ObjectIdentifier titleActive="false"/>
+												</cells>
+												<cells>
+													<ObjectIdentifier titleActive="false"/>
+												</cells>-->
+											</ColumnListItem>
+										</items>
+									</Table>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--Work Instructions-->
+					<!--Commented out because sap.i2d.mpe.lib.rtes1 is not yet delivered in cloud-->
+					<uxap:ObjectPageSection title="{i18n>workInstructions}" titleUppercase="false" visible="{activityObjectView>/WIVisible}">
+						<uxap:subSections >
+							<uxap:ObjectPageSubSection id="idWorkInstructionsSubSection">
+								<uxap:blocks>
+									<core:ComponentContainer id="inlineWorkInstructions" propagateModel="true"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--Attachments-->
+					<!--Commented out because attachments are not supported-->
+					<!--<uxap:ObjectPageSection title="{i18n>Attachments}" titleUppercase="false">-->
+					<!--	<uxap:subSections>-->
+					<!--		<uxap:ObjectPageSubSection>-->
+					<!--			<uxap:blocks>-->
+					<!--				<core:ComponentContainer id="attachmentContainer" height="100%"/>-->
+					<!--			</uxap:blocks>-->
+					<!--		</uxap:ObjectPageSubSection>-->
+					<!--	</uxap:subSections>-->
+					<!--</uxap:ObjectPageSection>-->
+					<!--Components-->
+					<uxap:ObjectPageSection title="{i18n>components}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<Table id="componentsTable" width="auto" mode="SingleSelectMaster" items="{to_OperationActivityComponent}"
+										noDataText="{i18n>compTableNoDataText}" showSeparators="Inner">
+										<columns>
+											<Column width="30%" id="materialColumn">
+												<Text text="{i18n>components}" id="materialColumnTitle"/>
+											</Column>
+											<Column id="totalQuantityColumn" hAlign="End">
+												<Text text="{i18n>totalQuantity}" id="totalQuantityColumnTitle"/>
+											</Column>
+											<Column id="consumedQuantityColumn" hAlign="End">
+												<Text text="{i18n>consumedQuantity}" id="consumedQuantityColumnTitle"/>
+											</Column>
+											<!--<Column id="scanStatus" hAlign="Center">-->
+											<!--	<Text text="{i18n>serialScanIcon}" id="serialOrBatchIconColumnTitle"/>-->
+											<!--</Column>-->
+											<core:ExtensionPoint name="extComponentColumns"></core:ExtensionPoint>
+										</columns>
+										<items>
+											<ColumnListItem vAlign="Middle">
+												<cells>
+													<ObjectIdentifier title="{Material}" text="{MaterialName}"></ObjectIdentifier>
+													<ObjectNumber number="{path: 'MfgOrderComponentUsageQuantity', formatter: '.formatter.numberUnit'}" unit="{BaseUnit}"></ObjectNumber>
+													<HBox justifyContent="End">
+														<ObjectNumber number="{MaterialComponentQuantity}" unit="{BaseUnit}" visible="{= ${MatlCompIsMarkedForBackflush} === false }"></ObjectNumber>
+														<Text text="{i18n>materialBackFlushed}" visible="{= ${MatlCompIsMarkedForBackflush} === true }"></Text>
+													</HBox>
+													<!--<core:Icon src="sap-icon://bar-code"-->
+													<!--	tooltip="{parts:['ComponentAssemblyCriticality','MatlCompIsMarkedForBackflush'], formatter:'.formatter.getScanStatusText'}"-->
+													<!--	color="{path:'ComponentAssemblyCriticality', formatter:'.formatter.formatIconColor'}"-->
+													<!--	visible="{= ${MatlCompIsMarkedForBackflush} === false }"></core:Icon>-->
+													<core:ExtensionPoint name="extComponentItems"></core:ExtensionPoint>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--PRT-->
+					<uxap:ObjectPageSection title="{i18n>PRT}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<commonsBlock:PRTBlock id="idPRTBlock"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection title="{i18n>Documents}" titleUppercase="false">
+						<uxap:ObjectPageSubSection>
+							<uxap:blocks>
+								<!--<core:ComponentContainer id="documentsContainer" height="100%"/>-->
+								<UploadCollection items="{activityObjectView>/documents}" uploadEnabled="false" uploadButtonInvisible="true"
+									numberOfAttachmentsText="{parts:[{path:'i18n>Documents'}, {path: 'activityObjectView>/documentsCount'}], formatter:'.formatter.formatTextWithBrackets'}">
+									<items>
+										<UploadCollectionItem visibleDelete="false" visibleEdit="false" documentId="{activityObjectView>Documentnumber}"
+											fileName="{activityObjectView>Filename}" mimeType="{activityObjectView>Documenttype}" url="{activityObjectView>URL}">
+											<attributes>
+												<ObjectAttribute title="{i18n>uploadedBy}" text="{activityObjectView>FullName}"/>
+												<ObjectAttribute title="{i18n>uploadedOn}"
+													text="{path: 'activityObjectView>CreatedAt',type:'sap.ui.model.type.DateTime',formatOptions: { style : 'medium'}}"/>
+												<ObjectAttribute title="{i18n>source}" text="{activityObjectView>Source}"/>
+											</attributes>
+										</UploadCollectionItem>
+									</items>
+								</UploadCollection>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:ObjectPageSection>
+					<!--Inspection Characteristics-->
+					<!--Commented out because i2d.mpe.lib.qmcomps1 is not yet delivered in cloud-->
+					<uxap:ObjectPageSection title="{i18n>inspCharacteristics}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<mvc:XMLView viewName="sap.i2d.mpe.lib.qmcomps1.view.AggregatedResults" id="idInspCharView"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</semantic:content>
+	</semantic:FullscreenPage>
+</mvc:View>

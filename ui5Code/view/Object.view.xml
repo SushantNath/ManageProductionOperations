@@ -1,0 +1,125 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.mpe.operations.manages1.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap"
+	xmlns:core="sap.ui.core" xmlns:semantic="sap.m.semantic" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:l="sap.ui.layout"
+	xmlns:customBlock="i2d.mpe.operations.manages1.blocks" xmlns:commonsBlock="sap.i2d.mpe.lib.commons1.blocks">
+	<semantic:FullscreenPage id="idOperationDetailsPage" busy="{objectView>/busy}" busyIndicatorDelay="{objectView>/delay}" showFooter="false">
+		<semantic:content>
+			<uxap:ObjectPageLayout id="idOpreationObjectPageLayout" upperCaseAnchorBar="false" enableLazyLoading="{DetailModel>/bEnableAutoBinding}">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader id="idOpreationObjectPageHeader"
+						objectTitle="{parts:[{path:'MfgOrderOperationText'},{path:'ManufacturingOrderOperation'}], formatter : '.commonformatter.getCombineDescriptionWithId'}"
+						headerDesign="Light">
+						<uxap:actions>
+							<Button text="{i18n>EditOrder}" press="handleEditOperation" type="Emphasized" tooltip="{i18n>EditOrder}"
+								visible="{=!${OrderIsShopFloorOrder} &amp;&amp; ${ActionButtonVisiblity>/EditButtonNavigable}}"/>
+							<Button text="{i18n>ConfirmOperation}" press="handleConfirmOperation" tooltip="{i18n>ConfirmOperation}"
+								enabled="{parts:[{path:'OperationStatusInternalID'},{path:'OrderIsShopFloorOrder'}], formatter : '.formatter.setEnableStatus'}"
+								visible="{ActionButtonVisiblity>/ConfirmButtonVisible}"/>
+							<Button id="idOneOperationReleaseButton" text="{i18n>operationorderReleaseButton}" press="handleReleaseOperationPress"
+								tooltip="{i18n>operationorderReleaseButton}" type="Transparent"
+								enabled="{path : 'OperationStatusInternalID',formatter : '.formatter.setEnableStatusRelease'}"/>
+							<Button id="idOperationHoldButton" text="{i18n>OperationHoldButton}" type="Transparent" press="handleOperationHoldButton"
+								tooltip="{i18n>OperationHoldButton}"
+								visible="{parts:[{path:'MfgFeatureIsActiveInAnyPlant'}], formatter : '.formatter.setHoldIconVisibility'}"
+								enabled="{parts:[{path:'ManufacturingFeature'},{path:'ManufacturingFeatureIsActive'},{path:'OperationStatusInternalID'}], formatter : '.formatter.setEnableHoldButton'}"/>
+						</uxap:actions>
+					</uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:headerContent>
+					<Label class="sapUiTinyMarginEnd" text="{i18n>OrderNumber}" labelFor="idProductionOrderNumber"/>
+					<Text id="idProductionOrderNumber" text="{path:'ManufacturingOrder'}"></Text>
+					<core:Fragment fragmentName="i2d.mpe.operations.manages1.blocks.OperationDetailsHeader" type="XML"/>
+				</uxap:headerContent>
+				<uxap:sections>
+					<uxap:ObjectPageSection id="idIssuesSection" title="{i18n>Issues}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idIssuesSubSection">
+								<uxap:blocks>
+									<customBlock:IssuesBlock id="idIssuesBlock"/>
+									<VBox visible="{path : 'MfgFeatureIsActiveInAnyPlant',formatter : '.formatter.setHoldIconVisibility'}">
+										<core:Fragment fragmentName="sap.i2d.mpe.lib.qmcomps1.view.DefectsFragment.DefectMessageStrip" type="XML"/>
+									</VBox>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idActivitiesSection" title="{i18n>Activities}" titleUppercase="false"
+						visible="{parts:[{path:'MfgFeatureIsActiveInAnyPlant'}], formatter : '.formatter.setHoldIconVisibility'}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idActivitiesSubSection"
+								visible="{parts:[{path:'MfgFeatureIsActiveInAnyPlant'}], formatter : '.formatter.setHoldIconVisibility'}">
+								<uxap:blocks>
+									<customBlock:ActivitiesBlock id="idActivitiesBlock"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idComponentsSection" title="{i18n>Components}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idComponentsSubSection" title="">
+								<uxap:blocks>
+									<commonsBlock:ComponentsBlock id="idComponentsBlock"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idOperationsSchedule" title="{i18n>OrderSchedule}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idOperationsSchedulesSubSection" title="">
+								<uxap:blocks>
+									<commonsBlock:OrderScheduleBlock id="idOperationsScheduleBlock"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idWCenterScheduleSection" title="{i18n>WorkCenterSchedule}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idWCenterScheduleSubSectionOIP" title="{i18n>WorkCenterScheduleOIP}">
+								<uxap:blocks>
+									<customBlock:OperationInProgressBlock columnLayout="4" id="idOperationPrgress"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+							<uxap:ObjectPageSubSection id="idWCenterScheduleSubSectionONS" title="{i18n>WorkCenterScheduleONS}">
+								<uxap:blocks>
+									<customBlock:OperationNotStartedBlock columnLayout="4" id="idOperationNotStarted"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idOrdConfirmationSection" title="{i18n>OrderConfirmations}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idOrdConfirmationSubSection" title="">
+								<uxap:blocks>
+									<customBlock:ConfirmationBlock id="idOrderConfirmationBlock"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="idInspectionlotSection" title="{i18n>InspectionLot}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="idInspectionlotSubSection" title="">
+								<uxap:blocks>
+									<customBlock:InspectionBlock id="idInspectionBlock"/>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>Defects}"
+					visible="{path : 'MfgFeatureIsActiveInAnyPlant',formatter : '.formatter.setHoldIconVisibility'}" titleUppercase="false">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<uxap:blocks>
+								<core:Fragment fragmentName="sap.i2d.mpe.lib.qmcomps1.view.DefectsFragment.defectRecordingList" type="XML"/>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:ObjectPageLayout>
+		</semantic:content>
+	</semantic:FullscreenPage>
+</mvc:View>

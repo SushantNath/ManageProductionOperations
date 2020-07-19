@@ -1,0 +1,20 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.mpe.operations.manages1.blocks.IssuesBlockController" xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout"
+	xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m">
+	<VBox id="idIssuesItems">
+	    <Text text="{parts:[{path: 'OrderInternalBillOfOperations'}, {path:'OrderIntBillOfOperationsItem'}],  formatter:'.getCompositeKey'}" visible = "false"></Text>
+		<core:Fragment fragmentName="sap.i2d.mpe.lib.commons1.fragments.HoldMessageStrip" type="XML"/>
+		<MessageStrip id="idDelay" class="sapUiSmallMarginBottom" type="Error" showIcon="true" showCloseButton="false"
+			customIcon="sap-icon://history" visible="false"/>
+		<MessageStrip id="idMissingComponents" text="{i18n>MissingComponentsMessage}" type="Error" showIcon="true" showCloseButton="false"
+			customIcon="sap-icon://tree" visible="false" class="sapUiSmallMarginBottom"></MessageStrip>
+		<MessageStrip id="idQtyIssue" text="{i18n>Quantity}" type="Error" showIcon="true" showCloseButton="false" customIcon="sap-icon://dimension"
+			visible="false" class="sapUiSmallMarginBottom"></MessageStrip>
+		<MessageStrip id="idQltyIssue" text="{i18n>QualityIssue}" type="Error" showIcon="true" showCloseButton="false"
+			customIcon="sap-icon://quality-issue" visible="false" class="sapUiSmallMarginBottom"></MessageStrip>
+	</VBox>
+</mvc:View>

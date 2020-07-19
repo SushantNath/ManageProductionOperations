@@ -1,0 +1,841 @@
+[{
+	"Asmoacomp_ac": true,
+	"Execoaaction_ac": false,
+	"Postquantity_ac": false,
+	"OpActyNtwkInstance": 3798,
+	"OpActyNtwkElement": 5013,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 1",
+	"OANElementDisplaySqncNumber": 2732,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 1",
+	"ProductionPlant": "ProductionPlant 1",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 1",
+	"OperationActivityName": "OperationActivityName 1",
+	"OperationActivityNetworkGroup": 3912,
+	"OpActyNtwkGroupVersionCounter": 9422,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 1",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 1",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 1",
+	"MfgOrderOperationText": "MfgOrderOperationText 1",
+	"OrderInternalID": "OrderInternalID 1",
+	"OrderOperationInternalID": "OrderOperationInternalID 1",
+	"OperationStatusInternalID": "OperationStatusInternalID 1",
+	"OperationStatusText": "OperationStatusText 1",
+	"OpPlannedTotalQuantity": 2692.5,
+	"WorkCenterInternalID": "WorkCenterInternalID 1",
+	"WorkCenter": "WorkCenter 1",
+	"ManufacturingOrder": "ManufacturingOrder 1",
+	"StatusAndActionSchema": "StatusAndActionSchema 1",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 1",
+	"SASStatusCategory": 4,
+	"SASStatusName": "SASStatusName 1",
+	"SASStatusCriticality": 4,
+	"OperationActivity": 9593,
+	"OperationActyVersionCounter": 5267,
+	"Material": "Material 1",
+	"MaterialName": "MaterialName 1",
+	"ConfirmationScrapQuantity": 746.19,
+	"ConfirmationSkippedQuantity": 2719.03,
+	"ConfirmationYieldQuantity": 661.81,
+	"OpPlannedYieldQuantity": 7112.31,
+	"OpActyConfIsSFIBased": true,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 1",
+	"OpActyChgAlertAcknIsRequired": false,
+	"OpPlannedScrapQuantity": 7762.14,
+	"OperationUnit": "OperationUnit 1",
+	"ProductionUnit": "ProductionUnit 1",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": false,
+	"OpActyHasAssgdProdnRsceTools": false,
+	"OpActyHasAssgdInspCharcs": true,
+	"OpActyHasMandatoryInspCharcs": true,
+	"OperationExecutionAvailableQty": 7015.21,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": true,
+	"MfgExecActionLogIsExisting": false,
+	"OpActyHasMandatoryComponents": true,
+	"MfgBuyOffCycleIsExisting": true,
+	"OpActyHasAssgdBuyOffs": false,
+	"WorkInstruction": 9197,
+	"WorkInstructionVersionCounter": 5887,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 1",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3798,OpActyNtwkElement=5013)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3798,OpActyNtwkElement=5013)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3798,OpActyNtwkElement=5013)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3798,OpActyNtwkElement=5013)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3798,OpActyNtwkElement=5013)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": false,
+	"Execoaaction_ac": true,
+	"Postquantity_ac": false,
+	"OpActyNtwkInstance": 335,
+	"OpActyNtwkElement": 5895,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 2",
+	"OANElementDisplaySqncNumber": 909,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 2",
+	"ProductionPlant": "ProductionPlant 2",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 2",
+	"OperationActivityName": "OperationActivityName 2",
+	"OperationActivityNetworkGroup": 2875,
+	"OpActyNtwkGroupVersionCounter": 5132,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 2",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 2",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 2",
+	"MfgOrderOperationText": "MfgOrderOperationText 2",
+	"OrderInternalID": "OrderInternalID 2",
+	"OrderOperationInternalID": "OrderOperationInternalID 2",
+	"OperationStatusInternalID": "OperationStatusInternalID 2",
+	"OperationStatusText": "OperationStatusText 2",
+	"OpPlannedTotalQuantity": 9645.36,
+	"WorkCenterInternalID": "WorkCenterInternalID 2",
+	"WorkCenter": "WorkCenter 2",
+	"ManufacturingOrder": "ManufacturingOrder 2",
+	"StatusAndActionSchema": "StatusAndActionSchema 2",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 2",
+	"SASStatusCategory": 3,
+	"SASStatusName": "SASStatusName 2",
+	"SASStatusCriticality": 4,
+	"OperationActivity": 9048,
+	"OperationActyVersionCounter": 4429,
+	"Material": "Material 2",
+	"MaterialName": "MaterialName 2",
+	"ConfirmationScrapQuantity": 7610.67,
+	"ConfirmationSkippedQuantity": 2415.36,
+	"ConfirmationYieldQuantity": 9644.43,
+	"OpPlannedYieldQuantity": 1721.43,
+	"OpActyConfIsSFIBased": false,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 2",
+	"OpActyChgAlertAcknIsRequired": false,
+	"OpPlannedScrapQuantity": 8475.6,
+	"OperationUnit": "OperationUnit 2",
+	"ProductionUnit": "ProductionUnit 2",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": false,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": true,
+	"OpActyHasMandatoryInspCharcs": false,
+	"OperationExecutionAvailableQty": 8595.65,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": false,
+	"MfgExecActionLogIsExisting": true,
+	"OpActyHasMandatoryComponents": true,
+	"MfgBuyOffCycleIsExisting": true,
+	"OpActyHasAssgdBuyOffs": true,
+	"WorkInstruction": 643,
+	"WorkInstructionVersionCounter": 9104,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 2",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=335,OpActyNtwkElement=5895)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=335,OpActyNtwkElement=5895)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=335,OpActyNtwkElement=5895)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=335,OpActyNtwkElement=5895)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=335,OpActyNtwkElement=5895)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": true,
+	"Execoaaction_ac": true,
+	"Postquantity_ac": false,
+	"OpActyNtwkInstance": 5182,
+	"OpActyNtwkElement": 7048,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 3",
+	"OANElementDisplaySqncNumber": 5989,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 3",
+	"ProductionPlant": "ProductionPlant 3",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 3",
+	"OperationActivityName": "OperationActivityName 3",
+	"OperationActivityNetworkGroup": 31,
+	"OpActyNtwkGroupVersionCounter": 5925,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 3",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 3",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 3",
+	"MfgOrderOperationText": "MfgOrderOperationText 3",
+	"OrderInternalID": "OrderInternalID 3",
+	"OrderOperationInternalID": "OrderOperationInternalID 3",
+	"OperationStatusInternalID": "OperationStatusInternalID 3",
+	"OperationStatusText": "OperationStatusText 3",
+	"OpPlannedTotalQuantity": 8770.23,
+	"WorkCenterInternalID": "WorkCenterInternalID 3",
+	"WorkCenter": "WorkCenter 3",
+	"ManufacturingOrder": "ManufacturingOrder 3",
+	"StatusAndActionSchema": "StatusAndActionSchema 3",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 3",
+	"SASStatusCategory": 6,
+	"SASStatusName": "SASStatusName 3",
+	"SASStatusCriticality": 5,
+	"OperationActivity": 1545,
+	"OperationActyVersionCounter": 2234,
+	"Material": "Material 3",
+	"MaterialName": "MaterialName 3",
+	"ConfirmationScrapQuantity": 8776.41,
+	"ConfirmationSkippedQuantity": 3959.17,
+	"ConfirmationYieldQuantity": 4912.86,
+	"OpPlannedYieldQuantity": 6540.15,
+	"OpActyConfIsSFIBased": false,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 3",
+	"OpActyChgAlertAcknIsRequired": false,
+	"OpPlannedScrapQuantity": 1993.09,
+	"OperationUnit": "OperationUnit 3",
+	"ProductionUnit": "ProductionUnit 3",
+	"OpActyHasAssignedComponents": false,
+	"OpActyHasAssgdWorkInstructions": false,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": false,
+	"OpActyHasMandatoryInspCharcs": true,
+	"OperationExecutionAvailableQty": 1871.7,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": false,
+	"MfgExecActionLogIsExisting": false,
+	"OpActyHasMandatoryComponents": false,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": false,
+	"WorkInstruction": 7208,
+	"WorkInstructionVersionCounter": 5674,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 3",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5182,OpActyNtwkElement=7048)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5182,OpActyNtwkElement=7048)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5182,OpActyNtwkElement=7048)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5182,OpActyNtwkElement=7048)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5182,OpActyNtwkElement=7048)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": false,
+	"Execoaaction_ac": false,
+	"Postquantity_ac": true,
+	"OpActyNtwkInstance": 3041,
+	"OpActyNtwkElement": 2670,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 4",
+	"OANElementDisplaySqncNumber": 280,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 4",
+	"ProductionPlant": "ProductionPlant 4",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 4",
+	"OperationActivityName": "OperationActivityName 4",
+	"OperationActivityNetworkGroup": 8718,
+	"OpActyNtwkGroupVersionCounter": 9942,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 4",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 4",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 4",
+	"MfgOrderOperationText": "MfgOrderOperationText 4",
+	"OrderInternalID": "OrderInternalID 4",
+	"OrderOperationInternalID": "OrderOperationInternalID 4",
+	"OperationStatusInternalID": "OperationStatusInternalID 4",
+	"OperationStatusText": "OperationStatusText 4",
+	"OpPlannedTotalQuantity": 5151.7,
+	"WorkCenterInternalID": "WorkCenterInternalID 4",
+	"WorkCenter": "WorkCenter 4",
+	"ManufacturingOrder": "ManufacturingOrder 4",
+	"StatusAndActionSchema": "StatusAndActionSchema 4",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 4",
+	"SASStatusCategory": 5,
+	"SASStatusName": "SASStatusName 4",
+	"SASStatusCriticality": 2,
+	"OperationActivity": 5275,
+	"OperationActyVersionCounter": 3981,
+	"Material": "Material 4",
+	"MaterialName": "MaterialName 4",
+	"ConfirmationScrapQuantity": 346.13,
+	"ConfirmationSkippedQuantity": 3664.73,
+	"ConfirmationYieldQuantity": 9111.59,
+	"OpPlannedYieldQuantity": 5346.99,
+	"OpActyConfIsSFIBased": false,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 4",
+	"OpActyChgAlertAcknIsRequired": true,
+	"OpPlannedScrapQuantity": 7591.99,
+	"OperationUnit": "OperationUnit 4",
+	"ProductionUnit": "ProductionUnit 4",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": true,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": true,
+	"OpActyHasMandatoryInspCharcs": true,
+	"OperationExecutionAvailableQty": 8144.96,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": false,
+	"MfgExecActionLogIsExisting": true,
+	"OpActyHasMandatoryComponents": true,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": true,
+	"WorkInstruction": 6451,
+	"WorkInstructionVersionCounter": 5753,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 4",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3041,OpActyNtwkElement=2670)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3041,OpActyNtwkElement=2670)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3041,OpActyNtwkElement=2670)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3041,OpActyNtwkElement=2670)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=3041,OpActyNtwkElement=2670)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": true,
+	"Execoaaction_ac": false,
+	"Postquantity_ac": true,
+	"OpActyNtwkInstance": 5674,
+	"OpActyNtwkElement": 1206,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 5",
+	"OANElementDisplaySqncNumber": 2518,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 5",
+	"ProductionPlant": "ProductionPlant 5",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 5",
+	"OperationActivityName": "OperationActivityName 5",
+	"OperationActivityNetworkGroup": 1891,
+	"OpActyNtwkGroupVersionCounter": 2496,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 5",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 5",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 5",
+	"MfgOrderOperationText": "MfgOrderOperationText 5",
+	"OrderInternalID": "OrderInternalID 5",
+	"OrderOperationInternalID": "OrderOperationInternalID 5",
+	"OperationStatusInternalID": "OperationStatusInternalID 5",
+	"OperationStatusText": "OperationStatusText 5",
+	"OpPlannedTotalQuantity": 9233.98,
+	"WorkCenterInternalID": "WorkCenterInternalID 5",
+	"WorkCenter": "WorkCenter 5",
+	"ManufacturingOrder": "ManufacturingOrder 5",
+	"StatusAndActionSchema": "StatusAndActionSchema 5",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 5",
+	"SASStatusCategory": 3,
+	"SASStatusName": "SASStatusName 5",
+	"SASStatusCriticality": 9,
+	"OperationActivity": 9677,
+	"OperationActyVersionCounter": 655,
+	"Material": "Material 5",
+	"MaterialName": "MaterialName 5",
+	"ConfirmationScrapQuantity": 2366.1,
+	"ConfirmationSkippedQuantity": 5305.73,
+	"ConfirmationYieldQuantity": 4654.27,
+	"OpPlannedYieldQuantity": 2800.91,
+	"OpActyConfIsSFIBased": true,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 5",
+	"OpActyChgAlertAcknIsRequired": true,
+	"OpPlannedScrapQuantity": 7870.44,
+	"OperationUnit": "OperationUnit 5",
+	"ProductionUnit": "ProductionUnit 5",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": true,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": false,
+	"OpActyHasMandatoryInspCharcs": false,
+	"OperationExecutionAvailableQty": 7788.14,
+	"MfgExecDocReasonCodeIsExisting": true,
+	"MfgExecDocNoteIsExisting": true,
+	"MfgExecActionLogIsExisting": true,
+	"OpActyHasMandatoryComponents": true,
+	"MfgBuyOffCycleIsExisting": true,
+	"OpActyHasAssgdBuyOffs": false,
+	"WorkInstruction": 1464,
+	"WorkInstructionVersionCounter": 9379,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 5",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5674,OpActyNtwkElement=1206)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5674,OpActyNtwkElement=1206)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5674,OpActyNtwkElement=1206)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5674,OpActyNtwkElement=1206)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5674,OpActyNtwkElement=1206)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": false,
+	"Execoaaction_ac": true,
+	"Postquantity_ac": true,
+	"OpActyNtwkInstance": 9580,
+	"OpActyNtwkElement": 6607,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 6",
+	"OANElementDisplaySqncNumber": 2987,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 6",
+	"ProductionPlant": "ProductionPlant 6",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 6",
+	"OperationActivityName": "OperationActivityName 6",
+	"OperationActivityNetworkGroup": 3184,
+	"OpActyNtwkGroupVersionCounter": 8903,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 6",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 6",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 6",
+	"MfgOrderOperationText": "MfgOrderOperationText 6",
+	"OrderInternalID": "OrderInternalID 6",
+	"OrderOperationInternalID": "OrderOperationInternalID 6",
+	"OperationStatusInternalID": "OperationStatusInternalID 6",
+	"OperationStatusText": "OperationStatusText 6",
+	"OpPlannedTotalQuantity": 816.59,
+	"WorkCenterInternalID": "WorkCenterInternalID 6",
+	"WorkCenter": "WorkCenter 6",
+	"ManufacturingOrder": "ManufacturingOrder 6",
+	"StatusAndActionSchema": "StatusAndActionSchema 6",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 6",
+	"SASStatusCategory": 7,
+	"SASStatusName": "SASStatusName 6",
+	"SASStatusCriticality": 6,
+	"OperationActivity": 8811,
+	"OperationActyVersionCounter": 7134,
+	"Material": "Material 6",
+	"MaterialName": "MaterialName 6",
+	"ConfirmationScrapQuantity": 7194.41,
+	"ConfirmationSkippedQuantity": 8276.38,
+	"ConfirmationYieldQuantity": 4512.25,
+	"OpPlannedYieldQuantity": 6168.03,
+	"OpActyConfIsSFIBased": true,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 6",
+	"OpActyChgAlertAcknIsRequired": true,
+	"OpPlannedScrapQuantity": 2348.56,
+	"OperationUnit": "OperationUnit 6",
+	"ProductionUnit": "ProductionUnit 6",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": true,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": false,
+	"OpActyHasMandatoryInspCharcs": false,
+	"OperationExecutionAvailableQty": 4465.12,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": true,
+	"MfgExecActionLogIsExisting": true,
+	"OpActyHasMandatoryComponents": false,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": true,
+	"WorkInstruction": 4706,
+	"WorkInstructionVersionCounter": 5230,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 6",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=9580,OpActyNtwkElement=6607)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=9580,OpActyNtwkElement=6607)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=9580,OpActyNtwkElement=6607)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=9580,OpActyNtwkElement=6607)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=9580,OpActyNtwkElement=6607)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": true,
+	"Execoaaction_ac": false,
+	"Postquantity_ac": false,
+	"OpActyNtwkInstance": 8508,
+	"OpActyNtwkElement": 1826,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 7",
+	"OANElementDisplaySqncNumber": 3377,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 7",
+	"ProductionPlant": "ProductionPlant 7",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 7",
+	"OperationActivityName": "OperationActivityName 7",
+	"OperationActivityNetworkGroup": 1247,
+	"OpActyNtwkGroupVersionCounter": 667,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 7",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 7",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 7",
+	"MfgOrderOperationText": "MfgOrderOperationText 7",
+	"OrderInternalID": "OrderInternalID 7",
+	"OrderOperationInternalID": "OrderOperationInternalID 7",
+	"OperationStatusInternalID": "OperationStatusInternalID 7",
+	"OperationStatusText": "OperationStatusText 7",
+	"OpPlannedTotalQuantity": 9876.27,
+	"WorkCenterInternalID": "WorkCenterInternalID 7",
+	"WorkCenter": "WorkCenter 7",
+	"ManufacturingOrder": "ManufacturingOrder 7",
+	"StatusAndActionSchema": "StatusAndActionSchema 7",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 7",
+	"SASStatusCategory": 0,
+	"SASStatusName": "SASStatusName 7",
+	"SASStatusCriticality": 6,
+	"OperationActivity": 3818,
+	"OperationActyVersionCounter": 392,
+	"Material": "Material 7",
+	"MaterialName": "MaterialName 7",
+	"ConfirmationScrapQuantity": 5879.05,
+	"ConfirmationSkippedQuantity": 3309.06,
+	"ConfirmationYieldQuantity": 136.39,
+	"OpPlannedYieldQuantity": 2650.15,
+	"OpActyConfIsSFIBased": false,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 7",
+	"OpActyChgAlertAcknIsRequired": true,
+	"OpPlannedScrapQuantity": 6633.74,
+	"OperationUnit": "OperationUnit 7",
+	"ProductionUnit": "ProductionUnit 7",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": false,
+	"OpActyHasAssgdProdnRsceTools": false,
+	"OpActyHasAssgdInspCharcs": true,
+	"OpActyHasMandatoryInspCharcs": true,
+	"OperationExecutionAvailableQty": 386.15,
+	"MfgExecDocReasonCodeIsExisting": true,
+	"MfgExecDocNoteIsExisting": true,
+	"MfgExecActionLogIsExisting": true,
+	"OpActyHasMandatoryComponents": false,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": true,
+	"WorkInstruction": 886,
+	"WorkInstructionVersionCounter": 9492,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 7",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8508,OpActyNtwkElement=1826)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8508,OpActyNtwkElement=1826)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8508,OpActyNtwkElement=1826)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8508,OpActyNtwkElement=1826)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8508,OpActyNtwkElement=1826)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": true,
+	"Execoaaction_ac": true,
+	"Postquantity_ac": true,
+	"OpActyNtwkInstance": 5974,
+	"OpActyNtwkElement": 7847,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 8",
+	"OANElementDisplaySqncNumber": 7840,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 8",
+	"ProductionPlant": "ProductionPlant 8",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 8",
+	"OperationActivityName": "OperationActivityName 8",
+	"OperationActivityNetworkGroup": 8800,
+	"OpActyNtwkGroupVersionCounter": 8117,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 8",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 8",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 8",
+	"MfgOrderOperationText": "MfgOrderOperationText 8",
+	"OrderInternalID": "OrderInternalID 8",
+	"OrderOperationInternalID": "OrderOperationInternalID 8",
+	"OperationStatusInternalID": "OperationStatusInternalID 8",
+	"OperationStatusText": "OperationStatusText 8",
+	"OpPlannedTotalQuantity": 7047.86,
+	"WorkCenterInternalID": "WorkCenterInternalID 8",
+	"WorkCenter": "WorkCenter 8",
+	"ManufacturingOrder": "ManufacturingOrder 8",
+	"StatusAndActionSchema": "StatusAndActionSchema 8",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 8",
+	"SASStatusCategory": 4,
+	"SASStatusName": "SASStatusName 8",
+	"SASStatusCriticality": 2,
+	"OperationActivity": 7013,
+	"OperationActyVersionCounter": 9537,
+	"Material": "Material 8",
+	"MaterialName": "MaterialName 8",
+	"ConfirmationScrapQuantity": 720.47,
+	"ConfirmationSkippedQuantity": 2356.84,
+	"ConfirmationYieldQuantity": 5076.43,
+	"OpPlannedYieldQuantity": 6928.33,
+	"OpActyConfIsSFIBased": false,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 8",
+	"OpActyChgAlertAcknIsRequired": false,
+	"OpPlannedScrapQuantity": 8188.78,
+	"OperationUnit": "OperationUnit 8",
+	"ProductionUnit": "ProductionUnit 8",
+	"OpActyHasAssignedComponents": true,
+	"OpActyHasAssgdWorkInstructions": true,
+	"OpActyHasAssgdProdnRsceTools": false,
+	"OpActyHasAssgdInspCharcs": false,
+	"OpActyHasMandatoryInspCharcs": true,
+	"OperationExecutionAvailableQty": 8429.39,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": true,
+	"MfgExecActionLogIsExisting": false,
+	"OpActyHasMandatoryComponents": false,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": true,
+	"WorkInstruction": 4128,
+	"WorkInstructionVersionCounter": 5141,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 8",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5974,OpActyNtwkElement=7847)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5974,OpActyNtwkElement=7847)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5974,OpActyNtwkElement=7847)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5974,OpActyNtwkElement=7847)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=5974,OpActyNtwkElement=7847)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": true,
+	"Execoaaction_ac": true,
+	"Postquantity_ac": false,
+	"OpActyNtwkInstance": 1432,
+	"OpActyNtwkElement": 8098,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 9",
+	"OANElementDisplaySqncNumber": 7362,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 9",
+	"ProductionPlant": "ProductionPlant 9",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 9",
+	"OperationActivityName": "OperationActivityName 9",
+	"OperationActivityNetworkGroup": 6551,
+	"OpActyNtwkGroupVersionCounter": 5975,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 9",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 9",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 9",
+	"MfgOrderOperationText": "MfgOrderOperationText 9",
+	"OrderInternalID": "OrderInternalID 9",
+	"OrderOperationInternalID": "OrderOperationInternalID 9",
+	"OperationStatusInternalID": "OperationStatusInternalID 9",
+	"OperationStatusText": "OperationStatusText 9",
+	"OpPlannedTotalQuantity": 8640.18,
+	"WorkCenterInternalID": "WorkCenterInternalID 9",
+	"WorkCenter": "WorkCenter 9",
+	"ManufacturingOrder": "ManufacturingOrder 9",
+	"StatusAndActionSchema": "StatusAndActionSchema 9",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 9",
+	"SASStatusCategory": 2,
+	"SASStatusName": "SASStatusName 9",
+	"SASStatusCriticality": 3,
+	"OperationActivity": 7788,
+	"OperationActyVersionCounter": 373,
+	"Material": "Material 9",
+	"MaterialName": "MaterialName 9",
+	"ConfirmationScrapQuantity": 7330.66,
+	"ConfirmationSkippedQuantity": 6937.59,
+	"ConfirmationYieldQuantity": 5370.34,
+	"OpPlannedYieldQuantity": 2343.98,
+	"OpActyConfIsSFIBased": false,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 9",
+	"OpActyChgAlertAcknIsRequired": true,
+	"OpPlannedScrapQuantity": 7203.46,
+	"OperationUnit": "OperationUnit 9",
+	"ProductionUnit": "ProductionUnit 9",
+	"OpActyHasAssignedComponents": false,
+	"OpActyHasAssgdWorkInstructions": true,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": false,
+	"OpActyHasMandatoryInspCharcs": false,
+	"OperationExecutionAvailableQty": 5665.37,
+	"MfgExecDocReasonCodeIsExisting": true,
+	"MfgExecDocNoteIsExisting": true,
+	"MfgExecActionLogIsExisting": false,
+	"OpActyHasMandatoryComponents": false,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": false,
+	"WorkInstruction": 2168,
+	"WorkInstructionVersionCounter": 9175,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 9",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=1432,OpActyNtwkElement=8098)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=1432,OpActyNtwkElement=8098)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=1432,OpActyNtwkElement=8098)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=1432,OpActyNtwkElement=8098)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=1432,OpActyNtwkElement=8098)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}, {
+	"Asmoacomp_ac": false,
+	"Execoaaction_ac": true,
+	"Postquantity_ac": false,
+	"OpActyNtwkInstance": 8716,
+	"OpActyNtwkElement": 5295,
+	"OpActyNtwkSegmentType": "OpActyNtwkSegmentType 10",
+	"OANElementDisplaySqncNumber": 4169,
+	"OpActyNtwkSegmentTypeText": "OpActyNtwkSegmentTypeText 10",
+	"ProductionPlant": "ProductionPlant 10",
+	"OpActyNtwkElementExternalID": "OpActyNtwkElementExternalID 10",
+	"OperationActivityName": "OperationActivityName 10",
+	"OperationActivityNetworkGroup": 7610,
+	"OpActyNtwkGroupVersionCounter": 2641,
+	"OpActyNtwkGroupExternalID": "OpActyNtwkGroupExternalID 10",
+	"OpActyNtwkGroupName": "OpActyNtwkGroupName 10",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 10",
+	"MfgOrderOperationText": "MfgOrderOperationText 10",
+	"OrderInternalID": "OrderInternalID 10",
+	"OrderOperationInternalID": "OrderOperationInternalID 10",
+	"OperationStatusInternalID": "OperationStatusInternalID 10",
+	"OperationStatusText": "OperationStatusText 10",
+	"OpPlannedTotalQuantity": 9868.83,
+	"WorkCenterInternalID": "WorkCenterInternalID 10",
+	"WorkCenter": "WorkCenter 10",
+	"ManufacturingOrder": "ManufacturingOrder 10",
+	"StatusAndActionSchema": "StatusAndActionSchema 10",
+	"StatusAndActionSchemaStatus": "StatusAndActionSchemaStatus 10",
+	"SASStatusCategory": 6,
+	"SASStatusName": "SASStatusName 10",
+	"SASStatusCriticality": 3,
+	"OperationActivity": 4114,
+	"OperationActyVersionCounter": 534,
+	"Material": "Material 10",
+	"MaterialName": "MaterialName 10",
+	"ConfirmationScrapQuantity": 8196.19,
+	"ConfirmationSkippedQuantity": 4693.47,
+	"ConfirmationYieldQuantity": 7585.51,
+	"OpPlannedYieldQuantity": 8418.15,
+	"OpActyConfIsSFIBased": true,
+	"OriginalChgAlertCount": "OriginalChgAlertCount 10",
+	"OpActyChgAlertAcknIsRequired": false,
+	"OpPlannedScrapQuantity": 929.05,
+	"OperationUnit": "OperationUnit 10",
+	"ProductionUnit": "ProductionUnit 10",
+	"OpActyHasAssignedComponents": false,
+	"OpActyHasAssgdWorkInstructions": true,
+	"OpActyHasAssgdProdnRsceTools": true,
+	"OpActyHasAssgdInspCharcs": false,
+	"OpActyHasMandatoryInspCharcs": true,
+	"OperationExecutionAvailableQty": 6329.99,
+	"MfgExecDocReasonCodeIsExisting": false,
+	"MfgExecDocNoteIsExisting": false,
+	"MfgExecActionLogIsExisting": false,
+	"OpActyHasMandatoryComponents": true,
+	"MfgBuyOffCycleIsExisting": false,
+	"OpActyHasAssgdBuyOffs": true,
+	"WorkInstruction": 2746,
+	"WorkInstructionVersionCounter": 5841,
+	"MfgWorkInstructionContent": "MfgWorkInstructionContent 10",
+	"__metadata": {
+		"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8716,OpActyNtwkElement=5295)",
+		"type": "PP_MPE_OPER_MANAGE.C_ProcgExecOperationActivityType"
+	},
+	"to_MfgOrderDocInfoRecdObjLink": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8716,OpActyNtwkElement=5295)/to_MfgOrderDocInfoRecdObjLink"
+		}
+	},
+	"to_OperationActivityComponent": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8716,OpActyNtwkElement=5295)/to_OperationActivityComponent"
+		}
+	},
+	"to_OperationActyPRTAssignment": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8716,OpActyNtwkElement=5295)/to_OperationActyPRTAssignment"
+		}
+	},
+	"to_ShopFloorItemAtOpActy": {
+		"__deferred": {
+			"uri": "C_ProcgExecOperationActivity(OpActyNtwkInstance=8716,OpActyNtwkElement=5295)/to_ShopFloorItemAtOpActy"
+		}
+	}
+}]

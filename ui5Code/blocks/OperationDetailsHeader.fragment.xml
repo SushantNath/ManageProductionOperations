@@ -1,0 +1,57 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:layout="sap.ui.layout">
+	<VBox width="100%" class="sapUiNoMarginBottom">
+		<HBox>
+			<VBox>
+				<Label labelFor="idLinkMaterial" text="{path: 'i18n>Material', formatter:'.formatter.addColon'}" class="sapUiTinyMarginEnd"
+					tooltip="{i18n>MaterialHeaderTooltip}"/>
+				<HBox wrap="Wrap" alignItems="Center">
+					<Link id="idLinkMaterial" text="{Material}" press="handleMaterialLinkPress" class="sapUiTinyMarginEnd"/>
+					<Text id="idTextMaterial" text="{parts:[{path:'MaterialName'}], formatter:'.formatter.getWordInBrackets'}" maxLines="2"
+						class="sapUiTinyMarginEnd" tooltip="{parts:[{path:'MaterialName'}], formatter:'.formatter.getWordInBrackets'}"></Text>
+				</HBox>
+			</VBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<Label text="{path: 'i18n>Status', formatter:'.formatter.addColon'}" tooltip="{i18n>StatusHeaderTooltip}" labelFor="idTextStatus"/>
+				<Link id="idTextStatus" text="{parts:[{path:'OperationStatusInternalID'}], formatter:'.formatter.getStatusText'}"
+					press="handleStatusLinkPress"/>
+			</VBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<Label text="{path: 'i18n>Workcenter', formatter:'.formatter.addColon'}" class="sapUiTinyMarginEnd" tooltip="{i18n>WorkCenterHeaderTooltip}"
+					labelFor="idLinkWorkcenter"/>
+				<HBox wrap="Wrap" alignItems="Center">
+					<Link id="idLinkWorkcenter" press="handleWorkCenterPress" text="{WorkCenter}" class="sapUiTinyMarginEnd"/>
+					<Text text="{parts:[{path:'WorkCenterText'}], formatter:'.formatter.getWordInBrackets'}" class="sapUiTinyMarginEnd" maxLines="2"
+						tooltip="{parts:[{path:'WorkCenterText'}], formatter:'.formatter.getWordInBrackets'}"/>
+				</HBox>
+			</VBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<Label text="{path: 'i18n>ProductionPlant', formatter:'.formatter.addColon'}" class="sapUiTinyMarginEnd"
+					tooltip="{i18n>ProductionPlantHeaderTooltip}"/>
+				<Text text="{parts:[{path:'ProductionPlantName'},{path:'ProductionPlant'}], formatter : '.commonformatter.getCombineDescriptionWithId'}"
+					tooltip="{parts:[{path:'ProductionPlantName'},{path:'ProductionPlant'}], formatter : '.commonformatter.getCombineDescriptionWithId'}"/>
+			</VBox>
+			<VBox visible="{=${EffctyTypeCnctntdParamDesc} !== '' }" class="sapUiMediumMarginBegin">
+				<Label text="{path: 'EffctyTypeCnctntdParamDesc', formatter:'.formatter.addColon'}" class="sapUiTinyMarginEnd"/>
+				<Text text="{EffectivityParameterDesc}"/>
+			</VBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<Label text="{path: '/#C_Manageoperations/ProdnProcgIsFlexible/@sap:label', formatter:'.formatter.addColon'}" class="sapUiTinyMarginEnd"/>
+				<Text text="{ProdnProcgFlexibilityIndName}"/>
+			</VBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<Label text="{path: 'i18n>Responsible', formatter:'.formatter.addColon'}" tooltip="{i18n>ResponsibleHeaderTooltip}"
+					labelFor="idTextResponsible"/>
+				<Text id="idTextResponsible" text="{MRPControllerName}"/>
+			</VBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<Label text="{path: 'i18n>Quantity', formatter:'.formatter.addColon'}" tooltip="{i18n>QuantityHeaderTooltip}" labelFor="idONumberQuantity"/>
+				<ObjectNumber id="idONumberQuantity" number="{OpPlannedTotalQuantity}" unit="{OperationUnit}"/>
+			</VBox>
+		</HBox>
+	</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,1021 @@
+[{
+	"OrderInternalID": "OrderInternalID 1",
+	"OrderOperationInternalID": "OrderOperationInternalID 1",
+	"ManufacturingOrder": "ManufacturingOrder 1",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 1",
+	"ManufacturingOrderType": "ManufacturingOrderType 1",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 1",
+	"ProductionPlant": "ProductionPlant 1",
+	"PlantName": "PlantName 1",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 1",
+	"MfgOrderOperationText": "MfgOrderOperationText 1",
+	"OperationStatusInternalID": "OperationStatusInternalID 1",
+	"OperationStatusText": "OperationStatusText 1",
+	"Material": "Material 1",
+	"MaterialName": "MaterialName 1",
+	"WorkCenterInternalID": "WorkCenterInternalID 1",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 1",
+	"WorkCenter": "WorkCenter 1",
+	"WorkCenterText": "WorkCenterText 1",
+	"WorkCenterLocation": "WorkCenterLocation 1",
+	"WorkCenterResponsible": "WorkCenterResponsible 1",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 1",
+	"SupplyArea": "SupplyArea 1",
+	"OpLtstSchedldExecStrtDte": "/Date(1264683652000)/",
+	"OpLtstSchedldExecStrtTme": "PT20H17M16S",
+	"OpLtstSchedldExecEndDte": "/Date(1115208052000)/",
+	"OpLtstSchedldExecEndTme": "PT5H45M38S",
+	"OpActualExecutionStartDate": "/Date(1145534452000)/",
+	"OpActualExecutionStartTime": "PT16H34M5S",
+	"OpActualExecutionEndDate": "/Date(1119355252000)/",
+	"OpActualExecutionEndTime": "PT14H29M49S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 1",
+	"OpPlannedScrapQuantity": 963.68,
+	"OpPlannedTotalQuantity": 8325.41,
+	"OpTotalConfirmedYieldQty": 270.18,
+	"OpTotalConfirmedScrapQty": 6316.26,
+	"ConfirmationScrapQuantity": 134.53,
+	"MfgOrderOperationReadyQuantity": 3696.63,
+	"MfgOrderOperationNotReadyQty": 3072.99,
+	"OpExecutionCompletedQuantity": 6301.75,
+	"OperationUnit": "OperationUnit 1",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 6197,
+	"OperationActivityNetwork": 483,
+	"OpActyNtwkVersionCounter": 1762,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 1",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 1",
+	"OperationIsDelivered": "OperationIsDelivered 1",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 1",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 1",
+	"OperationIsPrinted": "OperationIsPrinted 1",
+	"OperationIsReleased": "OperationIsReleased 1",
+	"OperationIsCreated": "OperationIsCreated 1",
+	"OperationIsScheduled": "OperationIsScheduled 1",
+	"OperationIsConfirmed": "OperationIsConfirmed 1",
+	"OperationIsDeleted": "OperationIsDeleted 1",
+	"OperationExecutionEndIsLate": false,
+	"OperationYieldDeviationQty": 1923.5,
+	"ExecutionStartLatenessInHours": 5.31237482308732,
+	"ExecutionEndLatenessInHours": 8.304764627841195,
+	"ExecutionStartLatenessInMins": 2.6345585721084386,
+	"ExecutionEndLatenessInMinutes": 9.436758169139122,
+	"OperationStartDeviationDays": 2.4072832780773035,
+	"PlannedEndDateDvtnInDays": 7.655426894375155,
+	"OperationHasScrapQualityIssue": true,
+	"OpHasAssgdProdnRsceTools": false,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%201',OrderOperationInternalID='OrderOperationInternalID%201')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 2",
+	"OrderOperationInternalID": "OrderOperationInternalID 2",
+	"ManufacturingOrder": "ManufacturingOrder 2",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 2",
+	"ManufacturingOrderType": "ManufacturingOrderType 2",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 2",
+	"ProductionPlant": "ProductionPlant 2",
+	"PlantName": "PlantName 2",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 2",
+	"MfgOrderOperationText": "MfgOrderOperationText 2",
+	"OperationStatusInternalID": "OperationStatusInternalID 2",
+	"OperationStatusText": "OperationStatusText 2",
+	"Material": "Material 2",
+	"MaterialName": "MaterialName 2",
+	"WorkCenterInternalID": "WorkCenterInternalID 2",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 2",
+	"WorkCenter": "WorkCenter 2",
+	"WorkCenterText": "WorkCenterText 2",
+	"WorkCenterLocation": "WorkCenterLocation 2",
+	"WorkCenterResponsible": "WorkCenterResponsible 2",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 2",
+	"SupplyArea": "SupplyArea 2",
+	"OpLtstSchedldExecStrtDte": "/Date(1534593652000)/",
+	"OpLtstSchedldExecStrtTme": "PT6H44M47S",
+	"OpLtstSchedldExecEndDte": "/Date(955886452000)/",
+	"OpLtstSchedldExecEndTme": "PT6H12M49S",
+	"OpActualExecutionStartDate": "/Date(1156593652000)/",
+	"OpActualExecutionStartTime": "PT5H0M31S",
+	"OpActualExecutionEndDate": "/Date(1518613252000)/",
+	"OpActualExecutionEndTime": "PT11H14M14S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 2",
+	"OpPlannedScrapQuantity": 599.01,
+	"OpPlannedTotalQuantity": 3501.22,
+	"OpTotalConfirmedYieldQty": 7262.13,
+	"OpTotalConfirmedScrapQty": 7353.05,
+	"ConfirmationScrapQuantity": 4928.91,
+	"MfgOrderOperationReadyQuantity": 9871.65,
+	"MfgOrderOperationNotReadyQty": 7901.59,
+	"OpExecutionCompletedQuantity": 980.19,
+	"OperationUnit": "OperationUnit 2",
+	"OperationExecutionStartIsLate": true,
+	"OpActyNtwkInstance": 7918,
+	"OperationActivityNetwork": 922,
+	"OpActyNtwkVersionCounter": 269,
+	"OpActyConfIsSFIBased": true,
+	"OperationIsClosed": "OperationIsClosed 2",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 2",
+	"OperationIsDelivered": "OperationIsDelivered 2",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 2",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 2",
+	"OperationIsPrinted": "OperationIsPrinted 2",
+	"OperationIsReleased": "OperationIsReleased 2",
+	"OperationIsCreated": "OperationIsCreated 2",
+	"OperationIsScheduled": "OperationIsScheduled 2",
+	"OperationIsConfirmed": "OperationIsConfirmed 2",
+	"OperationIsDeleted": "OperationIsDeleted 2",
+	"OperationExecutionEndIsLate": true,
+	"OperationYieldDeviationQty": 6259.36,
+	"ExecutionStartLatenessInHours": 8.804021946077611,
+	"ExecutionEndLatenessInHours": 8.089466967805432,
+	"ExecutionStartLatenessInMins": 3.1318335785434215,
+	"ExecutionEndLatenessInMinutes": 2.5696477624755887,
+	"OperationStartDeviationDays": 8.940364219513752,
+	"PlannedEndDateDvtnInDays": 1.2602430787634833,
+	"OperationHasScrapQualityIssue": true,
+	"OpHasAssgdProdnRsceTools": true,
+	"OperationHasProductionHold": true,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%202',OrderOperationInternalID='OrderOperationInternalID%202')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 3",
+	"OrderOperationInternalID": "OrderOperationInternalID 3",
+	"ManufacturingOrder": "ManufacturingOrder 3",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 3",
+	"ManufacturingOrderType": "ManufacturingOrderType 3",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 3",
+	"ProductionPlant": "ProductionPlant 3",
+	"PlantName": "PlantName 3",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 3",
+	"MfgOrderOperationText": "MfgOrderOperationText 3",
+	"OperationStatusInternalID": "OperationStatusInternalID 3",
+	"OperationStatusText": "OperationStatusText 3",
+	"Material": "Material 3",
+	"MaterialName": "MaterialName 3",
+	"WorkCenterInternalID": "WorkCenterInternalID 3",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 3",
+	"WorkCenter": "WorkCenter 3",
+	"WorkCenterText": "WorkCenterText 3",
+	"WorkCenterLocation": "WorkCenterLocation 3",
+	"WorkCenterResponsible": "WorkCenterResponsible 3",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 3",
+	"SupplyArea": "SupplyArea 3",
+	"OpLtstSchedldExecStrtDte": "/Date(1192449652000)/",
+	"OpLtstSchedldExecStrtTme": "PT12H33M17S",
+	"OpLtstSchedldExecEndDte": "/Date(1352293252000)/",
+	"OpLtstSchedldExecEndTme": "PT5H16M1S",
+	"OpActualExecutionStartDate": "/Date(1523361652000)/",
+	"OpActualExecutionStartTime": "PT8H7M24S",
+	"OpActualExecutionEndDate": "/Date(1194613252000)/",
+	"OpActualExecutionEndTime": "PT20H38M55S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 3",
+	"OpPlannedScrapQuantity": 5646.26,
+	"OpPlannedTotalQuantity": 7932.26,
+	"OpTotalConfirmedYieldQty": 5147.24,
+	"OpTotalConfirmedScrapQty": 6273.18,
+	"ConfirmationScrapQuantity": 3978.8,
+	"MfgOrderOperationReadyQuantity": 2013.69,
+	"MfgOrderOperationNotReadyQty": 1996.29,
+	"OpExecutionCompletedQuantity": 2392.73,
+	"OperationUnit": "OperationUnit 3",
+	"OperationExecutionStartIsLate": true,
+	"OpActyNtwkInstance": 4537,
+	"OperationActivityNetwork": 4576,
+	"OpActyNtwkVersionCounter": 4075,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 3",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 3",
+	"OperationIsDelivered": "OperationIsDelivered 3",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 3",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 3",
+	"OperationIsPrinted": "OperationIsPrinted 3",
+	"OperationIsReleased": "OperationIsReleased 3",
+	"OperationIsCreated": "OperationIsCreated 3",
+	"OperationIsScheduled": "OperationIsScheduled 3",
+	"OperationIsConfirmed": "OperationIsConfirmed 3",
+	"OperationIsDeleted": "OperationIsDeleted 3",
+	"OperationExecutionEndIsLate": false,
+	"OperationYieldDeviationQty": 5599.56,
+	"ExecutionStartLatenessInHours": 5.0542561124535235,
+	"ExecutionEndLatenessInHours": 1.8105456394592023,
+	"ExecutionStartLatenessInMins": 0.2778235433296472,
+	"ExecutionEndLatenessInMinutes": 1.7411108001343178,
+	"OperationStartDeviationDays": 9.31417191747531,
+	"PlannedEndDateDvtnInDays": 3.1575695166392515,
+	"OperationHasScrapQualityIssue": false,
+	"OpHasAssgdProdnRsceTools": false,
+	"OperationHasProductionHold": true,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%203',OrderOperationInternalID='OrderOperationInternalID%203')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 4",
+	"OrderOperationInternalID": "OrderOperationInternalID 4",
+	"ManufacturingOrder": "ManufacturingOrder 4",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 4",
+	"ManufacturingOrderType": "ManufacturingOrderType 4",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 4",
+	"ProductionPlant": "ProductionPlant 4",
+	"PlantName": "PlantName 4",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 4",
+	"MfgOrderOperationText": "MfgOrderOperationText 4",
+	"OperationStatusInternalID": "OperationStatusInternalID 4",
+	"OperationStatusText": "OperationStatusText 4",
+	"Material": "Material 4",
+	"MaterialName": "MaterialName 4",
+	"WorkCenterInternalID": "WorkCenterInternalID 4",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 4",
+	"WorkCenter": "WorkCenter 4",
+	"WorkCenterText": "WorkCenterText 4",
+	"WorkCenterLocation": "WorkCenterLocation 4",
+	"WorkCenterResponsible": "WorkCenterResponsible 4",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 4",
+	"SupplyArea": "SupplyArea 4",
+	"OpLtstSchedldExecStrtDte": "/Date(1255953652000)/",
+	"OpLtstSchedldExecStrtTme": "PT9H31M29S",
+	"OpLtstSchedldExecEndDte": "/Date(1424437252000)/",
+	"OpLtstSchedldExecEndTme": "PT12H0M33S",
+	"OpActualExecutionStartDate": "/Date(1050840052000)/",
+	"OpActualExecutionStartTime": "PT11H20M35S",
+	"OpActualExecutionEndDate": "/Date(1440417652000)/",
+	"OpActualExecutionEndTime": "PT6H47M40S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 4",
+	"OpPlannedScrapQuantity": 5482.46,
+	"OpPlannedTotalQuantity": 4275.26,
+	"OpTotalConfirmedYieldQty": 3415.71,
+	"OpTotalConfirmedScrapQty": 5270.21,
+	"ConfirmationScrapQuantity": 370.58,
+	"MfgOrderOperationReadyQuantity": 799.21,
+	"MfgOrderOperationNotReadyQty": 3130.13,
+	"OpExecutionCompletedQuantity": 239.13,
+	"OperationUnit": "OperationUnit 4",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 839,
+	"OperationActivityNetwork": 9690,
+	"OpActyNtwkVersionCounter": 3061,
+	"OpActyConfIsSFIBased": true,
+	"OperationIsClosed": "OperationIsClosed 4",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 4",
+	"OperationIsDelivered": "OperationIsDelivered 4",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 4",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 4",
+	"OperationIsPrinted": "OperationIsPrinted 4",
+	"OperationIsReleased": "OperationIsReleased 4",
+	"OperationIsCreated": "OperationIsCreated 4",
+	"OperationIsScheduled": "OperationIsScheduled 4",
+	"OperationIsConfirmed": "OperationIsConfirmed 4",
+	"OperationIsDeleted": "OperationIsDeleted 4",
+	"OperationExecutionEndIsLate": true,
+	"OperationYieldDeviationQty": 786.25,
+	"ExecutionStartLatenessInHours": 2.2896043212639405,
+	"ExecutionEndLatenessInHours": 6.308285602352388,
+	"ExecutionStartLatenessInMins": 8.02097983448922,
+	"ExecutionEndLatenessInMinutes": 9.766059892512102,
+	"OperationStartDeviationDays": 2.4312137985614024,
+	"PlannedEndDateDvtnInDays": 5.896722302562393,
+	"OperationHasScrapQualityIssue": true,
+	"OpHasAssgdProdnRsceTools": false,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%204',OrderOperationInternalID='OrderOperationInternalID%204')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 5",
+	"OrderOperationInternalID": "OrderOperationInternalID 5",
+	"ManufacturingOrder": "ManufacturingOrder 5",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 5",
+	"ManufacturingOrderType": "ManufacturingOrderType 5",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 5",
+	"ProductionPlant": "ProductionPlant 5",
+	"PlantName": "PlantName 5",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 5",
+	"MfgOrderOperationText": "MfgOrderOperationText 5",
+	"OperationStatusInternalID": "OperationStatusInternalID 5",
+	"OperationStatusText": "OperationStatusText 5",
+	"Material": "Material 5",
+	"MaterialName": "MaterialName 5",
+	"WorkCenterInternalID": "WorkCenterInternalID 5",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 5",
+	"WorkCenter": "WorkCenter 5",
+	"WorkCenterText": "WorkCenterText 5",
+	"WorkCenterLocation": "WorkCenterLocation 5",
+	"WorkCenterResponsible": "WorkCenterResponsible 5",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 5",
+	"SupplyArea": "SupplyArea 5",
+	"OpLtstSchedldExecStrtDte": "/Date(1568894452000)/",
+	"OpLtstSchedldExecStrtTme": "PT16H12M39S",
+	"OpLtstSchedldExecEndDte": "/Date(948373252000)/",
+	"OpLtstSchedldExecEndTme": "PT9H53M31S",
+	"OpActualExecutionStartDate": "/Date(1562500852000)/",
+	"OpActualExecutionStartTime": "PT5H32M8S",
+	"OpActualExecutionEndDate": "/Date(1501761652000)/",
+	"OpActualExecutionEndTime": "PT12H48M9S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 5",
+	"OpPlannedScrapQuantity": 1225.57,
+	"OpPlannedTotalQuantity": 823.21,
+	"OpTotalConfirmedYieldQty": 417.87,
+	"OpTotalConfirmedScrapQty": 5400.3,
+	"ConfirmationScrapQuantity": 9801.8,
+	"MfgOrderOperationReadyQuantity": 6610.96,
+	"MfgOrderOperationNotReadyQty": 3541.5,
+	"OpExecutionCompletedQuantity": 1493.25,
+	"OperationUnit": "OperationUnit 5",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 6601,
+	"OperationActivityNetwork": 8549,
+	"OpActyNtwkVersionCounter": 1412,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 5",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 5",
+	"OperationIsDelivered": "OperationIsDelivered 5",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 5",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 5",
+	"OperationIsPrinted": "OperationIsPrinted 5",
+	"OperationIsReleased": "OperationIsReleased 5",
+	"OperationIsCreated": "OperationIsCreated 5",
+	"OperationIsScheduled": "OperationIsScheduled 5",
+	"OperationIsConfirmed": "OperationIsConfirmed 5",
+	"OperationIsDeleted": "OperationIsDeleted 5",
+	"OperationExecutionEndIsLate": true,
+	"OperationYieldDeviationQty": 1600.67,
+	"ExecutionStartLatenessInHours": 0.9651719597730679,
+	"ExecutionEndLatenessInHours": 2.6539524423491057,
+	"ExecutionStartLatenessInMins": 3.698485154372493,
+	"ExecutionEndLatenessInMinutes": 8.011175715880048,
+	"OperationStartDeviationDays": 7.126776827571315,
+	"PlannedEndDateDvtnInDays": 2.8108473171560044,
+	"OperationHasScrapQualityIssue": false,
+	"OpHasAssgdProdnRsceTools": false,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%205',OrderOperationInternalID='OrderOperationInternalID%205')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 6",
+	"OrderOperationInternalID": "OrderOperationInternalID 6",
+	"ManufacturingOrder": "ManufacturingOrder 6",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 6",
+	"ManufacturingOrderType": "ManufacturingOrderType 6",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 6",
+	"ProductionPlant": "ProductionPlant 6",
+	"PlantName": "PlantName 6",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 6",
+	"MfgOrderOperationText": "MfgOrderOperationText 6",
+	"OperationStatusInternalID": "OperationStatusInternalID 6",
+	"OperationStatusText": "OperationStatusText 6",
+	"Material": "Material 6",
+	"MaterialName": "MaterialName 6",
+	"WorkCenterInternalID": "WorkCenterInternalID 6",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 6",
+	"WorkCenter": "WorkCenter 6",
+	"WorkCenterText": "WorkCenterText 6",
+	"WorkCenterLocation": "WorkCenterLocation 6",
+	"WorkCenterResponsible": "WorkCenterResponsible 6",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 6",
+	"SupplyArea": "SupplyArea 6",
+	"OpLtstSchedldExecStrtDte": "/Date(1419166852000)/",
+	"OpLtstSchedldExecStrtTme": "PT15H37M8S",
+	"OpLtstSchedldExecEndDte": "/Date(1387630852000)/",
+	"OpLtstSchedldExecEndTme": "PT18H3M41S",
+	"OpActualExecutionStartDate": "/Date(1183118452000)/",
+	"OpActualExecutionStartTime": "PT1H1M5S",
+	"OpActualExecutionEndDate": "/Date(1363266052000)/",
+	"OpActualExecutionEndTime": "PT4H50M15S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 6",
+	"OpPlannedScrapQuantity": 882.87,
+	"OpPlannedTotalQuantity": 4295,
+	"OpTotalConfirmedYieldQty": 831.63,
+	"OpTotalConfirmedScrapQty": 473.38,
+	"ConfirmationScrapQuantity": 4418.81,
+	"MfgOrderOperationReadyQuantity": 3807.07,
+	"MfgOrderOperationNotReadyQty": 6501.23,
+	"OpExecutionCompletedQuantity": 8656.73,
+	"OperationUnit": "OperationUnit 6",
+	"OperationExecutionStartIsLate": true,
+	"OpActyNtwkInstance": 6400,
+	"OperationActivityNetwork": 4118,
+	"OpActyNtwkVersionCounter": 9525,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 6",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 6",
+	"OperationIsDelivered": "OperationIsDelivered 6",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 6",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 6",
+	"OperationIsPrinted": "OperationIsPrinted 6",
+	"OperationIsReleased": "OperationIsReleased 6",
+	"OperationIsCreated": "OperationIsCreated 6",
+	"OperationIsScheduled": "OperationIsScheduled 6",
+	"OperationIsConfirmed": "OperationIsConfirmed 6",
+	"OperationIsDeleted": "OperationIsDeleted 6",
+	"OperationExecutionEndIsLate": true,
+	"OperationYieldDeviationQty": 3447.29,
+	"ExecutionStartLatenessInHours": 1.767210470147067,
+	"ExecutionEndLatenessInHours": 4.884082194940065,
+	"ExecutionStartLatenessInMins": 9.1422777166432,
+	"ExecutionEndLatenessInMinutes": 6.516064138550133,
+	"OperationStartDeviationDays": 1.119547602543256,
+	"PlannedEndDateDvtnInDays": 9.904229202540787,
+	"OperationHasScrapQualityIssue": false,
+	"OpHasAssgdProdnRsceTools": true,
+	"OperationHasProductionHold": true,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%206',OrderOperationInternalID='OrderOperationInternalID%206')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 7",
+	"OrderOperationInternalID": "OrderOperationInternalID 7",
+	"ManufacturingOrder": "ManufacturingOrder 7",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 7",
+	"ManufacturingOrderType": "ManufacturingOrderType 7",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 7",
+	"ProductionPlant": "ProductionPlant 7",
+	"PlantName": "PlantName 7",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 7",
+	"MfgOrderOperationText": "MfgOrderOperationText 7",
+	"OperationStatusInternalID": "OperationStatusInternalID 7",
+	"OperationStatusText": "OperationStatusText 7",
+	"Material": "Material 7",
+	"MaterialName": "MaterialName 7",
+	"WorkCenterInternalID": "WorkCenterInternalID 7",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 7",
+	"WorkCenter": "WorkCenter 7",
+	"WorkCenterText": "WorkCenterText 7",
+	"WorkCenterLocation": "WorkCenterLocation 7",
+	"WorkCenterResponsible": "WorkCenterResponsible 7",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 7",
+	"SupplyArea": "SupplyArea 7",
+	"OpLtstSchedldExecStrtDte": "/Date(983365252000)/",
+	"OpLtstSchedldExecStrtTme": "PT19H51M28S",
+	"OpLtstSchedldExecEndDte": "/Date(1113912052000)/",
+	"OpLtstSchedldExecEndTme": "PT3H42M17S",
+	"OpActualExecutionStartDate": "/Date(1454763652000)/",
+	"OpActualExecutionStartTime": "PT11H25M23S",
+	"OpActualExecutionEndDate": "/Date(986299252000)/",
+	"OpActualExecutionEndTime": "PT3H49M28S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 7",
+	"OpPlannedScrapQuantity": 6932.17,
+	"OpPlannedTotalQuantity": 8113.18,
+	"OpTotalConfirmedYieldQty": 982.08,
+	"OpTotalConfirmedScrapQty": 8469.73,
+	"ConfirmationScrapQuantity": 143.2,
+	"MfgOrderOperationReadyQuantity": 7253.21,
+	"MfgOrderOperationNotReadyQty": 6769.31,
+	"OpExecutionCompletedQuantity": 1327.83,
+	"OperationUnit": "OperationUnit 7",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 99,
+	"OperationActivityNetwork": 6083,
+	"OpActyNtwkVersionCounter": 6036,
+	"OpActyConfIsSFIBased": true,
+	"OperationIsClosed": "OperationIsClosed 7",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 7",
+	"OperationIsDelivered": "OperationIsDelivered 7",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 7",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 7",
+	"OperationIsPrinted": "OperationIsPrinted 7",
+	"OperationIsReleased": "OperationIsReleased 7",
+	"OperationIsCreated": "OperationIsCreated 7",
+	"OperationIsScheduled": "OperationIsScheduled 7",
+	"OperationIsConfirmed": "OperationIsConfirmed 7",
+	"OperationIsDeleted": "OperationIsDeleted 7",
+	"OperationExecutionEndIsLate": true,
+	"OperationYieldDeviationQty": 1204.48,
+	"ExecutionStartLatenessInHours": 7.509418162025218,
+	"ExecutionEndLatenessInHours": 6.513500175830975,
+	"ExecutionStartLatenessInMins": 6.080130599322029,
+	"ExecutionEndLatenessInMinutes": 0.08805577839016587,
+	"OperationStartDeviationDays": 2.3453181119116007,
+	"PlannedEndDateDvtnInDays": 1.9002438314731673,
+	"OperationHasScrapQualityIssue": true,
+	"OpHasAssgdProdnRsceTools": true,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%207',OrderOperationInternalID='OrderOperationInternalID%207')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 8",
+	"OrderOperationInternalID": "OrderOperationInternalID 8",
+	"ManufacturingOrder": "ManufacturingOrder 8",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 8",
+	"ManufacturingOrderType": "ManufacturingOrderType 8",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 8",
+	"ProductionPlant": "ProductionPlant 8",
+	"PlantName": "PlantName 8",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 8",
+	"MfgOrderOperationText": "MfgOrderOperationText 8",
+	"OperationStatusInternalID": "OperationStatusInternalID 8",
+	"OperationStatusText": "OperationStatusText 8",
+	"Material": "Material 8",
+	"MaterialName": "MaterialName 8",
+	"WorkCenterInternalID": "WorkCenterInternalID 8",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 8",
+	"WorkCenter": "WorkCenter 8",
+	"WorkCenterText": "WorkCenterText 8",
+	"WorkCenterLocation": "WorkCenterLocation 8",
+	"WorkCenterResponsible": "WorkCenterResponsible 8",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 8",
+	"SupplyArea": "SupplyArea 8",
+	"OpLtstSchedldExecStrtDte": "/Date(1102251652000)/",
+	"OpLtstSchedldExecStrtTme": "PT14H4M34S",
+	"OpLtstSchedldExecEndDte": "/Date(1485090052000)/",
+	"OpLtstSchedldExecEndTme": "PT0H27M27S",
+	"OpActualExecutionStartDate": "/Date(1204894852000)/",
+	"OpActualExecutionStartTime": "PT16H36M43S",
+	"OpActualExecutionEndDate": "/Date(1020427252000)/",
+	"OpActualExecutionEndTime": "PT15H24M39S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 8",
+	"OpPlannedScrapQuantity": 6454.02,
+	"OpPlannedTotalQuantity": 3667.68,
+	"OpTotalConfirmedYieldQty": 7112.5,
+	"OpTotalConfirmedScrapQty": 8526.35,
+	"ConfirmationScrapQuantity": 2192.9,
+	"MfgOrderOperationReadyQuantity": 386.39,
+	"MfgOrderOperationNotReadyQty": 2673.48,
+	"OpExecutionCompletedQuantity": 3087.37,
+	"OperationUnit": "OperationUnit 8",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 1690,
+	"OperationActivityNetwork": 5802,
+	"OpActyNtwkVersionCounter": 992,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 8",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 8",
+	"OperationIsDelivered": "OperationIsDelivered 8",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 8",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 8",
+	"OperationIsPrinted": "OperationIsPrinted 8",
+	"OperationIsReleased": "OperationIsReleased 8",
+	"OperationIsCreated": "OperationIsCreated 8",
+	"OperationIsScheduled": "OperationIsScheduled 8",
+	"OperationIsConfirmed": "OperationIsConfirmed 8",
+	"OperationIsDeleted": "OperationIsDeleted 8",
+	"OperationExecutionEndIsLate": false,
+	"OperationYieldDeviationQty": 8243.95,
+	"ExecutionStartLatenessInHours": 6.7834992995566745,
+	"ExecutionEndLatenessInHours": 1.5315837960715406,
+	"ExecutionStartLatenessInMins": 3.810878013686807,
+	"ExecutionEndLatenessInMinutes": 4.396626705321374,
+	"OperationStartDeviationDays": 3.4614829315134266,
+	"PlannedEndDateDvtnInDays": 1.3892110926098011,
+	"OperationHasScrapQualityIssue": false,
+	"OpHasAssgdProdnRsceTools": true,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%208',OrderOperationInternalID='OrderOperationInternalID%208')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 9",
+	"OrderOperationInternalID": "OrderOperationInternalID 9",
+	"ManufacturingOrder": "ManufacturingOrder 9",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 9",
+	"ManufacturingOrderType": "ManufacturingOrderType 9",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 9",
+	"ProductionPlant": "ProductionPlant 9",
+	"PlantName": "PlantName 9",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 9",
+	"MfgOrderOperationText": "MfgOrderOperationText 9",
+	"OperationStatusInternalID": "OperationStatusInternalID 9",
+	"OperationStatusText": "OperationStatusText 9",
+	"Material": "Material 9",
+	"MaterialName": "MaterialName 9",
+	"WorkCenterInternalID": "WorkCenterInternalID 9",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 9",
+	"WorkCenter": "WorkCenter 9",
+	"WorkCenterText": "WorkCenterText 9",
+	"WorkCenterLocation": "WorkCenterLocation 9",
+	"WorkCenterResponsible": "WorkCenterResponsible 9",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 9",
+	"SupplyArea": "SupplyArea 9",
+	"OpLtstSchedldExecStrtDte": "/Date(1136120452000)/",
+	"OpLtstSchedldExecStrtTme": "PT7H42M20S",
+	"OpLtstSchedldExecEndDte": "/Date(1229432452000)/",
+	"OpLtstSchedldExecEndTme": "PT1H27M38S",
+	"OpActualExecutionStartDate": "/Date(1243598452000)/",
+	"OpActualExecutionStartTime": "PT12H21M39S",
+	"OpActualExecutionEndDate": "/Date(1072184452000)/",
+	"OpActualExecutionEndTime": "PT10H11M17S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 9",
+	"OpPlannedScrapQuantity": 9765.1,
+	"OpPlannedTotalQuantity": 4897.25,
+	"OpTotalConfirmedYieldQty": 1184.93,
+	"OpTotalConfirmedScrapQty": 3858.44,
+	"ConfirmationScrapQuantity": 5328.94,
+	"MfgOrderOperationReadyQuantity": 8706.92,
+	"MfgOrderOperationNotReadyQty": 4232.32,
+	"OpExecutionCompletedQuantity": 5064.23,
+	"OperationUnit": "OperationUnit 9",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 5203,
+	"OperationActivityNetwork": 7880,
+	"OpActyNtwkVersionCounter": 8752,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 9",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 9",
+	"OperationIsDelivered": "OperationIsDelivered 9",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 9",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 9",
+	"OperationIsPrinted": "OperationIsPrinted 9",
+	"OperationIsReleased": "OperationIsReleased 9",
+	"OperationIsCreated": "OperationIsCreated 9",
+	"OperationIsScheduled": "OperationIsScheduled 9",
+	"OperationIsConfirmed": "OperationIsConfirmed 9",
+	"OperationIsDeleted": "OperationIsDeleted 9",
+	"OperationExecutionEndIsLate": false,
+	"OperationYieldDeviationQty": 7598.04,
+	"ExecutionStartLatenessInHours": 0.8666073366385585,
+	"ExecutionEndLatenessInHours": 1.28496535664121,
+	"ExecutionStartLatenessInMins": 9.945914468158115,
+	"ExecutionEndLatenessInMinutes": 4.959071106129002,
+	"OperationStartDeviationDays": 4.810931702426069,
+	"PlannedEndDateDvtnInDays": 9.556282869533012,
+	"OperationHasScrapQualityIssue": true,
+	"OpHasAssgdProdnRsceTools": false,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%209',OrderOperationInternalID='OrderOperationInternalID%209')/to_ProductionPlant"
+		}
+	}
+}, {
+	"OrderInternalID": "OrderInternalID 10",
+	"OrderOperationInternalID": "OrderOperationInternalID 10",
+	"ManufacturingOrder": "ManufacturingOrder 10",
+	"ManufacturingOrderCategory": "ManufacturingOrderCategory 10",
+	"ManufacturingOrderType": "ManufacturingOrderType 10",
+	"ManufacturingOrderSequence": "ManufacturingOrderSequence 10",
+	"ProductionPlant": "ProductionPlant 10",
+	"PlantName": "PlantName 10",
+	"ManufacturingOrderOperation": "ManufacturingOrderOperation 10",
+	"MfgOrderOperationText": "MfgOrderOperationText 10",
+	"OperationStatusInternalID": "OperationStatusInternalID 10",
+	"OperationStatusText": "OperationStatusText 10",
+	"Material": "Material 10",
+	"MaterialName": "MaterialName 10",
+	"WorkCenterInternalID": "WorkCenterInternalID 10",
+	"WorkCenterTypeCode": "WorkCenterTypeCode 10",
+	"WorkCenter": "WorkCenter 10",
+	"WorkCenterText": "WorkCenterText 10",
+	"WorkCenterLocation": "WorkCenterLocation 10",
+	"WorkCenterResponsible": "WorkCenterResponsible 10",
+	"WorkCenterResponsibleName": "WorkCenterResponsibleName 10",
+	"SupplyArea": "SupplyArea 10",
+	"OpLtstSchedldExecStrtDte": "/Date(1564142452000)/",
+	"OpLtstSchedldExecStrtTme": "PT6H7M38S",
+	"OpLtstSchedldExecEndDte": "/Date(1463486452000)/",
+	"OpLtstSchedldExecEndTme": "PT3H36M26S",
+	"OpActualExecutionStartDate": "/Date(1266238852000)/",
+	"OpActualExecutionStartTime": "PT22H52M56S",
+	"OpActualExecutionEndDate": "/Date(1069074052000)/",
+	"OpActualExecutionEndTime": "PT8H35M36S",
+	"OperationHasMissingComponents": "OperationHasMissingComponents 10",
+	"OpPlannedScrapQuantity": 9567.16,
+	"OpPlannedTotalQuantity": 2956.18,
+	"OpTotalConfirmedYieldQty": 4601.99,
+	"OpTotalConfirmedScrapQty": 9793.38,
+	"ConfirmationScrapQuantity": 2118.27,
+	"MfgOrderOperationReadyQuantity": 3983.37,
+	"MfgOrderOperationNotReadyQty": 9915.54,
+	"OpExecutionCompletedQuantity": 1775.28,
+	"OperationUnit": "OperationUnit 10",
+	"OperationExecutionStartIsLate": false,
+	"OpActyNtwkInstance": 7876,
+	"OperationActivityNetwork": 3579,
+	"OpActyNtwkVersionCounter": 2749,
+	"OpActyConfIsSFIBased": false,
+	"OperationIsClosed": "OperationIsClosed 10",
+	"OperationIsTechlyCompleted": "OperationIsTechlyCompleted 10",
+	"OperationIsDelivered": "OperationIsDelivered 10",
+	"OperationIsPartiallyDelivered": "OperationIsPartiallyDelivered 10",
+	"OperationIsPartiallyConfirmed": "OperationIsPartiallyConfirmed 10",
+	"OperationIsPrinted": "OperationIsPrinted 10",
+	"OperationIsReleased": "OperationIsReleased 10",
+	"OperationIsCreated": "OperationIsCreated 10",
+	"OperationIsScheduled": "OperationIsScheduled 10",
+	"OperationIsConfirmed": "OperationIsConfirmed 10",
+	"OperationIsDeleted": "OperationIsDeleted 10",
+	"OperationExecutionEndIsLate": false,
+	"OperationYieldDeviationQty": 3506.04,
+	"ExecutionStartLatenessInHours": 9.520790436413238,
+	"ExecutionEndLatenessInHours": 8.73593789712569,
+	"ExecutionStartLatenessInMins": 4.885562272104957,
+	"ExecutionEndLatenessInMinutes": 5.548495120551755,
+	"OperationStartDeviationDays": 1.1420167041615437,
+	"PlannedEndDateDvtnInDays": 0.7399326008990248,
+	"OperationHasScrapQualityIssue": true,
+	"OpHasAssgdProdnRsceTools": true,
+	"OperationHasProductionHold": false,
+	"__metadata": {
+		"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')",
+		"type": "PP_MPE_OPER_MANAGE.C_MfgProcgExecOperationType"
+	},
+	"to_Material": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')/to_Material"
+		}
+	},
+	"to_MfgOrderOperationMissingComp": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')/to_MfgOrderOperationMissingComp"
+		}
+	},
+	"to_OpActyNtwkInternalId": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')/to_OpActyNtwkInternalId"
+		}
+	},
+	"to_OperationActivityNetwork": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')/to_OperationActivityNetwork"
+		}
+	},
+	"to_ProcgExecOperationActivity": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')/to_ProcgExecOperationActivity"
+		}
+	},
+	"to_ProductionPlant": {
+		"__deferred": {
+			"uri": "C_MfgProcgExecOperation(OrderInternalID='OrderInternalID%2010',OrderOperationInternalID='OrderOperationInternalID%2010')/to_ProductionPlant"
+		}
+	}
+}]
