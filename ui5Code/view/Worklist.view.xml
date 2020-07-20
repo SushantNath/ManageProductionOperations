@@ -97,6 +97,7 @@
 						<smartTable:customToolbar>
 							<OverflowToolbar design="Transparent">
 								<ToolbarSpacer></ToolbarSpacer>
+								<!-- ui extension for confirm button -->
 								<Button id="idConfirmButton" text="{i18n>ConfirmButton}" type="Transparent" press="handleConfirmPress"/>
 								<Button id="idEditButton" text="{i18n>EditButton}" type="Transparent" press="handleEditPress"
 									visible="{=${ActionButtonVisiblity>/EditButtonVisible} &amp;&amp; ${ActionButtonVisiblity>/EditButtonNavigable}}"/>
