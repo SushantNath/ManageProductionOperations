@@ -4,7 +4,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
-	"i2d/mpe/operations/manages1/model/formatter",
+	"i2d/mpe/operations/manages2/model/formatter",
 	"sap/ui/model/resource/ResourceModel",
 	"sap/i2d/mpe/lib/commons1/fragments/HoldMessageStrip",
 	"sap/i2d/mpe/lib/commons1/fragments/ReleaseHoldDialog",
@@ -13,7 +13,7 @@ sap.ui.define([
 ], function(Controller, Filter, formatter, ResourceModel, HoldMessageStrip, ReleaseHoldDialog, commonsFormatter, JSONModel) {
 	"use strict";
 
-	return Controller.extend("i2d.mpe.operations.manages1.blocks.IssuesBlockController", {
+	return Controller.extend("i2d.mpe.operations.manages2.blocks.IssuesBlockController", {
 		formatter: formatter,
 		commonsFormatter: commonsFormatter,
 		/**
@@ -27,7 +27,7 @@ sap.ui.define([
 			
 			var oEventBusParams = {
 				ReleaseHoldDialog: {
-					Channel: "sap.i2d.mpe.operations.manages1",
+					Channel: "sap.i2d.mpe.operations.manages2",
 					Event: "onReleaseHoldSuccessfullyApplied",
 					Callback: this.onReleaseHoldSuccessfullyComplete
 				}
@@ -309,7 +309,7 @@ sap.ui.define([
 			// define events' details here for which event bus will be subscribed
 			var oEventBusParams = {
 				ReleaseHoldDialog: {
-					Channel: "sap.i2d.mpe.operations.manages1",
+					Channel: "sap.i2d.mpe.operations.manages2",
 					Event: "onHoldSuccessfullyApplied",
 					// Event: "onRelHoldSuccessfullyApplied",
 					Callback: this._onReleaseHoldSuccessfullyComplete

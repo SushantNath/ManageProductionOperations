@@ -5,15 +5,15 @@ sap.ui.define(['sap/uxap/BlockBase'],
 	function(BlockBase) {
 	"use strict";
 
-	var ConfirmationBlock = BlockBase.extend("i2d.mpe.operations.manages1.blocks.ConfirmationBlock", {
+	var ConfirmationBlock = BlockBase.extend("i2d.mpe.operations.manages2.blocks.ConfirmationBlock", {
 	    metadata: {
 	        views: {
 	            Collapsed: {
-	                viewName: "i2d.mpe.operations.manages1.blocks.ConfirmationBlock",
+	                viewName: "i2d.mpe.operations.manages2.blocks.ConfirmationBlock",
 	                type: "XML"
 	            },
 	            Expanded: {
-	                viewName: "i2d.mpe.operations.manages1.blocks.ConfirmationBlock",
+	                viewName: "i2d.mpe.operations.manages2.blocks.ConfirmationBlock",
 	                type: "XML"
 	            }
 	        }

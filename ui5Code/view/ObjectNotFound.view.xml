@@ -3,7 +3,7 @@
     Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
 
 -->
-<mvc:View controllerName="i2d.mpe.operations.manages1.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<mvc:View controllerName="i2d.mpe.operations.manages2.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<MessagePage title="{i18n>objectTitle}" text="{i18n>noObjectFoundText}" icon="{sap-icon://product}" description="" id="page">
 		<customDescription>
 			<Link id="link" text="{i18n>backToWorklist}" press="onLinkPressed"/>

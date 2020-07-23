@@ -4,12 +4,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/resource/ResourceModel",
-	"i2d/mpe/operations/manages1/model/formatter"
+	"i2d/mpe/operations/manages2/model/formatter"
 
 ], function (Controller, ResourceModel, formatter) {
 	"use strict";
 
-	return Controller.extend("i2d.mpe.operations.manages1.blocks.ConfirmationBlockController", {
+	return Controller.extend("i2d.mpe.operations.manages2.blocks.ConfirmationBlockController", {
 		formatter: formatter,
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

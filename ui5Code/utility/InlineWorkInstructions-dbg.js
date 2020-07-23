@@ -7,7 +7,7 @@ sap.ui.define([
 ], function(UI5Object, MessageToast) {
 	"use strict";
 
-	return UI5Object.extend("i2d.mpe.operations.manages1.utility.InlineWorkInstructions", {
+	return UI5Object.extend("i2d.mpe.operations.manages2.utility.InlineWorkInstructions", {
 		/* =========================================================== */
 		/* Work Instructions Editor methods                            */
 		/* =========================================================== */

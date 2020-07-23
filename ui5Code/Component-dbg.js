@@ -4,13 +4,13 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"i2d/mpe/operations/manages1/model/models",
-	"i2d/mpe/operations/manages1/controller/ErrorHandler",
+	"i2d/mpe/operations/manages2/model/models",
+	"i2d/mpe/operations/manages2/controller/ErrorHandler",
 	"sap/ui/core/routing/HashChanger"
 ], function(UIComponent, Device, models, ErrorHandler, HashChanger) {
 	"use strict";
 
-	return UIComponent.extend("i2d.mpe.operations.manages1.Component", {
+	return UIComponent.extend("i2d.mpe.operations.manages2.Component", {
 
 		metadata: {
 			manifest: "json"

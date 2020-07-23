@@ -4,13 +4,13 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/odata/type/Time",
-	"i2d/mpe/operations/manages1/model/formatter",
+	"i2d/mpe/operations/manages2/model/formatter",
 	"sap/ui/model/Sorter",
 	"sap/ui/model/resource/ResourceModel"
 ], function(Controller, Time, formatter, Sorter, ResourceModel) {
 	"use strict";
 
-	return Controller.extend("i2d.mpe.operations.manages1.blocks.InspectionBlockController", {
+	return Controller.extend("i2d.mpe.operations.manages2.blocks.InspectionBlockController", {
 		
 		formatter: formatter,
 		/**

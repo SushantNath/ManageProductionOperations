@@ -20,7 +20,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		NavHelper, FilterOperator, Filter, JSONModel) {
 		"use strict";
 
-		return Controller.extend("i2d.mpe.operations.manages1.blocks.OperationInProgressController", {
+		return Controller.extend("i2d.mpe.operations.manages2.blocks.OperationInProgressController", {
 
 			formatter: Formatter,
 			reuseUtil: reuseUtil,

@@ -3,7 +3,7 @@
     Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
 
 -->
-<mvc:View controllerName="i2d.mpe.operations.manages1.controller.Worklist" xmlns:commons="sap.suite.ui.commons" xmlns:core="sap.ui.core"
+<mvc:View controllerName="i2d.mpe.operations.manages2.controller.Worklist" xmlns:commons="sap.suite.ui.commons" xmlns:core="sap.ui.core"
 	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:footerbar="sap.ushell.ui.footerbar"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
 	xmlns:smartVariants="sap.ui.comp.smartvariants" xmlns:smartTable="sap.ui.comp.smarttable" xmlns="sap.m" xmlns:f="sap.f">
@@ -30,7 +30,7 @@
 								</smartFilterBar:customData>
 								<smartFilterBar:controlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="C_ManageoperationsType" controlType="dropDownList" index="1" key="CustomStatus"
-										label="{i18n>StatusFilter}" visibleInAdvancedArea="true" tooltip="{i18n>StatusFilter}">
+										label="statuscustomized" visibleInAdvancedArea="true" tooltip="{i18n>StatusFilter}">
 										<smartFilterBar:customControl>
 											<MultiComboBox id="idCustomStatusMultiSelectBox" selectedKeys="01,02,03,04,05,06,07" selectionFinish="onCategorySelectionFinish"
 												items="{path:'customFiltersModel>/status', templateShareable:false}" width="100%" selectionChange="handleStatusSelectionChange">
@@ -222,6 +222,12 @@
 											text="{=${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:customLabel} === undefined ? ${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:label} : ${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:customLabel}}"/>
 									</header>
 								</Column>
+									<Column visible="false">
+									<header>
+										<Text
+											text="Comments"/>
+									</header>
+								</Column>
 							</columns>
 							<ColumnListItem type="Navigation">
 								<cells>
@@ -322,6 +328,9 @@
 									</VBox>
 									<VBox>
 										<Text text="{EffectivityParameterDesc}"/>
+									</VBox>
+										<VBox>
+										<Text text="Comments Text"/>
 									</VBox>
 								</cells>
 							</ColumnListItem>

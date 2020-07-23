@@ -2,9 +2,9 @@
  * Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
  */
 sap.ui.define([
-	"i2d/mpe/operations/manages1/controller/BaseController",
+	"i2d/mpe/operations/manages2/controller/BaseController",
 	"sap/ui/model/odata/type/Time",
-	"i2d/mpe/operations/manages1/model/formatter",
+	"i2d/mpe/operations/manages2/model/formatter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	"sap/i2d/mpe/lib/workuicomps1/fragments/ChangeAlertComparisonDialog",
@@ -17,7 +17,7 @@ sap.ui.define([
 	ApplyHoldDialog, CommonsConstants, Defects) {
 	"use strict";
 
-	return BaseController.extend("i2d.mpe.operations.manages1.blocks.ActivitiesBlockController", {
+	return BaseController.extend("i2d.mpe.operations.manages2.blocks.ActivitiesBlockController", {
 
 		formatter: formatter,
 		// _selectedActivities: [],

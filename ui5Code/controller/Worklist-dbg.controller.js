@@ -2,9 +2,9 @@
  * Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
  */
 sap.ui.define([
-	"i2d/mpe/operations/manages1/controller/BaseController",
+	"i2d/mpe/operations/manages2/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"i2d/mpe/operations/manages1/model/formatter",
+	"i2d/mpe/operations/manages2/model/formatter",
 	"sap/ui/model/Filter",
 	"sap/i2d/mpe/lib/aors1/AOR/AORFragmentHandler",
 	"sap/i2d/mpe/lib/popovers1/fragments/IssuePopOverController",
@@ -26,7 +26,7 @@ sap.ui.define([
 	ApplyHoldDialog, ReuseProjectConstants, OrdSpcfcChange, NavHelper) {
 	"use strict";
 
-	return BaseController.extend("i2d.mpe.operations.manages1.controller.Worklist", {
+	return BaseController.extend("i2d.mpe.operations.manages2.controller.Worklist", {
 
 		formatter: formatter,
 
@@ -195,7 +195,7 @@ sap.ui.define([
 
 		/**
 		 * OnAfterRendering of Worklist
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 */
 		onAfterRendering: function () {
@@ -681,7 +681,7 @@ sap.ui.define([
 
 		/**
 		 * Triggered when each row check box is clicked on
-		 * @memberOf i2d.mpe.orders.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.orders.manages2.controller.Worklist
 		 * @public
 		 */
 		handleTableItemSelection: function (oEvent) {
@@ -787,7 +787,7 @@ sap.ui.define([
 
 		/**
 		 * Triggered when Release button is clicked on
-		 * @memberOf i2d.mpe.orders.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.orders.manages2.controller.Worklist
 		 * @public
 		 */
 		handleReleaseButton: function (oEvent) {
@@ -950,7 +950,7 @@ sap.ui.define([
 			// define events' details here for which event bus will be subscribed
 			var oEventBusParams = {
 				ApplyHoldDialog: {
-					Channel: "sap.i2d.mpe.operations.manages1",
+					Channel: "sap.i2d.mpe.operations.manages2",
 					Event: "onHoldSuccessfullyApplied",
 					Callback: this.onHoldSuccessfullyComplete
 				}
@@ -1016,7 +1016,7 @@ sap.ui.define([
 
 		/**
 		 * Used to calculate the Status custom filters. 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @return {object}  : The selected status Filters
 		 */
@@ -1042,7 +1042,7 @@ sap.ui.define([
 		},
 		/**
 		 * Used to get the right fileter parameter to filter. 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @param {string}	: Status code
 		 * @return {string}  : The selected status filter value
@@ -1085,7 +1085,7 @@ sap.ui.define([
 		},
 		/**
 		 * Used to calculate the Issue Filter array. 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @return {object}  : The selected Issues Filters
 		 */
@@ -1119,7 +1119,7 @@ sap.ui.define([
 
 		/**
 		 * Used to calculate the Delay Filter array. 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @return {object}  : The selected Delay Filters
 		 *
@@ -1140,7 +1140,7 @@ sap.ui.define([
 
 		/**
 		 * Used to calculate the Operations relevant for confirmation Filter array. 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @return {object}  : The selected  Operations relevant for confirmation Filters
 		 */
@@ -1165,7 +1165,7 @@ sap.ui.define([
 
 		/**
 		 * Triggered when the Variant is loaded in the SmartFilterBar. The list of Variants is set here
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 
 		 */
@@ -1191,7 +1191,7 @@ sap.ui.define([
 		},
 		/**
 		 * Triggered when the Variant is loaded in the SmartFilterBar. This method reads _CUSTOM data of the variant and sets to the respective custom filter
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 
 		 */
@@ -1234,7 +1234,7 @@ sap.ui.define([
 		},
 		/**
 		 * Triggered when any item is pressed of smart table . This method reads the current operation id and calls navTo method to navigate to detail page.
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 
 		 */
@@ -1256,7 +1256,7 @@ sap.ui.define([
 		},
 		/**
 		 * 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @param {string} id of the selected operation
 		 */
@@ -1271,7 +1271,7 @@ sap.ui.define([
 		},
 		/**
 		 * Triggered when any item is selected/deselected of Status custom filter
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 */
 		handleStatusSelectionChange: function (oEvent) {
@@ -1289,7 +1289,7 @@ sap.ui.define([
 
 		/**
 		 * Triggered when any item is selected/deselected of Issue custom filter
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 
 		 */
@@ -1305,7 +1305,7 @@ sap.ui.define([
 		},
 		/**
 		 * handleSelectAllOptionOfMultiSelectBox method selects all the options of custom filter if "All" is selected
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 */
 		handleSelectAllOptionOfMultiSelectBox: function (oEvent, sCustomName) {
@@ -1343,7 +1343,7 @@ sap.ui.define([
 		},
 		/**
 		 * handleDelayFilter method gets the selected value of delay filter and stores in app state model
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 
 		 */
@@ -1357,7 +1357,7 @@ sap.ui.define([
 
 		/** 
 		 * Event handler of Operation Relevant for confirmation filter
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @param oEvent
 		 */
 		handleRelOperationChange: function (oEvent) {
@@ -1373,7 +1373,7 @@ sap.ui.define([
 
 		/** 
 		 * on change of any filter, this method updates the app state model
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @param oEvent
 		 */
 		handleFilterChange: function (oEvent) {
@@ -1385,7 +1385,7 @@ sap.ui.define([
 		/* =========================================================== */
 		/**
 		 * updateAppStateforCustomFilters method gets the selected value of selected filter and stores in app state model
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @param {string} 
 		 * @param {sCustomName} name of custom filter key
@@ -1413,7 +1413,7 @@ sap.ui.define([
 
 		/**
 		 * Triggered before variant gets saved. This method saves all the custom filter data of that variant in _CUSTOM object.
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @param {object} oEvent action data performed at that event
 		 * @param {boolean} bGOButtonClickFlag Flag provided for differentiating multiple table rebind calls
@@ -1481,7 +1481,7 @@ sap.ui.define([
 		/**
 		 * Triggered when the Variant is saved in the smart variant management. If createTile option is selected while creating a variant, 
 		 * then call updatePersonalizationContainer to save the information in personalization container
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @param {object} oEvent
 		 */
@@ -1504,7 +1504,7 @@ sap.ui.define([
 
 		/**
 		 * triggers when Variant Management is initialised. On click of custom tiles, this method loads the variant based on variant id saved in the URL of custom tile.
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @public
 		 * @param {object} oVariantMgmt : Variant Management
 		 */
@@ -1533,7 +1533,7 @@ sap.ui.define([
 		/**
 		 * trigers when variant is updated or created.
 		 * This method calls the bookmark service to create or update a tile on launchpad.
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @param oEvent
 		 * @public
 		 */
@@ -1542,7 +1542,7 @@ sap.ui.define([
 		},
 		/**
 		 * triggers when variant is renamed or deleted using manage variant.
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @param oEvent
 		 * @public
 		 */
@@ -1553,7 +1553,7 @@ sap.ui.define([
 
 		/**
 		 * Select a variant
-		 * @memberOf i2d.mpe.orders.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.orders.manages2.controller.Worklist
 		 * @public
 		 * @param {object} oEvent Event information for selecting the variant
 		 */
@@ -1570,7 +1570,7 @@ sap.ui.define([
 
 		/*Based on the color of the icon, it opens the popover
 		 * @param oEvent 
-		 * @memberOf i2d.mpe.operations.manages1.controller.Worklist
+		 * @memberOf i2d.mpe.operations.manages2.controller.Worklist
 		 * @param oEvent
 		 */
 

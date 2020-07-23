@@ -3,11 +3,11 @@
  */
 /*global location*/
 sap.ui.define([
-	"i2d/mpe/operations/manages1/controller/BaseController",
-	//	"i2d/mpe/operations/manages1/blocks/IssuesBlockController.controller",
+	"i2d/mpe/operations/manages2/controller/BaseController",
+	//	"i2d/mpe/operations/manages2/blocks/IssuesBlockController.controller",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/routing/History",
-	"i2d/mpe/operations/manages1/model/formatter",
+	"i2d/mpe/operations/manages2/model/formatter",
 	"sap/i2d/mpe/lib/popovers1/fragments/MaterialController",
 	"sap/i2d/mpe/lib/popovers1/fragments/WorkCenterController",
 	"sap/i2d/mpe/lib/commons1/utils/util",
@@ -26,7 +26,7 @@ sap.ui.define([
 	ApplyHoldDialog, ReleaseHoldDialog, ReuseProjectConstants, commonformatter, Defects, defectFormatter, ProductionOrderPopOver) {
 	"use strict";
 
-	return BaseController.extend("i2d.mpe.operations.manages1.controller.Object", {
+	return BaseController.extend("i2d.mpe.operations.manages2.controller.Object", {
 
 		formatter: formatter,
 		reuseUtil: reuseUtil,
@@ -624,7 +624,7 @@ sap.ui.define([
 			// define events' details here for which event bus will be subscribed
 			var oEventBusParams = {
 				ApplyHoldDialog: {
-					Channel: "sap.i2d.mpe.operations.manages1",
+					Channel: "sap.i2d.mpe.operations.manages2",
 					Event: "onHoldSuccessfullyApplied",
 					Callback: this.onHoldSuccessfullyComplete
 				}
@@ -636,7 +636,7 @@ sap.ui.define([
 			// define events' details here for which event bus will be subscribed
 			var oEventBusParams = {
 				ReleaseHoldDialog: {
-					Channel: "sap.i2d.mpe.operations.manages1",
+					Channel: "sap.i2d.mpe.operations.manages2",
 					Event: "onHoldSuccessfullyApplied",
 					Callback: this.onReleaseHoldSuccessfullyComplete
 				}

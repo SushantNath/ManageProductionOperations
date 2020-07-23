@@ -1,11 +1,11 @@
 /*
  * Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
  */
-sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "i2d/mpe/operations/manages1/model/models",
-	"i2d/mpe/operations/manages1/controller/ErrorHandler", "sap/ui/core/routing/HashChanger"
+sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "i2d/mpe/operations/manages2/model/models",
+	"i2d/mpe/operations/manages2/controller/ErrorHandler", "sap/ui/core/routing/HashChanger"
 ], function (U, D, m, E, H) {
 	"use strict";
-	return U.extend("i2d.mpe.operations.manages1.Component", {
+	return U.extend("i2d.mpe.operations.manages2.Component", {
 		metadata: {
 			manifest: "json"
 		},

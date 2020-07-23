@@ -21,7 +21,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		NavHelper, FilterOperator, Filter, JSONModel, MessageBox) {
 		"use strict";
 
-		return Controller.extend("i2d.mpe.operations.manages1.blocks.OperationNotStartedController", {
+		return Controller.extend("i2d.mpe.operations.manages2.blocks.OperationNotStartedController", {
 
 			formatter: Formatter,
 			reuseUtil: reuseUtil,

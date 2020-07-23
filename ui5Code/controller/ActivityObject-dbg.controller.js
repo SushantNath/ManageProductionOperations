@@ -2,14 +2,14 @@
  * Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
  */
 sap.ui.define([
-	"i2d/mpe/operations/manages1/controller/BaseController",
+	"i2d/mpe/operations/manages2/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"i2d/mpe/operations/manages1/model/formatter",
-	"i2d/mpe/operations/manages1/utility/InlineWorkInstructions"
+	"i2d/mpe/operations/manages2/model/formatter",
+	"i2d/mpe/operations/manages2/utility/InlineWorkInstructions"
 ], function (BaseController, JSONModel, formatter, InlineWorkInstructions) {
 	"use strict";
 
-	return BaseController.extend("i2d.mpe.operations.manages1.controller.ActivityObject", {
+	return BaseController.extend("i2d.mpe.operations.manages2.controller.ActivityObject", {
 		formatter: formatter,
 
 		/**

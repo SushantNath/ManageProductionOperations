@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
  */
-sap.ui.define(["i2d/mpe/operations/manages1/controller/BaseController", "sap/ui/model/json/JSONModel",
-	"i2d/mpe/operations/manages1/model/formatter", "sap/ui/model/Filter", "sap/i2d/mpe/lib/aors1/AOR/AORFragmentHandler",
+sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/model/json/JSONModel",
+	"i2d/mpe/operations/manages2/model/formatter", "sap/ui/model/Filter", "sap/i2d/mpe/lib/aors1/AOR/AORFragmentHandler",
 	"sap/i2d/mpe/lib/popovers1/fragments/IssuePopOverController", "sap/i2d/mpe/lib/popovers1/fragments/MaterialController",
 	"sap/i2d/mpe/lib/popovers1/fragments/ProductionOrderController",
 	"sap/i2d/mpe/lib/popovers1/fragments/ProductionOrderOperationsController", "sap/i2d/mpe/lib/popovers1/fragments/WorkCenterController",
@@ -12,7 +12,7 @@ sap.ui.define(["i2d/mpe/operations/manages1/controller/BaseController", "sap/ui/
 	"sap/i2d/mpe/lib/commons1/fragments/OrdSpcfcChange", "sap/i2d/mpe/lib/commons1/utils/NavHelper"
 ], function (B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N) {
 	"use strict";
-	return B.extend("i2d.mpe.operations.manages1.controller.Worklist", {
+	return B.extend("i2d.mpe.operations.manages2.controller.Worklist", {
 		formatter: f,
 		onInit: function () {
 			this.bAORFilterFlag = false;
@@ -648,7 +648,7 @@ sap.ui.define(["i2d/mpe/operations/manages1/controller/BaseController", "sap/ui/
 		getEventBusParameters: function () {
 			var E = {
 				ApplyHoldDialog: {
-					Channel: "sap.i2d.mpe.operations.manages1",
+					Channel: "sap.i2d.mpe.operations.manages2",
 					Event: "onHoldSuccessfullyApplied",
 					Callback: this.onHoldSuccessfullyComplete
 				}

@@ -5,7 +5,7 @@
 -->
 <mvc:View
 	xmlns:mvc="sap.ui.core.mvc"
-	controllerName="i2d.mpe.operations.manages1.controller.App"
+	controllerName="i2d.mpe.operations.manages2.controller.App"
 	displayBlock="true"
 	xmlns="sap.m">
 

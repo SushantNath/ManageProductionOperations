@@ -3,7 +3,7 @@
     Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
 
 -->
-<mvc:View controllerName="i2d.mpe.operations.manages1.blocks.ConfirmationBlockController" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="i2d.mpe.operations.manages2.blocks.ConfirmationBlockController" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m">
 	<HBox id="AllConfirmations" visible="true" width="100%">

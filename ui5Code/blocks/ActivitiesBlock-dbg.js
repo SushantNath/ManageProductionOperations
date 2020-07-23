@@ -5,15 +5,15 @@ sap.ui.define(["sap/uxap/BlockBase"],
 	function(BlockBase) {
 	"use strict";
 
-	var ActivitiesBlock = BlockBase.extend("i2d.mpe.operations.manages1.blocks.ActivitiesBlock", {
+	var ActivitiesBlock = BlockBase.extend("i2d.mpe.operations.manages2.blocks.ActivitiesBlock", {
 	    metadata: {
 	        views: {
 	            Collapsed: {
-	                viewName: "i2d.mpe.operations.manages1.blocks.ActivitiesBlock",
+	                viewName: "i2d.mpe.operations.manages2.blocks.ActivitiesBlock",
 	                type: "XML"
 	            },
 	            Expanded: {
-	                viewName: "i2d.mpe.operations.manages1.blocks.ActivitiesBlock",
+	                viewName: "i2d.mpe.operations.manages2.blocks.ActivitiesBlock",
 	                type: "XML"
 	            }
 	        }
