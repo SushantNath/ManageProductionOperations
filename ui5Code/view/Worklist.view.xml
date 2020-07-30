@@ -30,7 +30,7 @@
 								</smartFilterBar:customData>
 								<smartFilterBar:controlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="C_ManageoperationsType" controlType="dropDownList" index="1" key="CustomStatus"
-										label="statuscustomized" visibleInAdvancedArea="true" tooltip="{i18n>StatusFilter}">
+										label="{i18n>StatusFilter}" visibleInAdvancedArea="true" tooltip="{i18n>StatusFilter}">
 										<smartFilterBar:customControl>
 											<MultiComboBox id="idCustomStatusMultiSelectBox" selectedKeys="01,02,03,04,05,06,07" selectionFinish="onCategorySelectionFinish"
 												items="{path:'customFiltersModel>/status', templateShareable:false}" width="100%" selectionChange="handleStatusSelectionChange">
@@ -222,10 +222,32 @@
 											text="{=${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:customLabel} === undefined ? ${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:label} : ${/#C_ManageoperationsType/EffectivityParameterDesc/@sap:customLabel}}"/>
 									</header>
 								</Column>
-									<Column visible="false">
+								<!--Code for Ui extension of 1789 -->
+								<!--	<Column visible="false"
+									customData:p13nData='\{"columnKey":"CommentsText", "leadingProperty":["EffectivityParameterDesc"]\}'>
 									<header>
 										<Text
-											text="Comments"/>
+											text="{i18n>Comments}"/>
+									</header>
+								</Column>
+									<Column visible="false"
+									customData:p13nData='\{"columnKey":"OpDuration", "leadingProperty":["EffectivityParameterDesc"], "sortProperty" :"ManufacturingOrderOperation"\}'>
+									<header>
+										<Text
+											text="Op. Duration"/>
+									</header>
+								</Column>
+								<Column visible="false"
+									customData:p13nData='\{"columnKey":"Setup Group", "leadingProperty":["EffectivityParameterDesc"], "sortProperty" :"ManufacturingOrderOperation"\}'>
+									<header>
+										<Text
+											text="Setup Group"/>
+									</header>
+								</Column> -->
+								<Column visible="false"
+									customData:p13nData='\{"columnKey":"Packaging Instruction", "leadingProperty":["EffectivityParameterDesc"], "sortProperty" :"ManufacturingOrderOperation"\}'>
+									<header>
+										<Text text="{i18n>packaging}"/>
 									</header>
 								</Column>
 							</columns>
@@ -329,9 +351,20 @@
 									<VBox>
 										<Text text="{EffectivityParameterDesc}"/>
 									</VBox>
-										<VBox>
-										<Text text="Comments Text"/>
+									<!--Code for Ui extension of 1789 -->
+									<VBox>
+										<core:Icon id="packagingIcon" src="sap-icon://document" class="sapUiMediumMarginBegin"  press="onOpenPackaging" ></core:Icon>
 									</VBox>
+									<!--	<VBox>
+										<Text text="{path:'ZZCommentText'}"/>
+									</VBox>
+									
+										<VBox>
+										<Text text="{path:'ZZCommentText'}"/>
+									</VBox>
+									<VBox>
+										<Text text="Packaging Instruction"/>
+									</VBox> -->
 								</cells>
 							</ColumnListItem>
 						</Table>
