@@ -74,13 +74,13 @@
 										</smartFilterBar:customControl>
 									</smartFilterBar:ControlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="C_ManageoperationsType" index="4" key="OpLtstSchedldExecStrtDte" label="{i18n>ScheduledStart}"
-										visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
+										conditionType="sap.ui.comp.config.condition.DateRangeType" visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="C_ManageoperationsType" index="5" key="OpLtstSchedldExecEndDte" label="{i18n>ScheduledEnd}"
-										visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
+										conditionType="sap.ui.comp.config.condition.DateRangeType"	visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="C_ManageoperationsType" index="6" key="OpActualExecutionStartDate" label="{i18n>ActualStart}"
-										visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
+										conditionType="sap.ui.comp.config.condition.DateRangeType"	visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="C_ManageoperationsType" index="7" key="OpActualExecutionEndDate" label="{i18n>ActualEnd}"
-										visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
+										conditionType="sap.ui.comp.config.condition.DateRangeType"	visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
 									<smartFilterBar:ControlConfiguration groupId="to_WorkCenter" key="to_WorkCenter.Plant" label="{i18n>workCenterPlantTooltip}"
 										visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
 								</smartFilterBar:controlConfiguration>
@@ -244,8 +244,7 @@
 											text="Setup Group"/>
 									</header>
 								</Column> -->
-								<Column visible="false"
-									customData:p13nData='\{"columnKey":"Packaging Instruction", "leadingProperty":["EffectivityParameterDesc"], "sortProperty" :"ManufacturingOrderOperation"\}'>
+								<Column visible="false" customData:p13nData='\{"columnKey":"Packaging Instruction"\}'>
 									<header>
 										<Text text="{i18n>packaging}"/>
 									</header>
@@ -353,7 +352,8 @@
 									</VBox>
 									<!--Code for Ui extension of 1789 -->
 									<VBox>
-										<core:Icon id="packagingIcon" src="sap-icon://document" class="sapUiMediumMarginBegin"  press="onOpenPackaging" ></core:Icon>
+										<!--<Link  press="onOpenPackaging" text = "Generate PDF" ></Link>-->
+										<core:Icon class="sapUiMediumMarginBegin" src="sap-icon://pdf-attachment" press="handleIconPressPdf"></core:Icon>
 									</VBox>
 									<!--	<VBox>
 										<Text text="{path:'ZZCommentText'}"/>

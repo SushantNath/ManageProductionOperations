@@ -9,8 +9,8 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 	"sap/i2d/mpe/lib/commons1/utils/saveAsTile", "sap/i2d/mpe/lib/commons1/utils/util",
 	"sap/i2d/mpe/lib/commons1/fragments/OrderOperationStatus", "sap/m/MessageToast", "sap/m/MessageBox",
 	"sap/i2d/mpe/lib/commons1/fragments/ApplyHoldDialog", "sap/i2d/mpe/lib/commons1/utils/constants",
-	"sap/i2d/mpe/lib/commons1/fragments/OrdSpcfcChange", "sap/i2d/mpe/lib/commons1/utils/NavHelper"
-], function (B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N) {
+	"sap/i2d/mpe/lib/commons1/fragments/OrdSpcfcChange", "sap/i2d/mpe/lib/commons1/utils/NavHelper", "sap/m/PDFViewer"
+], function (B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N, PDFViewer) {
 	"use strict";
 	return B.extend("i2d.mpe.operations.manages2.controller.Worklist", {
 		formatter: f,
@@ -446,6 +446,38 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				}
 			}
 		},
+		//Code for opeining pdf/packaging instruction
+	/*	onOpenPackaging: function (E) {
+			//	var oPdfModel = this.getOwnerComponent().getModel("oPdfModel");
+			//	 var materialNo = "000000000006303262";
+
+			var C = E.getSource().getBindingContext();
+			var m = C.getModel();
+			var s = m.getProperty("Material", C);
+
+			window.open("/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('" + s + "')/$value");
+
+			// 	var sUrl = "https://itbolde4as01.boltongroup.root.dom:44300/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('000000000006303262')/$value";
+			// //	var oPdfModel = this.getOwnerComponent().getModel("pdfModel");
+			// this._pdfViewer = new PDFViewer();
+			// this.getView().addDependent(this._pdfViewer);
+			// this._pdfViewer.setSource(sUrl);
+			// this._pdfViewer.open();
+
+		}, */
+
+		handleIconPressPdf: function (E) {
+
+			//	 var materialNo = "000000000006303262";
+
+			var C = E.getSource().getBindingContext();
+			var m = C.getModel();
+			var s = m.getProperty("Material", C);
+
+			window.open("/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('" + s + "')/$value");
+
+		},
+
 		handleTableItemSelection: function (E) {
 			var t = E.getSource().getSelectedItems();
 			var p, r;
@@ -473,6 +505,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			var o = [],
 				m = "";
+
 			for (i = 0; i < t.length; i++) {
 				var a = t[i].getBindingContext().getObject();
 				if (m === "") {
@@ -485,6 +518,8 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 					break;
 				}
 			}
+			this.orderNumber = m;
+
 			if (o.length > 0) {
 				R.checkOprHasOpenOrdSpcfcChange(this.getModel("OSR"), o, function (D) {
 					if (D.results.length === 0) {
@@ -943,7 +978,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this.getOwnerComponent().updateAppStateFromAppStateModel();
 		},
 		/* Sorting logic will go here*/
-		
+
 		handleBeforeVariantSave: function (E, G) {
 			var C = {
 				_CUSTOM: {
@@ -1215,6 +1250,33 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				"OpActualExecutionEndTime", "time");
 			o.workbook.columns.push(n);
 		},
+
+		//Function for trigerring product order confirmation app
+
+		handleConfirmPress: function () {
+			this.orderNumber;
+			//	var s = sap.ushell.Container.getService("CrossApplicationNavigation");
+			// var m = "1000191";
+			// 	var x ="1000191";
+			// 	var y = "1000191";
+			// 	R.confirmOrderOperation(m, x, y);
+
+			//	window.open("https://itbolde4as01.boltongroup.root.dom:44300/sap/bc/ui2/flp#ProductionOrder-change?ProductionOrder="+this.orderNumber);
+			sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
+				target: {
+					semanticObject: "ZPTM_CONF",
+					action: "display"
+				},
+				params: {
+					"orderType": this.orderNumber,
+					"mode": "crossNavigation"
+
+				}
+
+			});
+
+		},
+
 		getExcelWorkBookParameters: function (i, l, p, t) {
 			var E = {
 				columnId: i,
