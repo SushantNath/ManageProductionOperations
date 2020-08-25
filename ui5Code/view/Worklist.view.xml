@@ -87,6 +87,7 @@
 							</smartFilterBar:SmartFilterBar>
 						</f:content>
 					</f:DynamicPageHeader>
+					
 				</f:header>
 				<f:content>
 					<smartTable:SmartTable demandPopin="true" beforeRebindTable="handleBeforeRebindTable" enableAutoBinding="true" dataReceived="onDataReceived"
