@@ -505,11 +505,12 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			var o = [],
 				m = "";
-
+            var operation;
 			for (i = 0; i < t.length; i++) {
 				var a = t[i].getBindingContext().getObject();
 				if (m === "") {
 					m = a.ManufacturingOrder;
+					operation = a.ManufacturingOrderOperation;
 				}
 				if (f.isOperationChangePossible(a) && m === a.ManufacturingOrder) {
 					o.push(a);
@@ -519,6 +520,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				}
 			}
 			this.orderNumber = m;
+			this.operationNum = operation;
 
 			if (o.length > 0) {
 				R.checkOprHasOpenOrdSpcfcChange(this.getModel("OSR"), o, function (D) {
@@ -1255,6 +1257,8 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 
 		handleConfirmPress: function () {
 			this.orderNumber;
+			this.operationNum;
+			this.appName = "manageProductionOperations";
 			//	var s = sap.ushell.Container.getService("CrossApplicationNavigation");
 			// var m = "1000191";
 			// 	var x ="1000191";
@@ -1269,6 +1273,8 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				},
 				params: {
 					"orderType": this.orderNumber,
+					"operationNum": this.operationNum,
+					"appName":this.appName,
 					"mode": "crossNavigation"
 
 				}
