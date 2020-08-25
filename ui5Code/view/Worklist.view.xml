@@ -20,6 +20,7 @@
 				</f:title>
 				<f:header>
 					<f:DynamicPageHeader>
+						
 						<f:content>
 							<smartFilterBar:SmartFilterBar smartVariant="idSmartVManagement" afterVariantLoad="handleVariantLoad"
 								afterVariantSave="handleAfterVariantSave" beforeVariantFetch="handleVariantFetch" beforeVariantSave="handleBeforeVariantSave"
