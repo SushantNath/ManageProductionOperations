@@ -227,13 +227,13 @@
 								</Column>
 								<!--Code for Ui extension of 1789 -->
 								<!--	<Column visible="false"
-									customData:p13nData='\{"columnKey":"CommentsText", "leadingProperty":["EffectivityParameterDesc"]\}'>
+									customData:p13nData='\{"columnKey":"ZZPkgngInstrForMat", "leadingProperty":["ZZPkgngInstrForMat"]\}'>
 									<header>
 										<Text
-											text="{i18n>Comments}"/>
+											text="Packaging Instruction"/>
 									</header>
 								</Column>
-									<Column visible="false"
+										<Column visible="false"
 									customData:p13nData='\{"columnKey":"OpDuration", "leadingProperty":["EffectivityParameterDesc"], "sortProperty" :"ManufacturingOrderOperation"\}'>
 									<header>
 										<Text
@@ -354,11 +354,11 @@
 										<Text text="{EffectivityParameterDesc}"/>
 									</VBox>
 									<!--Code for Ui extension of 1789 -->
-								<!--	<VBox>
-									
-										<core:Icon class="sapUiMediumMarginBegin" src="sap-icon://pdf-attachment" press="handleIconPressPdf"></core:Icon>
-									</VBox>-->
 									<!--	<VBox>
+									<Text text="{ZZPkgngInstrForMat}"/>
+									
+									</VBox>
+									<VBox>
 										<Text text="{path:'ZZCommentText'}"/>
 									</VBox>
 									
