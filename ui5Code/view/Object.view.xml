@@ -18,7 +18,7 @@
 								visible="{=!${OrderIsShopFloorOrder} &amp;&amp; ${ActionButtonVisiblity>/EditButtonNavigable}}"/>
 							<Button text="{i18n>ConfirmOperation}" press="handleConfirmOperation" tooltip="{i18n>ConfirmOperation}"
 								enabled="{parts:[{path:'OperationStatusInternalID'},{path:'OrderIsShopFloorOrder'}], formatter : '.formatter.setEnableStatus'}"
-								visible="{ActionButtonVisiblity>/ConfirmButtonVisible}"/>
+								visible="false"/>
 							<Button id="idOneOperationReleaseButton" text="{i18n>operationorderReleaseButton}" press="handleReleaseOperationPress"
 								tooltip="{i18n>operationorderReleaseButton}" type="Transparent"
 								enabled="{path : 'OperationStatusInternalID',formatter : '.formatter.setEnableStatusRelease'}"/>
