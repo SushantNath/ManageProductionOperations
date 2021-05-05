@@ -1259,7 +1259,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this.orderNumber;
 			this.operationNum;
 			this.appName = "manageProductionOperations";
-           //code changes for Wricef 12704 
+           //code changes for Wricef 12704
 			var navigationService = sap.ushell.Container.getService('CrossApplicationNavigation');
 
 			var hash = navigationService.hrefForExternal({
