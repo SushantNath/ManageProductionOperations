@@ -10,11 +10,11 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 	"sap/i2d/mpe/lib/commons1/fragments/OrderOperationStatus", "sap/m/MessageToast", "sap/m/MessageBox",
 	"sap/i2d/mpe/lib/commons1/fragments/ApplyHoldDialog", "sap/i2d/mpe/lib/commons1/utils/constants",
 	"sap/i2d/mpe/lib/commons1/fragments/OrdSpcfcChange", "sap/i2d/mpe/lib/commons1/utils/NavHelper", "sap/m/PDFViewer"
-], function (B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N, PDFViewer) {
+], function(B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N, PDFViewer) {
 	"use strict";
 	return B.extend("i2d.mpe.operations.manages2.controller.Worklist", {
 		formatter: f,
-		onInit: function () {
+		onInit: function() {
 			this.bAORFilterFlag = false;
 			this.bAORDeleted = false;
 			this.bOnAfterRenderExecuted = false;
@@ -24,7 +24,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this._osmartTable = this.getView().byId("idMonitorOperationsTable");
 			this._oOperationOrderReleaseButton = this.getView().byId("idOperationOrderReleaseButton");
 			var t = this;
-			sap.ushell.Container.getService("Personalization").getContainer("i2d.mpe.Supervisor").done(function (b) {
+			sap.ushell.Container.getService("Personalization").getContainer("i2d.mpe.Supervisor").done(function(b) {
 				t.bPersServiceExecuted = true;
 				if (b.getItemValue("AssignedSupervisors")) {
 					t.AssignedSupervisor = b.getItemValue("AssignedSupervisors");
@@ -69,7 +69,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				var s = sap.ushell.Container.getService("CrossApplicationNavigation");
 				var S = [];
 				S.push("#ProductionOrderConfirmation-createTimeTicket", "#ProductionOrder-change", "#ShopFloorRouting-change");
-				s.isIntentSupported(S).done(function (b) {
+				s.isIntentSupported(S).done(function(b) {
 					if (b) {
 						this.getOwnerComponent().getModel("ActionButtonVisiblity").setProperty("/EditButtonNavigable", b["#ProductionOrder-change"].supported);
 						this.getOwnerComponent().getModel("ActionButtonVisiblity").setProperty("/ConfirmButtonVisible", b[
@@ -77,14 +77,14 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 						this.getOwnerComponent().getModel("ActionButtonVisiblity").setProperty("/bIsDisplayOrderSpecificHoldAvailable", b[
 							"#ShopFloorRouting-change"].supported);
 					}
-				}.bind(this)).fail(function () {
+				}.bind(this)).fail(function() {
 					jQuery.sap.log.error("Reading intent data failed.");
 				});
 			} else {
 				jQuery.sap.log.error("ushell not available");
 			}
 		},
-		ApplyFilterOnAOR: function (s, S) {
+		ApplyFilterOnAOR: function(s, S) {
 			this.AssignedSupervisor = s;
 			this.AssignedWorkcenter = S;
 			if ((this.AssignedSupervisor && this.AssignedSupervisor !== null && this.AssignedSupervisor.length > 0) || (this.AssignedWorkcenter &&
@@ -97,9 +97,9 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this._osmartTable.rebindTable();
 			T.updateTileCountURL(this);
 		},
-		onAfterRendering: function () {
+		onAfterRendering: function() {
 			var t = this;
-			this.getModel("HoldModel").metadataLoaded().then(function () {
+			this.getModel("HoldModel").metadataLoaded().then(function() {
 				t.getOwnerComponent().getModel("ActionButtonVisiblity").setProperty("/bIsOrderSpecificHoldAvailable", R.checkOrdSpcfcChangeAvailable(
 					t.getModel("HoldModel")));
 			});
@@ -112,7 +112,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			this.bOnAfterRenderExecuted = true;
 		},
-		loadAORData: function () {
+		loadAORData: function() {
 			var t = this;
 			if ((t.AssignedWorkcenter && t.AssignedWorkcenter !== null && t.AssignedWorkcenter.length > 0) || (t.AssignedSupervisor && t.AssignedSupervisor !==
 					null && t.AssignedSupervisor.length > 0)) {
@@ -124,7 +124,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				A.loadSFCSettingsMenuOption(t, "i2d.mpe.Supervisor", false);
 			}
 		},
-		handleAppStateChanges: function (E, a, C) {
+		handleAppStateChanges: function(E, a, C) {
 			var s = this.getView().byId("idSmartFilterBar");
 			if (C.bDirtyFlag) {
 				this._oVariantMgt.currentVariantSetModified(true);
@@ -155,11 +155,11 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			this.getOwnerComponent().updateAppStateFromAppStateModel();
 		},
-		onCategorySelectionFinish: function (E) {
+		onCategorySelectionFinish: function(E) {
 			var C = this.getView().byId("idSmartFilterBar");
 			C.fireFilterChange(E);
 		},
-		handleRouteMatched: function (E) {
+		handleRouteMatched: function(E) {
 			this.sAppState = E.getParameter("arguments").iAppState;
 			var C = E.getParameter("config").name;
 			this.getOwnerComponent().extractInnerAppStateFromURL(this.sAppState, C);
@@ -179,10 +179,10 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this._osmartTable.rebindTable();
 			}
 		},
-		getI18NText: function (i, v) {
+		getI18NText: function(i, v) {
 			return this.getResourceBundle().getText(i, v);
 		},
-		setCustomFiltersData: function () {
+		setCustomFiltersData: function() {
 			this.oCustomFilter = {};
 			this.oCustomFilter.issues = [{
 				id: "All",
@@ -269,7 +269,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			var l = new J(this.oCustomFilter);
 			this.getView().setModel(l, "customFiltersModel");
 		},
-		setFiltersData: function (H) {
+		setFiltersData: function(H) {
 			this.oCustomFilter = {};
 			if (H === true || H === "X") {
 				this.oCustomFilter.issues = [{
@@ -375,7 +375,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			var l = new J(this.oCustomFilter);
 			this.getView().setModel(l, "customFiltersModel");
 		},
-		onDataReceived: function (E) {
+		onDataReceived: function(E) {
 			if (E.getParameters().getParameters().data && E.getParameters().getParameters().data.results && E.getParameters().getParameters().data
 				.results[0]) {
 				var C = E.getParameters().getParameters().data.results;
@@ -383,7 +383,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this.setFiltersData(H);
 			}
 		},
-		handleBeforeRebindTable: function (E) {
+		handleBeforeRebindTable: function(E) {
 			this.sAORFilterString = "";
 			var b = E.getParameter("bindingParams");
 			b.preventTableBind = false;
@@ -447,26 +447,26 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 		},
 		//Code for opeining pdf/packaging instruction
-	/*	onOpenPackaging: function (E) {
-			//	var oPdfModel = this.getOwnerComponent().getModel("oPdfModel");
-			//	 var materialNo = "000000000006303262";
+		/*	onOpenPackaging: function (E) {
+				//	var oPdfModel = this.getOwnerComponent().getModel("oPdfModel");
+				//	 var materialNo = "000000000006303262";
 
-			var C = E.getSource().getBindingContext();
-			var m = C.getModel();
-			var s = m.getProperty("Material", C);
+				var C = E.getSource().getBindingContext();
+				var m = C.getModel();
+				var s = m.getProperty("Material", C);
 
-			window.open("/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('" + s + "')/$value");
+				window.open("/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('" + s + "')/$value");
 
-			// 	var sUrl = "https://itbolde4as01.boltongroup.root.dom:44300/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('000000000006303262')/$value";
-			// //	var oPdfModel = this.getOwnerComponent().getModel("pdfModel");
-			// this._pdfViewer = new PDFViewer();
-			// this.getView().addDependent(this._pdfViewer);
-			// this._pdfViewer.setSource(sUrl);
-			// this._pdfViewer.open();
+				// 	var sUrl = "https://itbolde4as01.boltongroup.root.dom:44300/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV/PDFDocumentSet('000000000006303262')/$value";
+				// //	var oPdfModel = this.getOwnerComponent().getModel("pdfModel");
+				// this._pdfViewer = new PDFViewer();
+				// this.getView().addDependent(this._pdfViewer);
+				// this._pdfViewer.setSource(sUrl);
+				// this._pdfViewer.open();
 
-		}, */
+			}, */
 
-		handleIconPressPdf: function (E) {
+		handleIconPressPdf: function(E) {
 
 			//	 var materialNo = "000000000006303262";
 
@@ -478,7 +478,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 
 		},
 
-		handleTableItemSelection: function (E) {
+		handleTableItemSelection: function(E) {
 			var t = E.getSource().getSelectedItems();
 			var p, r;
 			for (var i = 0; i < t.length; i++) {
@@ -505,7 +505,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			var o = [],
 				m = "";
-            var operation;
+			var operation;
 			for (i = 0; i < t.length; i++) {
 				var a = t[i].getBindingContext().getObject();
 				if (m === "") {
@@ -523,7 +523,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this.operationNum = operation;
 
 			if (o.length > 0) {
-				R.checkOprHasOpenOrdSpcfcChange(this.getModel("OSR"), o, function (D) {
+				R.checkOprHasOpenOrdSpcfcChange(this.getModel("OSR"), o, function(D) {
 					if (D.results.length === 0) {
 						this.getView().getModel("ActionButtonVisiblity").setProperty("/bIsDisplayOrderSpecificHoldVisible", false);
 						this.getView().getModel("ActionButtonVisiblity").setProperty("/bIsOrderSpecificHoldVisible", true);
@@ -543,9 +543,9 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this.getView().getModel("ActionButtonVisiblity").setProperty("/bIsDisplayOrderSpecificHoldVisible", false);
 			}
 		},
-		handleReleaseButton: function (E) {
+		handleReleaseButton: function(E) {
 			var t = this._osmartTable.getTable().getSelectedItems();
-			t = t.sort(function (a, b) {
+			t = t.sort(function(a, b) {
 				var n = a.getBindingContext().sPath.substring(51, 61) - b.getBindingContext().sPath.substring(51, 61);
 				if (n !== 0) {
 					return n;
@@ -565,7 +565,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 					"OrderInternalBillOfOperations": "",
 					"OrderIntBillOfOperationsItem": ""
 				},
-				"success": function (D, r) {
+				"success": function(D, r) {
 					k++;
 					if (r.headers["sap-message"]) {
 						var a = JSON.parse(r.headers["sap-message"]);
@@ -632,7 +632,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 						}
 					}
 				}.bind(this),
-				"error": function (a) {
+				"error": function(a) {
 					d.show("Release failed");
 					this._oOperationOrderReleaseButton.setEnabled(false);
 				}.bind(this)
@@ -646,7 +646,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				l.callFunction("/C_ManageoperationsReleaseoperation", p);
 			}
 		},
-		handleHoldButton: function (E) {
+		handleHoldButton: function(E) {
 			var i = this._osmartTable.getTable().getSelectedItems();
 			var p = i[0].getBindingContext().sPath;
 			var o = i[0].getBindingContext().oModel.getProperty(p).ManufacturingOrder;
@@ -682,7 +682,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			var r = sap.ui.getCore().getEventBus();
 			g.setEventBusParameters(r, q.ApplyHoldDialog.Channel, q.ApplyHoldDialog.Event);
 		},
-		getEventBusParameters: function () {
+		getEventBusParameters: function() {
 			var E = {
 				ApplyHoldDialog: {
 					Channel: "sap.i2d.mpe.operations.manages2",
@@ -692,7 +692,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			};
 			return E;
 		},
-		onHoldSuccessfullyComplete: function (C, E, r) {
+		onHoldSuccessfullyComplete: function(C, E, r) {
 			var m, s;
 			var t = this._osmartTable.getTable().getSelectedItems();
 			if (r.success) {
@@ -719,7 +719,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this.getView().getModel("ActionButtonVisiblity").setProperty("/EditButtonVisible", false);
 			}
 		},
-		getDynamicMessageBox: function (m, i, s, a, b, k, C) {
+		getDynamicMessageBox: function(m, i, s, a, b, k, C) {
 			e.show(m, {
 				icon: i ? i : e.Icon.NONE,
 				title: s ? s : "",
@@ -729,7 +729,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				styleClass: C ? "sapUiSizeCompact" : ""
 			});
 		},
-		updateStatusFilter: function () {
+		updateStatusFilter: function() {
 			var o = new sap.ui.model.Filter([], false);
 			var s = [];
 			if (this._oSmartFilter.getControlByKey("CustomStatus")) {
@@ -746,43 +746,43 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			return o;
 		},
-		_getStatusFieldValue: function (s) {
+		_getStatusFieldValue: function(s) {
 			var S = "";
 			switch (s) {
-			case "01":
-				S = "OperationIsCreated";
-				break;
-			case "02":
-				S = "OperationIsScheduled";
-				break;
-			case "03":
-				S = "OperationIsReleased";
-				break;
-			case "04":
-				S = "OperationIsPartiallyConfirmed";
-				break;
-			case "05":
-				S = "OperationIsConfirmed";
-				break;
-			case "06":
-				S = "OperationIsPartiallyDelivered";
-				break;
-			case "07":
-				S = "OperationIsDelivered";
-				break;
-			case "08":
-				S = "OperationIsTechlyCompleted";
-				break;
-			case "09":
-				S = "OperationIsClosed";
-				break;
-			case "10":
-				S = "OperationIsDeleted";
-				break;
+				case "01":
+					S = "OperationIsCreated";
+					break;
+				case "02":
+					S = "OperationIsScheduled";
+					break;
+				case "03":
+					S = "OperationIsReleased";
+					break;
+				case "04":
+					S = "OperationIsPartiallyConfirmed";
+					break;
+				case "05":
+					S = "OperationIsConfirmed";
+					break;
+				case "06":
+					S = "OperationIsPartiallyDelivered";
+					break;
+				case "07":
+					S = "OperationIsDelivered";
+					break;
+				case "08":
+					S = "OperationIsTechlyCompleted";
+					break;
+				case "09":
+					S = "OperationIsClosed";
+					break;
+				case "10":
+					S = "OperationIsDeleted";
+					break;
 			}
 			return S;
 		},
-		updateIssueCustomFilter: function () {
+		updateIssueCustomFilter: function() {
 			var o = new sap.ui.model.Filter([], false);
 			var s = [];
 			if (this._oSmartFilter.getControlByKey("CustomIssue")) {
@@ -809,7 +809,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			return o;
 		},
-		updateDelayFilter: function () {
+		updateDelayFilter: function() {
 			var s = [];
 			if (this._oSmartFilter.getControlByKey("CustomDelay")) {
 				s = this._oSmartFilter.getControlByKey("CustomDelay").getSelectedKey();
@@ -821,7 +821,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			return o;
 		},
-		updateRelOperationsFilter: function () {
+		updateRelOperationsFilter: function() {
 			var s = [];
 			if (this._oSmartFilter.getControlByKey("CustomConfirmation")) {
 				s = this._oSmartFilter.getControlByKey("CustomConfirmation").getSelectedItems();
@@ -837,7 +837,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			return o;
 		},
-		handleVariantFetch: function () {
+		handleVariantFetch: function() {
 			var v = this._oVariantMgt;
 			var V = v.getVariantItems();
 			var s = null;
@@ -856,7 +856,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			this._aVariants = b;
 		},
-		handleVariantLoad: function () {
+		handleVariantLoad: function() {
 			var C = this._oSmartFilter.getFilterData();
 			this.oFilterData = this._oSmartFilter.getFilterData();
 			if (C._CUSTOM) {
@@ -886,7 +886,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this.bAssignDefaultStatusFilter = true;
 			}
 		},
-		handleOperationSelect: function (E) {
+		handleOperationSelect: function(E) {
 			var o = E.getParameter("listItem").getBindingContextPath();
 			var s = E.getParameter("listItem").getBindingContext().getObject();
 			var a = o.substr(1);
@@ -901,7 +901,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				iAppState: this.sAppState
 			}, false);
 		},
-		updateOperationDetailModel: function (o, s) {
+		updateOperationDetailModel: function(o, s) {
 			var a = this.getView().getModel("DetailModel");
 			var b = a.getData();
 			b.orderId = o;
@@ -910,7 +910,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			b.selectedOrderData = s;
 			a.setData(b);
 		},
-		handleStatusSelectionChange: function (E) {
+		handleStatusSelectionChange: function(E) {
 			this.getView().getModel("ActionButtonVisiblity").setProperty("/bIsHoldButtionVisible", false);
 			var C = "statusFilter";
 			this.handleSelectAllOptionOfMultiSelectBox(E, C);
@@ -921,11 +921,11 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				E.getSource().data("hasValue", false);
 			}
 		},
-		handleIssueSelectionChange: function (E) {
+		handleIssueSelectionChange: function(E) {
 			var C = "issuesFilter";
 			this.handleSelectAllOptionOfMultiSelectBox(E, C);
 		},
-		handleSelectAllOptionOfMultiSelectBox: function (E, C) {
+		handleSelectAllOptionOfMultiSelectBox: function(E, C) {
 			var s = E.getSource();
 			var S = E.getParameter("changedItem").getProperty("key");
 			var a = s.getProperty("selectedKeys");
@@ -952,25 +952,25 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			this.updateAppStateforCustomFilters(a, C);
 		},
-		handleDelayFilter: function (E) {
+		handleDelayFilter: function(E) {
 			var i = E.getParameter("selectedItem");
 			var s = i.getKey();
 			var C = "delayFilter";
 			this.updateAppStateforCustomFilters(s, C);
 		},
-		handleRelOperationChange: function (E) {
+		handleRelOperationChange: function(E) {
 			var C = "confirmationFilter";
 			this.updateAppStateforCustomFilters(E, C);
 		},
-		handleFilterChange: function (E) {
+		handleFilterChange: function(E) {
 			this.handleAppstateUpdate(E);
 		},
-		updateAppStateforCustomFilters: function (k, C) {
+		updateAppStateforCustomFilters: function(k, C) {
 			var i = this.getOwnerComponent().getModel("AppState");
 			i.getProperty("/appState")[C] = k;
 			this.getOwnerComponent().updateAppStateFromAppStateModel();
 		},
-		handleAppstateUpdate: function (l) {
+		handleAppstateUpdate: function(l) {
 			var i = this.getOwnerComponent().getModel("AppState");
 			var p = i.getProperty("/appState");
 			p.variantId = l.getSource().getCurrentVariantId();
@@ -981,7 +981,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 		},
 		/* Sorting logic will go here*/
 
-		handleBeforeVariantSave: function (E, G) {
+		handleBeforeVariantSave: function(E, G) {
 			var C = {
 				_CUSTOM: {
 					Issues: "",
@@ -1035,7 +1035,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			k.setProperty("/appState", p);
 			this.getOwnerComponent().updateAppStateFromAppStateModel();
 		},
-		handleAfterVariantSave: function (E) {
+		handleAfterVariantSave: function(E) {
 			if (this.bCreateTileSelected) {
 				var s = "";
 				var S = this.getView().byId("idMonitorOperationsTable");
@@ -1050,7 +1050,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this._osmartTable.getTable().setShowOverlay(false);
 			}
 		},
-		loadInitialVariant: function () {
+		loadInitialVariant: function() {
 			var v = this._oVariantMgt;
 			var V = this.sSelectedVariant;
 			if (v && V !== "") {
@@ -1069,23 +1069,23 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this._oSmartFilter.determineFilterItemByName("CustomStatus").setLabelTooltip(this.getI18NText("StatusFilter"));
 			this._oSmartFilter.determineFilterItemByName("CustomConfirmation").setLabelTooltip(this.getI18NText("ConfirmationFilter"));
 		},
-		handleSaveVariant: function (E) {
+		handleSaveVariant: function(E) {
 			T.saveVariantAsTile(E, this, "idMonitorOperationsTable");
 		},
-		handleManageVariant: function (E) {
+		handleManageVariant: function(E) {
 			T.manageVariant(E, this);
 		},
-		handleSelectVariant: function (E) {
+		handleSelectVariant: function(E) {
 			var s = this.getView().byId("idMonitorOrdersTable");
 			var i = this.getOwnerComponent().getModel("AppState");
 			var p = i.getProperty("/appState");
-			jQuery.sap.delayedCall(1000, this, function () {
+			jQuery.sap.delayedCall(1000, this, function() {
 				p.VariantTableState = JSON.stringify(s.fetchVariant());
 				i.setProperty("/appState", p);
 				this._callHandleAppStateUpdate();
 			});
 		},
-		handleIconPress: function (E) {
+		handleIconPress: function(E) {
 			var C = E.getSource().getColor();
 			if (C === "#d9d9d9") {
 				return "";
@@ -1093,33 +1093,33 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				R.openIssuePopOver(E, this);
 			}
 		},
-		handleMaterialLinkPress: function (E) {
+		handleMaterialLinkPress: function(E) {
 			var C = E.getSource().getBindingContext();
 			var m = C.getModel();
 			var p = m.getProperty("ProductionPlant", C);
 			var s = m.getProperty("Material", C);
 			this.oMaterialPop.openMaterialPopOver(E, this, s, p);
 		},
-		handleOrderOperationPress: function (E) {
+		handleOrderOperationPress: function(E) {
 			this.oProductionOrderOperationPop.openOperationsPopOver(E, this);
 		},
-		handleOrderNumberPress: function (E) {
+		handleOrderNumberPress: function(E) {
 			var s = E.getSource();
 			var p = s.getBindingContext().sPath;
 			var o = s.getModel().getProperty(p);
 			var m = o.ManufacturingOrder || o.MRPElement;
 			this.oProductionOrderPop.openProdOrdPopOver(E, this, m);
 		},
-		handleWorkCenterPress: function (E) {
+		handleWorkCenterPress: function(E) {
 			this.oWorkCenterPop.openWorkCenterPopOver(E, this);
 		},
-		handleStatusLinkPress: function (E) {
+		handleStatusLinkPress: function(E) {
 			O.openStatusPopOver(E, this);
 		},
-		handleGOBtnPress: function () {
+		handleGOBtnPress: function() {
 			this.handleBeforeVariantSave(undefined, "true");
 		},
-		ChangeSTableNoDataText: function () {
+		ChangeSTableNoDataText: function() {
 			if (this.bAORDeleted) {
 				this._osmartTable.setNoData(this.getI18NText("AORDeleted"));
 				this._osmartTable.getTable().setNoDataText(this.getI18NText("AORDeleted"));
@@ -1128,16 +1128,16 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				this._osmartTable.getTable().setNoDataText(this.getI18NText("AORSelected"));
 			}
 		},
-		_callHandleAppStateUpdate: function () {
+		_callHandleAppStateUpdate: function() {
 			var E = {
 				oSourceTemp: this._oSmartFilter,
-				getSource: function () {
+				getSource: function() {
 					return this.oSourceTemp;
 				}
 			};
 			this.handleAppstateUpdate(E);
 		},
-		handleInspectionPress: function (E) {
+		handleInspectionPress: function(E) {
 			var C = E.getSource().getBindingContext().getObject();
 			var p = {
 				"InspectionLot": C.InspectionLot
@@ -1151,14 +1151,14 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				params: p
 			});
 		},
-		onPressOrdSpcfcChange: function (C) {
+		onPressOrdSpcfcChange: function(C) {
 			var t = this,
 				s = [],
 				S = this._osmartTable.getTable().getSelectedItems(),
 				b = S[0].getBindingContext().getObject().hasOwnProperty("BOOVersionChangeRecordIsRqd");
 			var p = new jQuery.Deferred();
 			if (b) {
-				S.forEach(function (o) {
+				S.forEach(function(o) {
 					s.push(o.getBindingContext().getObject());
 				});
 				p.resolve();
@@ -1167,23 +1167,23 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 					urlParameters: {
 						$select: "BOOVersionChangeRecordIsRqd"
 					},
-					success: function (D) {
-						S.forEach(function (o) {
+					success: function(D) {
+						S.forEach(function(o) {
 							var a = o.getBindingContext().getObject();
 							a.BOOVersionChangeRecordIsRqd = D.BOOVersionChangeRecordIsRqd;
 							s.push(a);
 						});
 						p.resolve();
 					},
-					error: function () {
-						S.forEach(function (o) {
+					error: function() {
+						S.forEach(function(o) {
 							s.push(o.getBindingContext().getObject());
 						});
 						p.resolve();
 					}
 				});
 			}
-			p.done(function () {
+			p.done(function() {
 				if (t._hasSameOrderNumber(s, s[0].ManufacturingOrder)) {
 					j.initAndOpen({
 						oHoldModel: t.getView().getModel("HoldModel"),
@@ -1199,7 +1199,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				}
 			});
 		},
-		_hasSameOrderNumber: function (o, m) {
+		_hasSameOrderNumber: function(o, m) {
 			for (var i = 0; i < o.length; i++) {
 				if (o[i].ManufacturingOrder !== m) {
 					return false;
@@ -1207,25 +1207,25 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			}
 			return true;
 		},
-		onOrdSpcfcChangeCallBack: function () {
+		onOrdSpcfcChangeCallBack: function() {
 			this._osmartTable.rebindTable();
 		},
-		onPressDisplayOrdScpfcChange: function () {
+		onPressDisplayOrdScpfcChange: function() {
 			N.navToShopFloorRoutingChange(this.getView().getModel("ActionButtonVisiblity").getProperty("/oOrderSpecificChangeDetails"));
 		},
-		onExit: function () {
+		onExit: function() {
 			var E = sap.ui.getCore().getEventBus();
 			E.unsubscribe("AppState", "handleAppstateChanges", this.handleAppStateChanges, this);
 			A.oAppSettingsButton.destroy();
 			A.oAppSettingsButton = null;
 		},
-		handleEditPress: function () {
+		handleEditPress: function() {
 			var i = this._osmartTable.getTable().getSelectedItems();
 			var p = i[0].getBindingContext().sPath;
 			var o = i[0].getBindingContext().oModel.getProperty(p).ManufacturingOrder;
 			R.editOrder(o);
 		},
-		handleBeforeExport: function (E) {
+		handleBeforeExport: function(E) {
 			var o = E.getParameter("exportSettings");
 			var n = this.getExcelWorkBookParameters("testingScheduledStartDateFiled", this.getI18NText("OpLtstSchedldExecStrtDte"),
 				"OpLtstSchedldExecStrtDte", "date");
@@ -1255,18 +1255,15 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 
 		//Function for trigerring product order confirmation app
 
-		handleConfirmPress: function () {
+		handleConfirmPress: function() {
 			this.orderNumber;
 			this.operationNum;
 			this.appName = "manageProductionOperations";
-			//	var s = sap.ushell.Container.getService("CrossApplicationNavigation");
-			// var m = "1000191";
-			// 	var x ="1000191";
-			// 	var y = "1000191";
-			// 	R.confirmOrderOperation(m, x, y);
 
-			//	window.open("https://itbolde4as01.boltongroup.root.dom:44300/sap/bc/ui2/flp#ProductionOrder-change?ProductionOrder="+this.orderNumber);
-			sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
+			var navigationService = sap.ushell.Container.getService('CrossApplicationNavigation');
+
+			var hash = navigationService.hrefForExternal({
+
 				target: {
 					semanticObject: "ZPTM_CONF",
 					action: "display"
@@ -1274,16 +1271,41 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 				params: {
 					"orderType": this.orderNumber,
 					"operationNum": this.operationNum,
-					"appName":this.appName,
-					"mode": "crossNavigation"
+					"appName": this.appName
 
 				}
 
 			});
 
+			var url = window.location.href.split('#')[0] + hash;
+
+			sap.m.URLHelper.redirect(url, true);
+
+			//	var s = sap.ushell.Container.getService("CrossApplicationNavigation");
+			// var m = "1000191";
+			// 	var x ="1000191";
+			// 	var y = "1000191";
+			// 	R.confirmOrderOperation(m, x, y);
+
+			//	window.open("https://itbolde4as01.boltongroup.root.dom:44300/sap/bc/ui2/flp#ProductionOrder-change?ProductionOrder="+this.orderNumber);
+			/*		sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
+						target: {
+							semanticObject: "ZPTM_CONF",
+							action: "display"
+						},
+						params: {
+							"orderType": this.orderNumber,
+							"operationNum": this.operationNum,
+							"appName":this.appName,
+							"mode": "crossNavigation"
+
+						}
+
+					}); */
+
 		},
 
-		getExcelWorkBookParameters: function (i, l, p, t) {
+		getExcelWorkBookParameters: function(i, l, p, t) {
 			var E = {
 				columnId: i,
 				displayUnit: false,

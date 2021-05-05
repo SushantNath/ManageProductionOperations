@@ -105,7 +105,7 @@
 								<Button id="idEditButton" text="{i18n>EditButton}" type="Transparent" press="handleEditPress"
 									visible="{=${ActionButtonVisiblity>/EditButtonVisible} &amp;&amp; ${ActionButtonVisiblity>/EditButtonNavigable}}"/>
 								<Button id="idOperationOrderReleaseButton" text="{i18n>operationorderReleaseButton}" type="Transparent" press="handleReleaseButton"
-									enabled="false"/>
+									enabled="false" visible="false" />
 								<Button text="{path: '/#C_ProductionHoldType/ProdnHoldIsAppldForOrderChg/@sap:label', model: 'HoldModel'}" press="onPressOrdSpcfcChange"
 									visible="{=${ActionButtonVisiblity>/bIsOrderSpecificHoldAvailable} &amp;&amp; ${ActionButtonVisiblity>/bIsOrderSpecificHoldVisible}}"/>
 								<Button text="{i18n>manageOrderChange}" press="onPressDisplayOrdScpfcChange"
