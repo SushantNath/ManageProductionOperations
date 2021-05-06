@@ -1285,7 +1285,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 
 			} else {
 
-				MessageBox.error("Please select only one operation to proceed.");
+				MessageBox.error("Please select only one order to proceed.");
 			}
 
 		},
