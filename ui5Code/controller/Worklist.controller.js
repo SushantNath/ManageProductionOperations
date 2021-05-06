@@ -1261,7 +1261,7 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this.appName = "manageProductionOperations";
 			//code changes for Wricef 12704
 			var navigationService = sap.ushell.Container.getService('CrossApplicationNavigation');
-
+    //validation if user selects more than one operation
 			if (this.getView().byId("idMonitorOperationsTable")._oTable._aSelectedPaths.length < 2) {
 
 				var hash = navigationService.hrefForExternal({
