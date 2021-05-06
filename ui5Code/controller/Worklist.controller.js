@@ -9,8 +9,8 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 	"sap/i2d/mpe/lib/commons1/utils/saveAsTile", "sap/i2d/mpe/lib/commons1/utils/util",
 	"sap/i2d/mpe/lib/commons1/fragments/OrderOperationStatus", "sap/m/MessageToast", "sap/m/MessageBox",
 	"sap/i2d/mpe/lib/commons1/fragments/ApplyHoldDialog", "sap/i2d/mpe/lib/commons1/utils/constants",
-	"sap/i2d/mpe/lib/commons1/fragments/OrdSpcfcChange", "sap/i2d/mpe/lib/commons1/utils/NavHelper", "sap/m/PDFViewer"
-], function(B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N, PDFViewer) {
+	"sap/i2d/mpe/lib/commons1/fragments/OrdSpcfcChange", "sap/i2d/mpe/lib/commons1/utils/NavHelper", "sap/m/PDFViewer", "sap/m/MessageBox"
+], function(B, J, f, F, A, I, M, P, c, W, T, R, O, d, e, g, h, j, N, PDFViewer, MessageBox) {
 	"use strict";
 	return B.extend("i2d.mpe.operations.manages2.controller.Worklist", {
 		formatter: f,
@@ -1259,49 +1259,34 @@ sap.ui.define(["i2d/mpe/operations/manages2/controller/BaseController", "sap/ui/
 			this.orderNumber;
 			this.operationNum;
 			this.appName = "manageProductionOperations";
-           //code changes for Wricef 12704
+			//code changes for Wricef 12704
 			var navigationService = sap.ushell.Container.getService('CrossApplicationNavigation');
 
-			var hash = navigationService.hrefForExternal({
+			if (this.getView().byId("idMonitorOperationsTable")._oTable._aSelectedPaths.length < 2) {
 
-				target: {
-					semanticObject: "ZPTM_CONF",
-					action: "display"
-				},
-				params: {
-					"orderType": this.orderNumber,
-					"operationNum": this.operationNum,
-					"appName": this.appName
+				var hash = navigationService.hrefForExternal({
 
-				}
+					target: {
+						semanticObject: "ZPTM_CONF",
+						action: "display"
+					},
+					params: {
+						"orderType": this.orderNumber,
+						"operationNum": this.operationNum,
+						"appName": this.appName
 
-			});
+					}
 
-			var url = window.location.href.split('#')[0] + hash;
+				});
 
-			sap.m.URLHelper.redirect(url, true);
+				var url = window.location.href.split('#')[0] + hash;
 
-			//	var s = sap.ushell.Container.getService("CrossApplicationNavigation");
-			// var m = "1000191";
-			// 	var x ="1000191";
-			// 	var y = "1000191";
-			// 	R.confirmOrderOperation(m, x, y);
+				sap.m.URLHelper.redirect(url, true);
 
-			//	window.open("https://itbolde4as01.boltongroup.root.dom:44300/sap/bc/ui2/flp#ProductionOrder-change?ProductionOrder="+this.orderNumber);
-			/*		sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
-						target: {
-							semanticObject: "ZPTM_CONF",
-							action: "display"
-						},
-						params: {
-							"orderType": this.orderNumber,
-							"operationNum": this.operationNum,
-							"appName":this.appName,
-							"mode": "crossNavigation"
+			} else {
 
-						}
-
-					}); */
+				MessageBox.error("Please select only one operation to proceed.");
+			}
 
 		},
 

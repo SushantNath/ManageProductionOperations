@@ -33,7 +33,7 @@
 					"localUri": "webapp/localService/MPE_HOLD_SRV/metadata.xml"
 				}
 			},
-				"pdfModel_SRV": {
+			"pdfModel_SRV": {
 				"uri": "/sap/opu/odata/sap/ZPTM_GET_MAT_PKGNG_INST_PDF_SRV",
 				"type": "OData",
 				"settings": {
@@ -41,7 +41,6 @@
 					"localUri": "webapp/localService/MPE_HOLD_SRV/metadata.xml"
 				}
 			},
-			
 			"mainAnnotationsSrv": {
 				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='PP_MPE_OPER_MANAGE_ANNO_MDL',Version='0001')/$value",
 				"type": "ODataAnnotation"
@@ -148,7 +147,7 @@
 	},
 	"sap.platform.abap": {
 		"_version": "1.2.0",
-		"uri": "/sap/bc/ui5_ui5/sap/MPE_OPER_MANS1"
+		"uri": "/sap/bc/ui5_ui5/sap/zprod_plan/ui5code"
 	},
 	"sap.fiori": {
 		"_version": "1.1.0",
@@ -297,7 +296,6 @@
 					}
 				}
 			},
-			
 			"Material": {
 				"preload": true,
 				"dataSource": "MaterialPopOver",
